@@ -67,11 +67,23 @@
     <Compile Include="FORMS\FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmCInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmCInterno.Designer.cs">
+      <DependentUpon>FrmCInterno.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmCMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmCMascota.Designer.cs">
+      <DependentUpon>FrmCMascota.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\FrmColonia.cs">
       <SubType>Form</SubType>
@@ -91,17 +103,107 @@
     <Compile Include="FORMS\FrmDomicilio.Designer.cs">
       <DependentUpon>FrmDomicilio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmGasto.Designer.cs">
+      <DependentUpon>FrmGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmInvMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmInvMascota.Designer.cs">
+      <DependentUpon>FrmInvMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmInvProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmInvProducto.Designer.cs">
+      <DependentUpon>FrmInvProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmMADetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmMADetalle.Designer.cs">
+      <DependentUpon>FrmMADetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmMascota.Designer.cs">
+      <DependentUpon>FrmMascota.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmPADetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmPADetalle.Designer.cs">
+      <DependentUpon>FrmPADetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmPaqueteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmPaqueteria.Designer.cs">
+      <DependentUpon>FrmPaqueteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmPMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmPMascota.Designer.cs">
+      <DependentUpon>FrmPMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmPProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmPProducto.Designer.cs">
+      <DependentUpon>FrmPProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmProveedor.Designer.cs">
+      <DependentUpon>FrmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmRaza.Designer.cs">
+      <DependentUpon>FrmRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmTipo.Designer.cs">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\FrmTrabajador.Designer.cs">
       <DependentUpon>FrmTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmTransportista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmTransportista.Designer.cs">
+      <DependentUpon>FrmTransportista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,8 +213,14 @@
     <EmbeddedResource Include="FORMS\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmCInterno.resx">
+      <DependentUpon>FrmCInterno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmCMascota.resx">
+      <DependentUpon>FrmCMascota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmColonia.resx">
       <DependentUpon>FrmColonia.cs</DependentUpon>
@@ -123,11 +231,56 @@
     <EmbeddedResource Include="FORMS\FrmDomicilio.resx">
       <DependentUpon>FrmDomicilio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmGasto.resx">
+      <DependentUpon>FrmGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmInvMascota.resx">
+      <DependentUpon>FrmInvMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmInvProducto.resx">
+      <DependentUpon>FrmInvProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmMADetalle.resx">
+      <DependentUpon>FrmMADetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmMascota.resx">
+      <DependentUpon>FrmMascota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmPADetalle.resx">
+      <DependentUpon>FrmPADetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmPaqueteria.resx">
+      <DependentUpon>FrmPaqueteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmPMascota.resx">
+      <DependentUpon>FrmPMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmPProducto.resx">
+      <DependentUpon>FrmPProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmProveedor.resx">
+      <DependentUpon>FrmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmRaza.resx">
+      <DependentUpon>FrmRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmTipo.resx">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmTrabajador.resx">
       <DependentUpon>FrmTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmTransportista.resx">
+      <DependentUpon>FrmTransportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

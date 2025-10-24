@@ -52,5 +52,20 @@ namespace ACUA_USUARIO.FORMS
         {
             AbrirFormHijo(new FrmCliente());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmAbono());
+        }
+
+        private void btnCIn_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmCInterno());
+        }
+
+        private void btnCMascota_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmCMascota());
+        }
     }
 }
