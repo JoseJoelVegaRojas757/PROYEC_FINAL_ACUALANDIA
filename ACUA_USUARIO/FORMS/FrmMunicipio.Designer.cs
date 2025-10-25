@@ -1,6 +1,6 @@
 ﻿namespace ACUA_USUARIO.FORMS
 {
-    partial class FrmGasto
+    partial class FrmMunicipio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGasto));
-            this.txtMonto = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDesGas = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMunicipio));
+            this.txtNombre = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -49,59 +47,27 @@
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtMonto
+            // txtNombre
             // 
-            this.txtMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtMonto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMonto.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMonto.BorderRadius = 13;
-            this.txtMonto.BorderSize = 2;
-            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMonto.Location = new System.Drawing.Point(456, 337);
-            this.txtMonto.Margin = new System.Windows.Forms.Padding(6);
-            this.txtMonto.Multiline = false;
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtMonto.PasswordChar = false;
-            this.txtMonto.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMonto.PlaceholderText = "";
-            this.txtMonto.Size = new System.Drawing.Size(275, 41);
-            this.txtMonto.TabIndex = 272;
-            this.txtMonto.Texts = "";
-            this.txtMonto.UnderlinedStyle = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(355, 343);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 35);
-            this.label5.TabIndex = 271;
-            this.label5.Text = "Monto";
-            // 
-            // txtDesGas
-            // 
-            this.txtDesGas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtDesGas.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDesGas.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDesGas.BorderRadius = 13;
-            this.txtDesGas.BorderSize = 2;
-            this.txtDesGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesGas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDesGas.Location = new System.Drawing.Point(456, 284);
-            this.txtDesGas.Margin = new System.Windows.Forms.Padding(6);
-            this.txtDesGas.Multiline = false;
-            this.txtDesGas.Name = "txtDesGas";
-            this.txtDesGas.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtDesGas.PasswordChar = false;
-            this.txtDesGas.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDesGas.PlaceholderText = "";
-            this.txtDesGas.Size = new System.Drawing.Size(275, 41);
-            this.txtDesGas.TabIndex = 270;
-            this.txtDesGas.Texts = "";
-            this.txtDesGas.UnderlinedStyle = false;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNombre.BorderRadius = 13;
+            this.txtNombre.BorderSize = 2;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre.Location = new System.Drawing.Point(454, 272);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNombre.Multiline = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtNombre.PasswordChar = false;
+            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNombre.PlaceholderText = "";
+            this.txtNombre.Size = new System.Drawing.Size(246, 41);
+            this.txtNombre.TabIndex = 97;
+            this.txtNombre.Texts = "";
+            this.txtNombre.UnderlinedStyle = false;
             // 
             // txtId
             // 
@@ -112,7 +78,7 @@
             this.txtId.BorderSize = 2;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(456, 231);
+            this.txtId.Location = new System.Drawing.Point(454, 213);
             this.txtId.Margin = new System.Windows.Forms.Padding(6);
             this.txtId.Multiline = false;
             this.txtId.Name = "txtId";
@@ -120,19 +86,19 @@
             this.txtId.PasswordChar = false;
             this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
-            this.txtId.TabIndex = 269;
+            this.txtId.Size = new System.Drawing.Size(199, 41);
+            this.txtId.TabIndex = 96;
             this.txtId.Texts = "";
             this.txtId.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(126, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 167);
+            this.pictureBox1.Size = new System.Drawing.Size(273, 238);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 268;
+            this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
             // toolStrip1
@@ -148,8 +114,8 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 531);
-            this.toolStrip1.TabIndex = 267;
+            this.toolStrip1.Size = new System.Drawing.Size(36, 471);
+            this.toolStrip1.TabIndex = 94;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsGuardar
@@ -191,32 +157,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Yellow;
             this.label3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(380, 95);
+            this.label3.Location = new System.Drawing.Point(405, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 35);
-            this.label3.TabIndex = 266;
-            this.label3.Text = "GASTO";
+            this.label3.Size = new System.Drawing.Size(138, 35);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "Municipio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(182, 290);
+            this.label2.Location = new System.Drawing.Point(332, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 35);
-            this.label2.TabIndex = 265;
-            this.label2.Text = "Descripcion de Gasto";
+            this.label2.Size = new System.Drawing.Size(113, 35);
+            this.label2.TabIndex = 92;
+            this.label2.Text = "NOMBRE";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(407, 232);
+            this.label1.Location = new System.Drawing.Point(405, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 35);
-            this.label1.TabIndex = 264;
-            this.label1.Text = "Id";
+            this.label1.TabIndex = 91;
+            this.label1.Text = "ID";
             // 
             // toolStrip2
             // 
@@ -225,11 +192,11 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(917, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(901, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 531);
-            this.toolStrip2.TabIndex = 273;
+            this.toolStrip2.Size = new System.Drawing.Size(36, 471);
+            this.toolStrip2.TabIndex = 98;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // btnClose
@@ -241,16 +208,14 @@
             this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.Text = "toolStripButton4";
             // 
-            // FrmGasto
+            // FrmMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(953, 531);
+            this.ClientSize = new System.Drawing.Size(937, 471);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.txtMonto);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDesGas);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
@@ -258,8 +223,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmGasto";
-            this.Text = "FrmGasto";
+            this.Name = "FrmMunicipio";
+            this.Text = "FrmMunicipio";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -272,9 +237,7 @@
 
         #endregion
 
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtMonto;
-        private System.Windows.Forms.Label label5;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtDesGas;
+        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNombre;
         private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;

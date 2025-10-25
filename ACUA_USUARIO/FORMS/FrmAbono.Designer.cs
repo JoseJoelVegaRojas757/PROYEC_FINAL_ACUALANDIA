@@ -36,10 +36,10 @@
             this.tsBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.cajadetexto4 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
+            this.txtMonto = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label5 = new System.Windows.Forms.Label();
-            this.cajadetexto2 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.cajadetexto1 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
+            this.txtApartado = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
+            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,11 +56,11 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1022, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1034, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(49, 562);
+            this.toolStrip2.Size = new System.Drawing.Size(37, 562);
             this.toolStrip2.TabIndex = 99;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -70,7 +70,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 28);
+            this.btnClose.Size = new System.Drawing.Size(30, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -128,27 +128,27 @@
             this.tsEliminar.Size = new System.Drawing.Size(30, 28);
             this.tsEliminar.Text = "toolStripButton4";
             // 
-            // cajadetexto4
+            // txtMonto
             // 
-            this.cajadetexto4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto4.BorderRadius = 13;
-            this.cajadetexto4.BorderSize = 2;
-            this.cajadetexto4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto4.Location = new System.Drawing.Point(466, 369);
-            this.cajadetexto4.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto4.Multiline = false;
-            this.cajadetexto4.Name = "cajadetexto4";
-            this.cajadetexto4.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto4.PasswordChar = false;
-            this.cajadetexto4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto4.PlaceholderText = "";
-            this.cajadetexto4.Size = new System.Drawing.Size(275, 41);
-            this.cajadetexto4.TabIndex = 221;
-            this.cajadetexto4.Texts = "";
-            this.cajadetexto4.UnderlinedStyle = false;
+            this.txtMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtMonto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMonto.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMonto.BorderRadius = 13;
+            this.txtMonto.BorderSize = 2;
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMonto.Location = new System.Drawing.Point(466, 369);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMonto.Multiline = false;
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtMonto.PasswordChar = false;
+            this.txtMonto.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMonto.PlaceholderText = "";
+            this.txtMonto.Size = new System.Drawing.Size(275, 41);
+            this.txtMonto.TabIndex = 221;
+            this.txtMonto.Texts = "";
+            this.txtMonto.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -160,49 +160,49 @@
             this.label5.TabIndex = 220;
             this.label5.Text = "Monto";
             // 
-            // cajadetexto2
+            // txtApartado
             // 
-            this.cajadetexto2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto2.BorderRadius = 13;
-            this.cajadetexto2.BorderSize = 2;
-            this.cajadetexto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto2.Location = new System.Drawing.Point(466, 316);
-            this.cajadetexto2.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto2.Multiline = false;
-            this.cajadetexto2.Name = "cajadetexto2";
-            this.cajadetexto2.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto2.PasswordChar = false;
-            this.cajadetexto2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto2.PlaceholderText = "";
-            this.cajadetexto2.Size = new System.Drawing.Size(275, 41);
-            this.cajadetexto2.TabIndex = 219;
-            this.cajadetexto2.Texts = "";
-            this.cajadetexto2.UnderlinedStyle = false;
+            this.txtApartado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtApartado.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtApartado.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtApartado.BorderRadius = 13;
+            this.txtApartado.BorderSize = 2;
+            this.txtApartado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApartado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApartado.Location = new System.Drawing.Point(466, 316);
+            this.txtApartado.Margin = new System.Windows.Forms.Padding(6);
+            this.txtApartado.Multiline = false;
+            this.txtApartado.Name = "txtApartado";
+            this.txtApartado.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtApartado.PasswordChar = false;
+            this.txtApartado.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtApartado.PlaceholderText = "";
+            this.txtApartado.Size = new System.Drawing.Size(275, 41);
+            this.txtApartado.TabIndex = 219;
+            this.txtApartado.Texts = "";
+            this.txtApartado.UnderlinedStyle = false;
             // 
-            // cajadetexto1
+            // txtId
             // 
-            this.cajadetexto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto1.BorderRadius = 13;
-            this.cajadetexto1.BorderSize = 2;
-            this.cajadetexto1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto1.Location = new System.Drawing.Point(466, 263);
-            this.cajadetexto1.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto1.Multiline = false;
-            this.cajadetexto1.Name = "cajadetexto1";
-            this.cajadetexto1.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto1.PasswordChar = false;
-            this.cajadetexto1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto1.PlaceholderText = "";
-            this.cajadetexto1.Size = new System.Drawing.Size(275, 41);
-            this.cajadetexto1.TabIndex = 218;
-            this.cajadetexto1.Texts = "";
-            this.cajadetexto1.UnderlinedStyle = false;
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtId.BorderRadius = 13;
+            this.txtId.BorderSize = 2;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId.Location = new System.Drawing.Point(466, 263);
+            this.txtId.Margin = new System.Windows.Forms.Padding(6);
+            this.txtId.Multiline = false;
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtId.PasswordChar = false;
+            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtId.PlaceholderText = "";
+            this.txtId.Size = new System.Drawing.Size(275, 41);
+            this.txtId.TabIndex = 218;
+            this.txtId.Texts = "";
+            this.txtId.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
@@ -250,10 +250,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1071, 562);
-            this.Controls.Add(this.cajadetexto4);
+            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cajadetexto2);
-            this.Controls.Add(this.cajadetexto1);
+            this.Controls.Add(this.txtApartado);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -282,10 +282,10 @@
         private System.Windows.Forms.ToolStripButton tsBuscar;
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto4;
+        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtMonto;
         private System.Windows.Forms.Label label5;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto2;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto1;
+        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtApartado;
+        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -139,6 +139,12 @@
     <Compile Include="FORMS\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmMunicipio.Designer.cs">
+      <DependentUpon>FrmMunicipio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmPADetalle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmMunicipio.resx">
+      <DependentUpon>FrmMunicipio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmPADetalle.resx">
       <DependentUpon>FrmPADetalle.cs</DependentUpon>
