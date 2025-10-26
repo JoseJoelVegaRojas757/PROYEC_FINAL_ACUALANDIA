@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autonomo">
+      <HintPath>..\..\..\..\..\..\LIBRERIAS\Autonomo.dll</HintPath>
+    </Reference>
     <Reference Include="PRUEBAROUNDCORNERS">
       <HintPath>..\..\..\..\..\..\LIBRERIAS\PRUEBAROUNDCORNERS.dll</HintPath>
     </Reference>
@@ -312,6 +315,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACUA_CAPA_NEG\ACUA_CAPA_NEG.csproj">
+      <Project>{F2B6ACAE-20D4-472B-9E88-0047B9014C01}</Project>
+      <Name>ACUA_CAPA_NEG</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

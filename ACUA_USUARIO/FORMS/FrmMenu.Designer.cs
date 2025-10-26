@@ -33,9 +33,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pBar = new System.Windows.Forms.Panel();
             this.btnCIn = new System.Windows.Forms.Button();
+            this.btnTrabajador = new System.Windows.Forms.Button();
             this.btnAbono = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.btnTrabajador = new System.Windows.Forms.Button();
             this.btnDomicilio = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnColonia = new System.Windows.Forms.Button();
@@ -98,6 +98,19 @@
             this.btnCIn.UseVisualStyleBackColor = true;
             this.btnCIn.Click += new System.EventHandler(this.btnCIn_Click);
             // 
+            // btnTrabajador
+            // 
+            this.btnTrabajador.FlatAppearance.BorderSize = 0;
+            this.btnTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrabajador.Location = new System.Drawing.Point(4, 226);
+            this.btnTrabajador.Name = "btnTrabajador";
+            this.btnTrabajador.Size = new System.Drawing.Size(197, 63);
+            this.btnTrabajador.TabIndex = 6;
+            this.btnTrabajador.Text = "Trabajador";
+            this.btnTrabajador.UseVisualStyleBackColor = true;
+            this.btnTrabajador.Click += new System.EventHandler(this.btnTrabajador_Click);
+            // 
             // btnAbono
             // 
             this.btnAbono.FlatAppearance.BorderSize = 0;
@@ -123,19 +136,6 @@
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnTrabajador
-            // 
-            this.btnTrabajador.FlatAppearance.BorderSize = 0;
-            this.btnTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrabajador.Location = new System.Drawing.Point(4, 226);
-            this.btnTrabajador.Name = "btnTrabajador";
-            this.btnTrabajador.Size = new System.Drawing.Size(197, 63);
-            this.btnTrabajador.TabIndex = 6;
-            this.btnTrabajador.Text = "Trabajador";
-            this.btnTrabajador.UseVisualStyleBackColor = true;
-            this.btnTrabajador.Click += new System.EventHandler(this.btnTrabajador_Click);
             // 
             // btnDomicilio
             // 
