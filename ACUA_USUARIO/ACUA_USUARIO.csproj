@@ -216,6 +216,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEARCH\FrmBusquedaAbono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaAbono.Designer.cs">
+      <DependentUpon>FrmBusquedaAbono.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FORMS\FrmAbono.resx">
       <DependentUpon>FrmAbono.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +309,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaAbono.resx">
+      <DependentUpon>FrmBusquedaAbono.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

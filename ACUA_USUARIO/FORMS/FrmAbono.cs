@@ -28,7 +28,7 @@ namespace ACUA_USUARIO.FORMS
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbApartado.DisplayMember = "faltante";
+            cbApartado.DisplayMember = "anticipo";
             cbApartado.ValueMember = "idApartado";
             cbApartado.DataSource = dt;
         }
@@ -87,6 +87,33 @@ namespace ACUA_USUARIO.FORMS
         private void FrmAbono_Load(object sender, EventArgs e)
         {
             CargarApartado();
+        }
+
+        private void tsLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void tsBuscar_Click(object sender, EventArgs e)
+        {
+            SEARCH.FrmBusquedaAbono x = new SEARCH.FrmBusquedaAbono();
+            x.ShowDialog();
+            if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                txtId.Text = x.dgAbono.SelectedRows[0].Cells["idAbono"].Value.ToString();
+                cbApartado.Text = x.dgAbono.SelectedRows[0].Cells["idApartado"].Value.ToString();
+                txtMonto.Text = x.dgAbono.SelectedRows[0].Cells["monto"].Value.ToString();
+            }
+        }
+
+        private void tsEliminar_Click(object sender, EventArgs e)
+        {
+            ACUA_CAPA_NEG.CLASES.Abono x = new ACUA_CAPA_NEG.CLASES.Abono();
+            x.idAbono = int.Parse(txtId.Text);
+            x.idApartado = Convert.ToInt32(cbApartado.SelectedValue);
+            x.Monto = txtMonto.Text;
+            MessageBox.Show(x.Eliminar());
+            Limpiar();
         }
     }
 }

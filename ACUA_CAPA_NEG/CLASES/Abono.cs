@@ -28,6 +28,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@idAbono", idAbono);
             comando.Parameters.AddWithValue("@idApartado", idApartado);
             comando.Parameters.AddWithValue("@monto", Monto);
+            comando.Connection = con;
 
             con.Open();
             comando.ExecuteNonQuery();
@@ -46,6 +47,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@idAbono", idAbono);
             comando.Parameters.AddWithValue("@idApartado", idApartado);
             comando.Parameters.AddWithValue("@monto", Monto);
+            comando.Connection = con;
             con.Open();
             msj = "El abono del Producto se ha actualizado correctamente";
             con.Close();
@@ -58,9 +60,13 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = "SP_ABONO";
             comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@op", 3);
+            comando.Parameters.AddWithValue("@OP", 3);
             comando.Parameters.AddWithValue("@idAbono", idAbono);
+            comando.Parameters.AddWithValue("@idApartado", idApartado);
+            comando.Parameters.AddWithValue("@monto", Monto);
+            comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El abono del Producto se ha Eliminado correctamente";
             con.Close();
             return msj;
