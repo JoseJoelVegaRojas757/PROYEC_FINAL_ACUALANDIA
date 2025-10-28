@@ -6,7 +6,7 @@ namespace ACUA_USUARIO
 {
     public partial class FrmConSql : Form
     {
-        SqlConnection con = new SqlConnection("Data Source = JOEL/UADEO;Initial Catalog=BSAcualandia; user id = sa; password = Jose2Joel");
+        SqlConnection con = new SqlConnection("Data Source = JOEL\\UADEO;Initial Catalog=BSAcualandia; user id = sa; password = Jose2Joel");
         public FrmConSql()
         {
             InitializeComponent();
@@ -16,6 +16,7 @@ namespace ACUA_USUARIO
         {
             con.Open();
             MessageBox.Show("Conexion Exitosa");
+            con.Close();
         }
     }
 }

@@ -83,5 +83,10 @@ namespace ACUA_USUARIO.FORMS
         {
             this.Close();
         }
+
+        private void FrmAbono_Load(object sender, EventArgs e)
+        {
+            CargarApartado();
+        }
     }
 }

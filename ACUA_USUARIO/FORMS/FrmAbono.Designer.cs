@@ -56,11 +56,11 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1022, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1034, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(49, 562);
+            this.toolStrip2.Size = new System.Drawing.Size(37, 562);
             this.toolStrip2.TabIndex = 99;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -70,7 +70,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 28);
+            this.btnClose.Size = new System.Drawing.Size(30, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
@@ -223,6 +223,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAbono";
             this.Text = "FrmAbono";
+            this.Load += new System.EventHandler(this.FrmAbono_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

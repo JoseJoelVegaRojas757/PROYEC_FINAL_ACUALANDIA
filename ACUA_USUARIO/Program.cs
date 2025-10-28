@@ -1,5 +1,4 @@
-﻿using ACUA_USUARIO.FORMS;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ACUA_USUARIO
@@ -14,7 +13,7 @@ namespace ACUA_USUARIO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenu());
+            Application.Run(new FORMS.FrmMenu());
         }
     }
 }
