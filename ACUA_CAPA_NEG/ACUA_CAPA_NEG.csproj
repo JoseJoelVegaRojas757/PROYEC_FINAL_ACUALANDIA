@@ -50,8 +50,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLASES\Abono.cs" />
+    <Compile Include="CLASES\Apartado.cs" />
+    <Compile Include="CLASES\Categoria.cs" />
+    <Compile Include="CLASES\CInterno.cs" />
+    <Compile Include="CLASES\Cliente.cs" />
+    <Compile Include="CLASES\CMascota.cs" />
+    <Compile Include="CLASES\Colonia.cs" />
     <Compile Include="CLASES\Conexion.cs" />
+    <Compile Include="CLASES\Domicilio.cs" />
+    <Compile Include="CLASES\Gasto.cs" />
     <Compile Include="CLASES\Herramientas.cs" />
+    <Compile Include="CLASES\InvMascota.cs" />
+    <Compile Include="CLASES\InvProducto.cs" />
+    <Compile Include="CLASES\MADetalle.cs" />
+    <Compile Include="CLASES\Mascota.cs" />
+    <Compile Include="CLASES\Municipio.cs" />
+    <Compile Include="CLASES\PADetalle.cs" />
+    <Compile Include="CLASES\Paqueteria.cs" />
+    <Compile Include="CLASES\PMascota.cs" />
+    <Compile Include="CLASES\PProducto.cs" />
+    <Compile Include="CLASES\Producto.cs" />
+    <Compile Include="CLASES\Proveedor.cs" />
+    <Compile Include="CLASES\Raza.cs" />
+    <Compile Include="CLASES\Tipo.cs" />
+    <Compile Include="CLASES\Trabajador.cs" />
+    <Compile Include="CLASES\Transportista.cs" />
+    <Compile Include="CLASES\Ventas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

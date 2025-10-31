@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGasto));
-            this.txtMonto = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDesGas = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsGuardar = new System.Windows.Forms.ToolStripButton();
@@ -44,32 +41,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtDesG = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtMonto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMonto.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMonto.BorderRadius = 13;
-            this.txtMonto.BorderSize = 2;
-            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMonto.Location = new System.Drawing.Point(456, 337);
-            this.txtMonto.Margin = new System.Windows.Forms.Padding(6);
-            this.txtMonto.Multiline = false;
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtMonto.PasswordChar = false;
-            this.txtMonto.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMonto.PlaceholderText = "";
-            this.txtMonto.Size = new System.Drawing.Size(275, 41);
-            this.txtMonto.TabIndex = 272;
-            this.txtMonto.Texts = "";
-            this.txtMonto.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -80,50 +58,6 @@
             this.label5.Size = new System.Drawing.Size(92, 35);
             this.label5.TabIndex = 271;
             this.label5.Text = "Monto";
-            // 
-            // txtDesGas
-            // 
-            this.txtDesGas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtDesGas.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDesGas.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDesGas.BorderRadius = 13;
-            this.txtDesGas.BorderSize = 2;
-            this.txtDesGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesGas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDesGas.Location = new System.Drawing.Point(456, 284);
-            this.txtDesGas.Margin = new System.Windows.Forms.Padding(6);
-            this.txtDesGas.Multiline = false;
-            this.txtDesGas.Name = "txtDesGas";
-            this.txtDesGas.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtDesGas.PasswordChar = false;
-            this.txtDesGas.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDesGas.PlaceholderText = "";
-            this.txtDesGas.Size = new System.Drawing.Size(275, 41);
-            this.txtDesGas.TabIndex = 270;
-            this.txtDesGas.Texts = "";
-            this.txtDesGas.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(456, 231);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
-            this.txtId.TabIndex = 269;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
@@ -158,8 +92,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -167,8 +102,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -176,8 +112,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -185,8 +122,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -225,10 +163,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(917, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(905, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 531);
+            this.toolStrip2.Size = new System.Drawing.Size(48, 531);
             this.toolStrip2.TabIndex = 273;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -238,8 +176,33 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 28);
+            this.btnClose.Size = new System.Drawing.Size(43, 28);
             this.btnClose.Text = "toolStripButton4";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(472, 232);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 274;
+            // 
+            // txtDesG
+            // 
+            this.txtDesG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtDesG.Location = new System.Drawing.Point(472, 290);
+            this.txtDesG.Name = "txtDesG";
+            this.txtDesG.Size = new System.Drawing.Size(193, 26);
+            this.txtDesG.TabIndex = 275;
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtMonto.Location = new System.Drawing.Point(472, 343);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(193, 26);
+            this.txtMonto.TabIndex = 276;
             // 
             // FrmGasto
             // 
@@ -247,11 +210,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(953, 531);
-            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.txtMonto);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDesGas);
+            this.Controls.Add(this.txtDesG);
             this.Controls.Add(this.txtId);
+            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label3);
@@ -271,11 +234,7 @@
         }
 
         #endregion
-
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtMonto;
         private System.Windows.Forms.Label label5;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtDesGas;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsGuardar;
@@ -287,5 +246,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnClose;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtDesG;
+        private System.Windows.Forms.TextBox txtMonto;
     }
 }

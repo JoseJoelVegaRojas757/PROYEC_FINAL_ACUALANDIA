@@ -40,8 +40,8 @@
             this.tsBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtNombre = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -124,7 +124,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 468);
+            this.toolStrip1.Size = new System.Drawing.Size(48, 468);
             this.toolStrip1.TabIndex = 97;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -134,8 +134,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -143,8 +144,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -152,8 +154,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -161,52 +164,25 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(338, 196);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
+            this.txtId.Location = new System.Drawing.Point(335, 211);
             this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
+            this.txtId.Size = new System.Drawing.Size(144, 26);
             this.txtId.TabIndex = 98;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNombre.BorderRadius = 13;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.Location = new System.Drawing.Point(338, 256);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombre.Multiline = false;
+            this.txtNombre.Location = new System.Drawing.Point(335, 265);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.Size = new System.Drawing.Size(275, 41);
+            this.txtNombre.Size = new System.Drawing.Size(217, 26);
             this.txtNombre.TabIndex = 99;
-            this.txtNombre.Texts = "";
-            this.txtNombre.UnderlinedStyle = false;
             // 
             // FrmCategoria
             // 
@@ -225,6 +201,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategoria";
             this.Text = "FrmCategoria";
+            this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -248,7 +225,7 @@
         private System.Windows.Forms.ToolStripButton tsBuscar;
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNombre;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

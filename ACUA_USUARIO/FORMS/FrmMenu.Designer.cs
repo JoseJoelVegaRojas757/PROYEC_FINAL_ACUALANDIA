@@ -32,6 +32,7 @@
             this.pMain = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pBar = new System.Windows.Forms.Panel();
+            this.btnCMascota = new System.Windows.Forms.Button();
             this.btnCIn = new System.Windows.Forms.Button();
             this.btnTrabajador = new System.Windows.Forms.Button();
             this.btnAbono = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.btnCMascota = new System.Windows.Forms.Button();
             this.pMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pBar.SuspendLayout();
@@ -54,7 +54,7 @@
             this.pMain.Controls.Add(this.pictureBox1);
             this.pMain.Location = new System.Drawing.Point(238, 5);
             this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(1188, 721);
+            this.pMain.Size = new System.Drawing.Size(1198, 785);
             this.pMain.TabIndex = 1;
             // 
             // pictureBox1
@@ -82,8 +82,21 @@
             this.pBar.Controls.Add(this.btnCategoria);
             this.pBar.Location = new System.Drawing.Point(3, 5);
             this.pBar.Name = "pBar";
-            this.pBar.Size = new System.Drawing.Size(204, 721);
+            this.pBar.Size = new System.Drawing.Size(204, 785);
             this.pBar.TabIndex = 2;
+            // 
+            // btnCMascota
+            // 
+            this.btnCMascota.FlatAppearance.BorderSize = 0;
+            this.btnCMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCMascota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCMascota.Location = new System.Drawing.Point(4, 640);
+            this.btnCMascota.Name = "btnCMascota";
+            this.btnCMascota.Size = new System.Drawing.Size(197, 63);
+            this.btnCMascota.TabIndex = 10;
+            this.btnCMascota.Text = "Consumo Mascota";
+            this.btnCMascota.UseVisualStyleBackColor = true;
+            this.btnCMascota.Click += new System.EventHandler(this.btnCMascota_Click);
             // 
             // btnCIn
             // 
@@ -202,28 +215,15 @@
             // 
             this.vScrollBar1.Location = new System.Drawing.Point(211, 9);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(13, 723);
+            this.vScrollBar1.Size = new System.Drawing.Size(12, 778);
             this.vScrollBar1.TabIndex = 3;
-            // 
-            // btnCMascota
-            // 
-            this.btnCMascota.FlatAppearance.BorderSize = 0;
-            this.btnCMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCMascota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCMascota.Location = new System.Drawing.Point(4, 640);
-            this.btnCMascota.Name = "btnCMascota";
-            this.btnCMascota.Size = new System.Drawing.Size(197, 63);
-            this.btnCMascota.TabIndex = 10;
-            this.btnCMascota.Text = "Consumo Mascota";
-            this.btnCMascota.UseVisualStyleBackColor = true;
-            this.btnCMascota.Click += new System.EventHandler(this.btnCMascota_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1428, 726);
+            this.ClientSize = new System.Drawing.Size(1445, 796);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.pBar);
             this.Controls.Add(this.pMain);

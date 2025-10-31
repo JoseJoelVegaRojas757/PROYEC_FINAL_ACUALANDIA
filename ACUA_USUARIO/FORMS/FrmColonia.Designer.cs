@@ -36,16 +36,16 @@
             this.tsBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtIdMuni = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtCodigoP = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtNombre = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigoP = new System.Windows.Forms.TextBox();
+            this.cbMunicipio = new System.Windows.Forms.ComboBox();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +88,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 450);
+            this.toolStrip1.Size = new System.Drawing.Size(48, 450);
             this.toolStrip1.TabIndex = 98;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -98,8 +98,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -107,8 +108,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -116,8 +118,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -125,96 +128,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(407, 160);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(171, 41);
-            this.txtId.TabIndex = 109;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
-            // 
-            // txtIdMuni
-            // 
-            this.txtIdMuni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtIdMuni.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtIdMuni.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIdMuni.BorderRadius = 13;
-            this.txtIdMuni.BorderSize = 2;
-            this.txtIdMuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdMuni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdMuni.Location = new System.Drawing.Point(407, 208);
-            this.txtIdMuni.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIdMuni.Multiline = false;
-            this.txtIdMuni.Name = "txtIdMuni";
-            this.txtIdMuni.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtIdMuni.PasswordChar = false;
-            this.txtIdMuni.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIdMuni.PlaceholderText = "";
-            this.txtIdMuni.Size = new System.Drawing.Size(232, 41);
-            this.txtIdMuni.TabIndex = 108;
-            this.txtIdMuni.Texts = "";
-            this.txtIdMuni.UnderlinedStyle = false;
-            // 
-            // txtCodigoP
-            // 
-            this.txtCodigoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCodigoP.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCodigoP.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCodigoP.BorderRadius = 13;
-            this.txtCodigoP.BorderSize = 2;
-            this.txtCodigoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCodigoP.Location = new System.Drawing.Point(407, 314);
-            this.txtCodigoP.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCodigoP.Multiline = false;
-            this.txtCodigoP.Name = "txtCodigoP";
-            this.txtCodigoP.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtCodigoP.PasswordChar = false;
-            this.txtCodigoP.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCodigoP.PlaceholderText = "";
-            this.txtCodigoP.Size = new System.Drawing.Size(232, 41);
-            this.txtCodigoP.TabIndex = 107;
-            this.txtCodigoP.Texts = "";
-            this.txtCodigoP.UnderlinedStyle = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNombre.BorderRadius = 13;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.Location = new System.Drawing.Point(407, 261);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombre.Multiline = false;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.Size = new System.Drawing.Size(232, 41);
-            this.txtNombre.TabIndex = 106;
-            this.txtNombre.Texts = "";
-            this.txtNombre.UnderlinedStyle = false;
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label5
             // 
@@ -280,16 +196,49 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "ID";
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(405, 168);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(104, 26);
+            this.txtId.TabIndex = 106;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNombre.Location = new System.Drawing.Point(404, 277);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(172, 26);
+            this.txtNombre.TabIndex = 108;
+            // 
+            // txtCodigoP
+            // 
+            this.txtCodigoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCodigoP.Location = new System.Drawing.Point(405, 324);
+            this.txtCodigoP.Name = "txtCodigoP";
+            this.txtCodigoP.Size = new System.Drawing.Size(171, 26);
+            this.txtCodigoP.TabIndex = 109;
+            // 
+            // cbMunicipio
+            // 
+            this.cbMunicipio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbMunicipio.FormattingEnabled = true;
+            this.cbMunicipio.Location = new System.Drawing.Point(405, 214);
+            this.cbMunicipio.Name = "cbMunicipio";
+            this.cbMunicipio.Size = new System.Drawing.Size(171, 28);
+            this.cbMunicipio.TabIndex = 110;
+            // 
             // FrmColonia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.txtIdMuni);
+            this.Controls.Add(this.cbMunicipio);
             this.Controls.Add(this.txtCodigoP);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -301,6 +250,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmColonia";
             this.Text = "FrmColonia";
+            this.Load += new System.EventHandler(this.FrmColonia_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -320,15 +270,15 @@
         private System.Windows.Forms.ToolStripButton tsBuscar;
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtIdMuni;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtCodigoP;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigoP;
+        private System.Windows.Forms.ComboBox cbMunicipio;
     }
 }

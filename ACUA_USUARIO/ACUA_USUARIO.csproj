@@ -64,6 +64,12 @@
     <Compile Include="FORMS\FrmAbono.Designer.cs">
       <DependentUpon>FrmAbono.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmApartado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmApartado.Designer.cs">
+      <DependentUpon>FrmApartado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,8 +228,155 @@
     <Compile Include="SEARCH\FrmBusquedaAbono.Designer.cs">
       <DependentUpon>FrmBusquedaAbono.cs</DependentUpon>
     </Compile>
+    <Compile Include="SEARCH\FrmBusquedaApartado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaApartado.Designer.cs">
+      <DependentUpon>FrmBusquedaApartado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCategoria.Designer.cs">
+      <DependentUpon>FrmBusquedaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCInterno.Designer.cs">
+      <DependentUpon>FrmBusquedaCInterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCliente.Designer.cs">
+      <DependentUpon>FrmBusquedaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaCMascota.Designer.cs">
+      <DependentUpon>FrmBusquedaCMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaColonia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaColonia.Designer.cs">
+      <DependentUpon>FrmBusquedaColonia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaDomicilio.Designer.cs">
+      <DependentUpon>FrmBusquedaDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaGasto.Designer.cs">
+      <DependentUpon>FrmBusquedaGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaInvMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaInvMascota.Designer.cs">
+      <DependentUpon>FrmBusquedaInvMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaInvProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaInvProducto.Designer.cs">
+      <DependentUpon>FrmBusquedaInvProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMADetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMADetalle.Designer.cs">
+      <DependentUpon>FrmBusquedaMADetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMascota.Designer.cs">
+      <DependentUpon>FrmBusquedaMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMunicipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaMunicipio.Designer.cs">
+      <DependentUpon>FrmBusquedaMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPADetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPADetalle.Designer.cs">
+      <DependentUpon>FrmBusquedaPADetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPaqueteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPaqueteria.Designer.cs">
+      <DependentUpon>FrmBusquedaPaqueteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPMascota.Designer.cs">
+      <DependentUpon>FrmBusquedaPMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPProducto.Designer.cs">
+      <DependentUpon>FrmBusquedaPProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaProducto.Designer.cs">
+      <DependentUpon>FrmBusquedaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaProveedor.Designer.cs">
+      <DependentUpon>FrmBusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaRaza.Designer.cs">
+      <DependentUpon>FrmBusquedaRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTipo.Designer.cs">
+      <DependentUpon>FrmBusquedaTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTrabajador.Designer.cs">
+      <DependentUpon>FrmBusquedaTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTransportista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaTransportista.Designer.cs">
+      <DependentUpon>FrmBusquedaTransportista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaVentas.Designer.cs">
+      <DependentUpon>FrmBusquedaVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FORMS\FrmAbono.resx">
       <DependentUpon>FrmAbono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmApartado.resx">
+      <DependentUpon>FrmApartado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
@@ -311,6 +464,36 @@
     </Compile>
     <EmbeddedResource Include="SEARCH\FrmBusquedaAbono.resx">
       <DependentUpon>FrmBusquedaAbono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaApartado.resx">
+      <DependentUpon>FrmBusquedaApartado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaCategoria.resx">
+      <DependentUpon>FrmBusquedaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaCInterno.resx">
+      <DependentUpon>FrmBusquedaCInterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaCliente.resx">
+      <DependentUpon>FrmBusquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaCMascota.resx">
+      <DependentUpon>FrmBusquedaCMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaColonia.resx">
+      <DependentUpon>FrmBusquedaColonia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaDomicilio.resx">
+      <DependentUpon>FrmBusquedaDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaGasto.resx">
+      <DependentUpon>FrmBusquedaGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaInvMascota.resx">
+      <DependentUpon>FrmBusquedaInvMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaInvProducto.resx">
+      <DependentUpon>FrmBusquedaInvProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

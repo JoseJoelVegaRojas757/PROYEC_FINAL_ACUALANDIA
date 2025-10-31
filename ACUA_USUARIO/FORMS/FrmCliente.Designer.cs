@@ -42,18 +42,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAMaterno = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtRedesS = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtCliente = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtAPaterno = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtNombre = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtDomicilio = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpFechaN = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtSociales = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtA_Materno = new System.Windows.Forms.TextBox();
+            this.txtA_Paterno = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtFechaNa = new System.Windows.Forms.TextBox();
+            this.cbDomicilio = new System.Windows.Forms.ComboBox();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,7 +98,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(37, 633);
+            this.toolStrip1.Size = new System.Drawing.Size(49, 633);
             this.toolStrip1.TabIndex = 99;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -108,8 +108,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(30, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(42, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -117,8 +118,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(30, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(42, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -126,8 +128,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(30, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(42, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -135,8 +138,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(30, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(42, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label10
             // 
@@ -198,160 +202,6 @@
             this.label4.TabIndex = 158;
             this.label4.Text = "APELLIDO PATERNO";
             // 
-            // txtAMaterno
-            // 
-            this.txtAMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtAMaterno.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtAMaterno.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtAMaterno.BorderRadius = 13;
-            this.txtAMaterno.BorderSize = 2;
-            this.txtAMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAMaterno.Location = new System.Drawing.Point(300, 438);
-            this.txtAMaterno.Margin = new System.Windows.Forms.Padding(6);
-            this.txtAMaterno.Multiline = false;
-            this.txtAMaterno.Name = "txtAMaterno";
-            this.txtAMaterno.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtAMaterno.PasswordChar = false;
-            this.txtAMaterno.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAMaterno.PlaceholderText = "";
-            this.txtAMaterno.Size = new System.Drawing.Size(275, 41);
-            this.txtAMaterno.TabIndex = 157;
-            this.txtAMaterno.Texts = "";
-            this.txtAMaterno.UnderlinedStyle = false;
-            // 
-            // txtRedesS
-            // 
-            this.txtRedesS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtRedesS.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtRedesS.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtRedesS.BorderRadius = 13;
-            this.txtRedesS.BorderSize = 2;
-            this.txtRedesS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRedesS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtRedesS.Location = new System.Drawing.Point(847, 279);
-            this.txtRedesS.Margin = new System.Windows.Forms.Padding(6);
-            this.txtRedesS.Multiline = false;
-            this.txtRedesS.Name = "txtRedesS";
-            this.txtRedesS.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtRedesS.PasswordChar = false;
-            this.txtRedesS.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtRedesS.PlaceholderText = "";
-            this.txtRedesS.Size = new System.Drawing.Size(275, 41);
-            this.txtRedesS.TabIndex = 155;
-            this.txtRedesS.Texts = "";
-            this.txtRedesS.UnderlinedStyle = false;
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCliente.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCliente.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCliente.BorderRadius = 13;
-            this.txtCliente.BorderSize = 2;
-            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCliente.Location = new System.Drawing.Point(847, 226);
-            this.txtCliente.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCliente.Multiline = false;
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtCliente.PasswordChar = false;
-            this.txtCliente.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCliente.PlaceholderText = "";
-            this.txtCliente.Size = new System.Drawing.Size(275, 41);
-            this.txtCliente.TabIndex = 154;
-            this.txtCliente.Texts = "";
-            this.txtCliente.UnderlinedStyle = false;
-            // 
-            // txtAPaterno
-            // 
-            this.txtAPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtAPaterno.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtAPaterno.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtAPaterno.BorderRadius = 13;
-            this.txtAPaterno.BorderSize = 2;
-            this.txtAPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtAPaterno.Location = new System.Drawing.Point(300, 385);
-            this.txtAPaterno.Margin = new System.Windows.Forms.Padding(6);
-            this.txtAPaterno.Multiline = false;
-            this.txtAPaterno.Name = "txtAPaterno";
-            this.txtAPaterno.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtAPaterno.PasswordChar = false;
-            this.txtAPaterno.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAPaterno.PlaceholderText = "";
-            this.txtAPaterno.Size = new System.Drawing.Size(275, 41);
-            this.txtAPaterno.TabIndex = 153;
-            this.txtAPaterno.Texts = "";
-            this.txtAPaterno.UnderlinedStyle = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNombre.BorderRadius = 13;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.Location = new System.Drawing.Point(300, 332);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombre.Multiline = false;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.Size = new System.Drawing.Size(275, 41);
-            this.txtNombre.TabIndex = 152;
-            this.txtNombre.Texts = "";
-            this.txtNombre.UnderlinedStyle = false;
-            // 
-            // txtDomicilio
-            // 
-            this.txtDomicilio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtDomicilio.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtDomicilio.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDomicilio.BorderRadius = 13;
-            this.txtDomicilio.BorderSize = 2;
-            this.txtDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDomicilio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDomicilio.Location = new System.Drawing.Point(300, 279);
-            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(6);
-            this.txtDomicilio.Multiline = false;
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtDomicilio.PasswordChar = false;
-            this.txtDomicilio.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtDomicilio.PlaceholderText = "";
-            this.txtDomicilio.Size = new System.Drawing.Size(275, 41);
-            this.txtDomicilio.TabIndex = 151;
-            this.txtDomicilio.Texts = "";
-            this.txtDomicilio.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(300, 226);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
-            this.txtId.TabIndex = 150;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -392,12 +242,70 @@
             this.label1.TabIndex = 146;
             this.label1.Text = "ID";
             // 
-            // dtpFechaN
+            // txtId
             // 
-            this.dtpFechaN.Location = new System.Drawing.Point(857, 346);
-            this.dtpFechaN.Name = "dtpFechaN";
-            this.dtpFechaN.Size = new System.Drawing.Size(265, 26);
-            this.dtpFechaN.TabIndex = 164;
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(305, 234);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(118, 26);
+            this.txtId.TabIndex = 164;
+            // 
+            // txtSociales
+            // 
+            this.txtSociales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtSociales.Location = new System.Drawing.Point(844, 294);
+            this.txtSociales.Name = "txtSociales";
+            this.txtSociales.Size = new System.Drawing.Size(166, 26);
+            this.txtSociales.TabIndex = 165;
+            // 
+            // txtTel
+            // 
+            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtTel.Location = new System.Drawing.Point(844, 236);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(166, 26);
+            this.txtTel.TabIndex = 166;
+            // 
+            // txtA_Materno
+            // 
+            this.txtA_Materno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtA_Materno.Location = new System.Drawing.Point(305, 444);
+            this.txtA_Materno.Name = "txtA_Materno";
+            this.txtA_Materno.Size = new System.Drawing.Size(188, 26);
+            this.txtA_Materno.TabIndex = 167;
+            // 
+            // txtA_Paterno
+            // 
+            this.txtA_Paterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtA_Paterno.Location = new System.Drawing.Point(305, 385);
+            this.txtA_Paterno.Name = "txtA_Paterno";
+            this.txtA_Paterno.Size = new System.Drawing.Size(188, 26);
+            this.txtA_Paterno.TabIndex = 168;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNombre.Location = new System.Drawing.Point(305, 338);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(188, 26);
+            this.txtNombre.TabIndex = 169;
+            // 
+            // txtFechaNa
+            // 
+            this.txtFechaNa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtFechaNa.Location = new System.Drawing.Point(844, 347);
+            this.txtFechaNa.Name = "txtFechaNa";
+            this.txtFechaNa.Size = new System.Drawing.Size(166, 26);
+            this.txtFechaNa.TabIndex = 171;
+            // 
+            // cbDomicilio
+            // 
+            this.cbDomicilio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbDomicilio.FormattingEnabled = true;
+            this.cbDomicilio.Location = new System.Drawing.Point(305, 294);
+            this.cbDomicilio.Name = "cbDomicilio";
+            this.cbDomicilio.Size = new System.Drawing.Size(188, 28);
+            this.cbDomicilio.TabIndex = 172;
             // 
             // FrmCliente
             // 
@@ -405,20 +313,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1216, 633);
-            this.Controls.Add(this.dtpFechaN);
+            this.Controls.Add(this.cbDomicilio);
+            this.Controls.Add(this.txtFechaNa);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtA_Paterno);
+            this.Controls.Add(this.txtA_Materno);
+            this.Controls.Add(this.txtTel);
+            this.Controls.Add(this.txtSociales);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtAMaterno);
-            this.Controls.Add(this.txtRedesS);
-            this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.txtAPaterno);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtDomicilio);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -428,6 +336,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -453,17 +362,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtAMaterno;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtRedesS;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtCliente;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtAPaterno;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNombre;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtDomicilio;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpFechaN;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtSociales;
+        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox txtA_Materno;
+        private System.Windows.Forms.TextBox txtA_Paterno;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtFechaNa;
+        private System.Windows.Forms.ComboBox cbDomicilio;
     }
 }

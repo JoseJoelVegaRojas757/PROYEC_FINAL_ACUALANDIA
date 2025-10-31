@@ -36,13 +36,6 @@
             this.tsBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.txtCalle = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtCalle2 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtNumeroE = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtIdColonia = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtReferencias = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtNumeroI = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,6 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
+            this.txtNumIn = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtCalle1 = new System.Windows.Forms.TextBox();
+            this.txtCalle2 = new System.Windows.Forms.TextBox();
+            this.txtNumE = new System.Windows.Forms.TextBox();
+            this.cbColonia = new System.Windows.Forms.ComboBox();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,7 +98,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(37, 610);
+            this.toolStrip1.Size = new System.Drawing.Size(49, 610);
             this.toolStrip1.TabIndex = 98;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -106,8 +108,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(30, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(42, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -115,8 +118,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(30, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(42, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -124,8 +128,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(30, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(42, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -133,162 +138,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(30, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(42, 28);
             this.tsEliminar.Text = "toolStripButton4";
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCalle.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCalle.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCalle.BorderRadius = 13;
-            this.txtCalle.BorderSize = 2;
-            this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCalle.Location = new System.Drawing.Point(291, 320);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCalle.Multiline = false;
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtCalle.PasswordChar = false;
-            this.txtCalle.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCalle.PlaceholderText = "";
-            this.txtCalle.Size = new System.Drawing.Size(234, 41);
-            this.txtCalle.TabIndex = 114;
-            this.txtCalle.Texts = "";
-            this.txtCalle.UnderlinedStyle = false;
-            // 
-            // txtCalle2
-            // 
-            this.txtCalle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCalle2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCalle2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCalle2.BorderRadius = 13;
-            this.txtCalle2.BorderSize = 2;
-            this.txtCalle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCalle2.Location = new System.Drawing.Point(291, 373);
-            this.txtCalle2.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCalle2.Multiline = false;
-            this.txtCalle2.Name = "txtCalle2";
-            this.txtCalle2.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtCalle2.PasswordChar = false;
-            this.txtCalle2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCalle2.PlaceholderText = "";
-            this.txtCalle2.Size = new System.Drawing.Size(234, 41);
-            this.txtCalle2.TabIndex = 113;
-            this.txtCalle2.Texts = "";
-            this.txtCalle2.UnderlinedStyle = false;
-            // 
-            // txtNumeroE
-            // 
-            this.txtNumeroE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNumeroE.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNumeroE.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNumeroE.BorderRadius = 13;
-            this.txtNumeroE.BorderSize = 2;
-            this.txtNumeroE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumeroE.Location = new System.Drawing.Point(291, 428);
-            this.txtNumeroE.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNumeroE.Multiline = false;
-            this.txtNumeroE.Name = "txtNumeroE";
-            this.txtNumeroE.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtNumeroE.PasswordChar = false;
-            this.txtNumeroE.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNumeroE.PlaceholderText = "";
-            this.txtNumeroE.Size = new System.Drawing.Size(234, 41);
-            this.txtNumeroE.TabIndex = 112;
-            this.txtNumeroE.Texts = "";
-            this.txtNumeroE.UnderlinedStyle = false;
-            // 
-            // txtIdColonia
-            // 
-            this.txtIdColonia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtIdColonia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtIdColonia.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIdColonia.BorderRadius = 13;
-            this.txtIdColonia.BorderSize = 2;
-            this.txtIdColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdColonia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdColonia.Location = new System.Drawing.Point(787, 326);
-            this.txtIdColonia.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIdColonia.Multiline = false;
-            this.txtIdColonia.Name = "txtIdColonia";
-            this.txtIdColonia.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtIdColonia.PasswordChar = false;
-            this.txtIdColonia.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIdColonia.PlaceholderText = "";
-            this.txtIdColonia.Size = new System.Drawing.Size(203, 41);
-            this.txtIdColonia.TabIndex = 111;
-            this.txtIdColonia.Texts = "";
-            this.txtIdColonia.UnderlinedStyle = false;
-            // 
-            // txtReferencias
-            // 
-            this.txtReferencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtReferencias.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtReferencias.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtReferencias.BorderRadius = 13;
-            this.txtReferencias.BorderSize = 2;
-            this.txtReferencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReferencias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtReferencias.Location = new System.Drawing.Point(787, 379);
-            this.txtReferencias.Margin = new System.Windows.Forms.Padding(6);
-            this.txtReferencias.Multiline = false;
-            this.txtReferencias.Name = "txtReferencias";
-            this.txtReferencias.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtReferencias.PasswordChar = false;
-            this.txtReferencias.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtReferencias.PlaceholderText = "";
-            this.txtReferencias.Size = new System.Drawing.Size(203, 41);
-            this.txtReferencias.TabIndex = 110;
-            this.txtReferencias.Texts = "";
-            this.txtReferencias.UnderlinedStyle = false;
-            // 
-            // txtNumeroI
-            // 
-            this.txtNumeroI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNumeroI.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtNumeroI.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNumeroI.BorderRadius = 13;
-            this.txtNumeroI.BorderSize = 2;
-            this.txtNumeroI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumeroI.Location = new System.Drawing.Point(787, 273);
-            this.txtNumeroI.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNumeroI.Multiline = false;
-            this.txtNumeroI.Name = "txtNumeroI";
-            this.txtNumeroI.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtNumeroI.PasswordChar = false;
-            this.txtNumeroI.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNumeroI.PlaceholderText = "";
-            this.txtNumeroI.Size = new System.Drawing.Size(203, 41);
-            this.txtNumeroI.TabIndex = 109;
-            this.txtNumeroI.Texts = "";
-            this.txtNumeroI.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(291, 267);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(199, 41);
-            this.txtId.TabIndex = 108;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label6
             // 
@@ -328,7 +180,7 @@
             this.label5.AutoSize = true;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(70, 428);
+            this.label5.Location = new System.Drawing.Point(70, 463);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(212, 35);
             this.label5.TabIndex = 104;
@@ -339,7 +191,7 @@
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(183, 373);
+            this.label4.Location = new System.Drawing.Point(183, 414);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 35);
             this.label4.TabIndex = 103;
@@ -371,7 +223,7 @@
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(202, 320);
+            this.label2.Location = new System.Drawing.Point(204, 316);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 35);
             this.label2.TabIndex = 100;
@@ -387,19 +239,97 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "ID";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Enabled = false;
+            this.label9.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(181, 365);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 35);
+            this.label9.TabIndex = 108;
+            this.label9.Text = "Calle 1";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(288, 273);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(105, 26);
+            this.txtId.TabIndex = 109;
+            // 
+            // txtReferencia
+            // 
+            this.txtReferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtReferencia.Location = new System.Drawing.Point(784, 389);
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(160, 26);
+            this.txtReferencia.TabIndex = 111;
+            // 
+            // txtNumIn
+            // 
+            this.txtNumIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNumIn.Location = new System.Drawing.Point(784, 282);
+            this.txtNumIn.Name = "txtNumIn";
+            this.txtNumIn.Size = new System.Drawing.Size(160, 26);
+            this.txtNumIn.TabIndex = 112;
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCalle.Location = new System.Drawing.Point(288, 316);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(153, 26);
+            this.txtCalle.TabIndex = 113;
+            // 
+            // txtCalle1
+            // 
+            this.txtCalle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCalle1.Location = new System.Drawing.Point(288, 374);
+            this.txtCalle1.Name = "txtCalle1";
+            this.txtCalle1.Size = new System.Drawing.Size(153, 26);
+            this.txtCalle1.TabIndex = 114;
+            // 
+            // txtCalle2
+            // 
+            this.txtCalle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCalle2.Location = new System.Drawing.Point(288, 423);
+            this.txtCalle2.Name = "txtCalle2";
+            this.txtCalle2.Size = new System.Drawing.Size(158, 26);
+            this.txtCalle2.TabIndex = 115;
+            // 
+            // txtNumE
+            // 
+            this.txtNumE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNumE.Location = new System.Drawing.Point(288, 472);
+            this.txtNumE.Name = "txtNumE";
+            this.txtNumE.Size = new System.Drawing.Size(158, 26);
+            this.txtNumE.TabIndex = 116;
+            // 
+            // cbColonia
+            // 
+            this.cbColonia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbColonia.FormattingEnabled = true;
+            this.cbColonia.Location = new System.Drawing.Point(784, 332);
+            this.cbColonia.Name = "cbColonia";
+            this.cbColonia.Size = new System.Drawing.Size(160, 28);
+            this.cbColonia.TabIndex = 117;
+            // 
             // FrmDomicilio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1179, 610);
-            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.cbColonia);
+            this.Controls.Add(this.txtNumE);
             this.Controls.Add(this.txtCalle2);
-            this.Controls.Add(this.txtNumeroE);
-            this.Controls.Add(this.txtIdColonia);
-            this.Controls.Add(this.txtReferencias);
-            this.Controls.Add(this.txtNumeroI);
+            this.Controls.Add(this.txtCalle1);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtNumIn);
+            this.Controls.Add(this.txtReferencia);
             this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -414,6 +344,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDomicilio";
             this.Text = "FrmDomicilio";
+            this.Load += new System.EventHandler(this.FrmDomicilio_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -433,13 +364,6 @@
         private System.Windows.Forms.ToolStripButton tsBuscar;
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtCalle;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtCalle2;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNumeroE;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtIdColonia;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtReferencias;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtNumeroI;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -449,5 +373,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtReferencia;
+        private System.Windows.Forms.TextBox txtNumIn;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtCalle1;
+        private System.Windows.Forms.TextBox txtCalle2;
+        private System.Windows.Forms.TextBox txtNumE;
+        private System.Windows.Forms.ComboBox cbColonia;
     }
 }

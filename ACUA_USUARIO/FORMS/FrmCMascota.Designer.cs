@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCMascota));
             this.label4 = new System.Windows.Forms.Label();
-            this.txtConsumible = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIdCliente = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsGuardar = new System.Windows.Forms.ToolStripButton();
@@ -45,7 +42,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtConsumible = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbMascota = new System.Windows.Forms.ComboBox();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -55,97 +57,31 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(580, 288);
+            this.label4.Location = new System.Drawing.Point(545, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 35);
             this.label4.TabIndex = 189;
             this.label4.Text = "Fecha";
             // 
-            // txtConsumible
-            // 
-            this.txtConsumible.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtConsumible.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtConsumible.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtConsumible.BorderRadius = 13;
-            this.txtConsumible.BorderSize = 2;
-            this.txtConsumible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsumible.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConsumible.Location = new System.Drawing.Point(677, 235);
-            this.txtConsumible.Margin = new System.Windows.Forms.Padding(6);
-            this.txtConsumible.Multiline = false;
-            this.txtConsumible.Name = "txtConsumible";
-            this.txtConsumible.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtConsumible.PasswordChar = false;
-            this.txtConsumible.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtConsumible.PlaceholderText = "";
-            this.txtConsumible.Size = new System.Drawing.Size(275, 41);
-            this.txtConsumible.TabIndex = 188;
-            this.txtConsumible.Texts = "";
-            this.txtConsumible.UnderlinedStyle = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(515, 235);
+            this.label6.Location = new System.Drawing.Point(470, 216);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 35);
             this.label6.TabIndex = 187;
             this.label6.Text = "Consumible";
             // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtIdCliente.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtIdCliente.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIdCliente.BorderRadius = 13;
-            this.txtIdCliente.BorderSize = 2;
-            this.txtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdCliente.Location = new System.Drawing.Point(219, 288);
-            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIdCliente.Multiline = false;
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtIdCliente.PasswordChar = false;
-            this.txtIdCliente.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIdCliente.PlaceholderText = "";
-            this.txtIdCliente.Size = new System.Drawing.Size(275, 41);
-            this.txtIdCliente.TabIndex = 186;
-            this.txtIdCliente.Texts = "";
-            this.txtIdCliente.UnderlinedStyle = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(106, 294);
+            this.label5.Location = new System.Drawing.Point(106, 287);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 35);
+            this.label5.Size = new System.Drawing.Size(120, 35);
             this.label5.TabIndex = 185;
-            this.label5.Text = "Cliente";
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(219, 229);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
-            this.txtId.TabIndex = 183;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
+            this.label5.Text = "Mascota";
             // 
             // pictureBox1
             // 
@@ -170,7 +106,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 537);
+            this.toolStrip1.Size = new System.Drawing.Size(48, 537);
             this.toolStrip1.TabIndex = 181;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -180,8 +116,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -189,8 +126,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -198,8 +136,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -207,8 +146,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -254,12 +194,57 @@
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // dtpFecha
+            // txtId
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(677, 296);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(275, 26);
-            this.dtpFecha.TabIndex = 192;
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(237, 225);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(143, 26);
+            this.txtId.TabIndex = 192;
+            // 
+            // txtConsumible
+            // 
+            this.txtConsumible.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtConsumible.Location = new System.Drawing.Point(674, 226);
+            this.txtConsumible.Name = "txtConsumible";
+            this.txtConsumible.Size = new System.Drawing.Size(202, 26);
+            this.txtConsumible.TabIndex = 194;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtFecha.Location = new System.Drawing.Point(674, 287);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(202, 26);
+            this.txtFecha.TabIndex = 195;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(122, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 35);
+            this.label2.TabIndex = 196;
+            this.label2.Text = "Cliente";
+            // 
+            // cbMascota
+            // 
+            this.cbMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbMascota.FormattingEnabled = true;
+            this.cbMascota.Location = new System.Drawing.Point(237, 293);
+            this.cbMascota.Name = "cbMascota";
+            this.cbMascota.Size = new System.Drawing.Size(181, 28);
+            this.cbMascota.TabIndex = 197;
+            // 
+            // cbCliente
+            // 
+            this.cbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(237, 348);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(181, 28);
+            this.cbCliente.TabIndex = 198;
             // 
             // FrmCMascota
             // 
@@ -267,14 +252,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1019, 537);
-            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.cbCliente);
+            this.Controls.Add(this.cbMascota);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtConsumible);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtConsumible);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label3);
@@ -282,6 +269,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCMascota";
             this.Text = "FrmCMascota";
+            this.Load += new System.EventHandler(this.FrmCMascota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -294,11 +282,8 @@
 
         #endregion
         private System.Windows.Forms.Label label4;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtConsumible;
         private System.Windows.Forms.Label label6;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtIdCliente;
         private System.Windows.Forms.Label label5;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsGuardar;
@@ -309,6 +294,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnClose;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtConsumible;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbMascota;
+        private System.Windows.Forms.ComboBox cbCliente;
     }
 }
