@@ -58,6 +58,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@referencias", referencias);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Domicilio se ha actualizado correctamente";
             con.Close();
             return msj;

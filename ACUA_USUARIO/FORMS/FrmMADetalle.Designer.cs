@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMADetalle));
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbprecio = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsClose = new System.Windows.Forms.ToolStripButton();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.cbApartado = new System.Windows.Forms.ComboBox();
+            this.cbMascota = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtAnticipo = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -70,15 +77,15 @@
             this.label7.TabIndex = 262;
             this.label7.Text = "SubTotal";
             // 
-            // label4
+            // lbprecio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(541, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 35);
-            this.label4.TabIndex = 260;
-            this.label4.Text = "Faltante";
+            this.lbprecio.AutoSize = true;
+            this.lbprecio.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbprecio.Location = new System.Drawing.Point(541, 288);
+            this.lbprecio.Name = "lbprecio";
+            this.lbprecio.Size = new System.Drawing.Size(118, 35);
+            this.lbprecio.TabIndex = 260;
+            this.lbprecio.Text = "Anticipo";
             // 
             // label6
             // 
@@ -86,9 +93,9 @@
             this.label6.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(541, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 35);
+            this.label6.Size = new System.Drawing.Size(94, 35);
             this.label6.TabIndex = 258;
-            this.label6.Text = "Anticipo";
+            this.label6.Text = "Precio";
             // 
             // label5
             // 
@@ -123,7 +130,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 547);
+            this.toolStrip1.Size = new System.Drawing.Size(48, 547);
             this.toolStrip1.TabIndex = 252;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -135,6 +142,7 @@
             this.tsGuardar.Name = "tsGuardar";
             this.tsGuardar.Size = new System.Drawing.Size(31, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -142,8 +150,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -151,8 +160,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -160,8 +170,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -200,10 +211,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1014, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1026, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(48, 547);
+            this.toolStrip2.Size = new System.Drawing.Size(36, 547);
             this.toolStrip2.TabIndex = 266;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -215,6 +226,65 @@
             this.tsClose.Name = "tsClose";
             this.tsClose.Size = new System.Drawing.Size(43, 28);
             this.tsClose.Text = "toolStripButton4";
+            this.tsClose.Click += new System.EventHandler(this.tsClose_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(222, 248);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 267;
+            // 
+            // cbApartado
+            // 
+            this.cbApartado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbApartado.FormattingEnabled = true;
+            this.cbApartado.Location = new System.Drawing.Point(222, 300);
+            this.cbApartado.Name = "cbApartado";
+            this.cbApartado.Size = new System.Drawing.Size(192, 28);
+            this.cbApartado.TabIndex = 268;
+            // 
+            // cbMascota
+            // 
+            this.cbMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbMascota.FormattingEnabled = true;
+            this.cbMascota.Location = new System.Drawing.Point(222, 357);
+            this.cbMascota.Name = "cbMascota";
+            this.cbMascota.Size = new System.Drawing.Size(192, 28);
+            this.cbMascota.TabIndex = 269;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCantidad.Location = new System.Drawing.Point(222, 400);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(192, 26);
+            this.txtCantidad.TabIndex = 270;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtPrecio.Location = new System.Drawing.Point(665, 240);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(177, 26);
+            this.txtPrecio.TabIndex = 271;
+            // 
+            // txtAnticipo
+            // 
+            this.txtAnticipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtAnticipo.Location = new System.Drawing.Point(663, 288);
+            this.txtAnticipo.Name = "txtAnticipo";
+            this.txtAnticipo.Size = new System.Drawing.Size(179, 26);
+            this.txtAnticipo.TabIndex = 272;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtSubTotal.Location = new System.Drawing.Point(663, 347);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(179, 26);
+            this.txtSubTotal.TabIndex = 273;
             // 
             // FrmMADetalle
             // 
@@ -222,10 +292,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1062, 547);
+            this.Controls.Add(this.txtSubTotal);
+            this.Controls.Add(this.txtAnticipo);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.cbMascota);
+            this.Controls.Add(this.cbApartado);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbprecio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -236,6 +313,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMADetalle";
             this.Text = "FrmMADetalle";
+            this.Load += new System.EventHandler(this.FrmMADetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -249,7 +327,7 @@
         #endregion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbprecio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -263,5 +341,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton tsClose;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ComboBox cbApartado;
+        private System.Windows.Forms.ComboBox cbMascota;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtAnticipo;
+        private System.Windows.Forms.TextBox txtSubTotal;
     }
 }

@@ -48,6 +48,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@tipo", tipo);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Consumo Interno se ha actualizado correctamente";
             con.Close();
             return msj;

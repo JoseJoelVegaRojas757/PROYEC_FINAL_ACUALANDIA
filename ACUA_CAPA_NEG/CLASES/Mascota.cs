@@ -48,8 +48,10 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@idRaza", idRaza);
             comando.Connection = con;
             con.Open();
-            msj = "La Mascota se ha actualizado correctamente";
+            comando.ExecuteNonQuery();
             con.Close();
+            msj = "La Mascota se ha actualizado correctamente";
+
             return msj;
         }
 

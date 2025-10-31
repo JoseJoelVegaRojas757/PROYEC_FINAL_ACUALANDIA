@@ -47,6 +47,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@monto", monto);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El gasto se ha actualizado correctamente";
             con.Close();
             return msj;

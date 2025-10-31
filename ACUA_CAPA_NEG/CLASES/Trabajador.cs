@@ -59,6 +59,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@traSociales", traSociales);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Trabajador se ha actualizado correctamente";
             con.Close();
             return msj;

@@ -51,6 +51,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@minimo", minimo);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Inventario se ha actualizado correctamente";
             con.Close();
             return msj;

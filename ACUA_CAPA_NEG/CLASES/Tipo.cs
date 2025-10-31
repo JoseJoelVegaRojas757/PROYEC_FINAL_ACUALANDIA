@@ -45,6 +45,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@nomTipo", nomTipo);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El tipo se ha actualizado correctamente";
             con.Close();
             return msj;

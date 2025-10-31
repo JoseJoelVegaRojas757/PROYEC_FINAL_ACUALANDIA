@@ -495,6 +495,21 @@
     <EmbeddedResource Include="SEARCH\FrmBusquedaInvProducto.resx">
       <DependentUpon>FrmBusquedaInvProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaMADetalle.resx">
+      <DependentUpon>FrmBusquedaMADetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaMascota.resx">
+      <DependentUpon>FrmBusquedaMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaMunicipio.resx">
+      <DependentUpon>FrmBusquedaMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaRaza.resx">
+      <DependentUpon>FrmBusquedaRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaTipo.resx">
+      <DependentUpon>FrmBusquedaTipo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

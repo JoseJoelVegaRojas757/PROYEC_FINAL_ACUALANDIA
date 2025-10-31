@@ -50,6 +50,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@idDom", idDom);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Paquete se ha actualizado correctamente";
             con.Close();
             return msj;

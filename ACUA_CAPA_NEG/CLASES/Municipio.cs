@@ -46,6 +46,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El abono del Producto se ha actualizado correctamente";
             con.Close();
             return msj;

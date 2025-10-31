@@ -42,7 +42,7 @@ namespace ACUA_CAPA_NEG.CLASES
 
         public string Actualizar()
         {
-            string msj = "";
+            string mensaje = "";
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = "SP_MADETALLE";
             comando.Parameters.Clear();
@@ -55,10 +55,12 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@anticipo", anticipo);
             comando.Parameters.AddWithValue("@subtotal", subtotal);
             comando.Connection = con;
+
             con.Open();
-            msj = "La mascota ha actualizado correctamente";
+            comando.ExecuteNonQuery();
             con.Close();
-            return msj;
+            mensaje = "La Mascota se ha Actualizado correctamente";
+            return mensaje;
         }
 
         public string Eliminar()

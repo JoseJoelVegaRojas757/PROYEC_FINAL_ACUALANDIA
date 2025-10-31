@@ -50,6 +50,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Transportista se ha actualizado correctamente";
             con.Close();
             return msj;

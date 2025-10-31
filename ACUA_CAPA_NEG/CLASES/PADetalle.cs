@@ -55,6 +55,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@subtotal", subtotal);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "El Apartado del producto se ha actualizado correctamente";
             con.Close();
             return msj;

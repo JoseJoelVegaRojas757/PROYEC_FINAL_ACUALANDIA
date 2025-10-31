@@ -49,6 +49,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@cPostal", cPostal);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "La Colonia se ha actualizado correctamente";
             con.Close();
             return msj;

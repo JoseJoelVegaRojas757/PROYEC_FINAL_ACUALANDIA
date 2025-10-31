@@ -47,7 +47,7 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(794, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1035, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -74,13 +74,13 @@
             this.dgColonia.ReadOnly = true;
             this.dgColonia.RowHeadersWidth = 62;
             this.dgColonia.RowTemplate.Height = 28;
-            this.dgColonia.Size = new System.Drawing.Size(744, 163);
+            this.dgColonia.Size = new System.Drawing.Size(1015, 163);
             this.dgColonia.TabIndex = 111;
             this.dgColonia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgColonia_CellClick);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(679, 257);
+            this.btnBorrar.Location = new System.Drawing.Point(918, 257);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(84, 36);
             this.btnBorrar.TabIndex = 110;
@@ -90,7 +90,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(598, 257);
+            this.btnAceptar.Location = new System.Drawing.Point(815, 257);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 36);
             this.btnAceptar.TabIndex = 109;
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(831, 455);
+            this.ClientSize = new System.Drawing.Size(1072, 455);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.dgColonia);
             this.Controls.Add(this.btnBorrar);

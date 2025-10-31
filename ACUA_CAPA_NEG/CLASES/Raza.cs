@@ -47,6 +47,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@nomRaza", nomRaza);
             comando.Connection = con;
             con.Open();
+            comando.ExecuteNonQuery();
             msj = "La Raza se ha actualizado correctamente";
             con.Close();
             return msj;
@@ -56,7 +57,7 @@ namespace ACUA_CAPA_NEG.CLASES
         {
             string msj = "";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "SP_PROVEEDOR";
+            comando.CommandText = "SP_RAZA";
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@op", 3);
             comando.Parameters.AddWithValue("@idRaza", idRaza);

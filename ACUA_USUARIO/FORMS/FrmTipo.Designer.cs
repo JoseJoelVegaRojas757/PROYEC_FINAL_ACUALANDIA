@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipo));
-            this.cajadetexto2 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.cajadetexto1 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsBuscar = new System.Windows.Forms.ToolStrip();
             this.tsGuardar = new System.Windows.Forms.ToolStripButton();
@@ -42,54 +40,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tsBuscar.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cajadetexto2
-            // 
-            this.cajadetexto2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto2.BorderRadius = 13;
-            this.cajadetexto2.BorderSize = 2;
-            this.cajadetexto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto2.Location = new System.Drawing.Point(414, 264);
-            this.cajadetexto2.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto2.Multiline = false;
-            this.cajadetexto2.Name = "cajadetexto2";
-            this.cajadetexto2.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto2.PasswordChar = false;
-            this.cajadetexto2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto2.PlaceholderText = "";
-            this.cajadetexto2.Size = new System.Drawing.Size(199, 41);
-            this.cajadetexto2.TabIndex = 97;
-            this.cajadetexto2.Texts = "";
-            this.cajadetexto2.UnderlinedStyle = false;
-            // 
-            // cajadetexto1
-            // 
-            this.cajadetexto1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto1.BorderRadius = 13;
-            this.cajadetexto1.BorderSize = 2;
-            this.cajadetexto1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto1.Location = new System.Drawing.Point(414, 211);
-            this.cajadetexto1.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto1.Multiline = false;
-            this.cajadetexto1.Name = "cajadetexto1";
-            this.cajadetexto1.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto1.PasswordChar = false;
-            this.cajadetexto1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto1.PlaceholderText = "";
-            this.cajadetexto1.Size = new System.Drawing.Size(119, 41);
-            this.cajadetexto1.TabIndex = 96;
-            this.cajadetexto1.Texts = "";
-            this.cajadetexto1.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
@@ -124,8 +80,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // toolStripButton2
             // 
@@ -135,6 +92,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(43, 28);
             this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // tsLimpiar
             // 
@@ -144,6 +102,7 @@
             this.tsLimpiar.Name = "tsLimpiar";
             this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -153,6 +112,7 @@
             this.tsEliminar.Name = "tsEliminar";
             this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -205,8 +165,25 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 28);
+            this.btnClose.Size = new System.Drawing.Size(43, 28);
             this.btnClose.Text = "toolStripButton4";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(411, 211);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(176, 26);
+            this.txtId.TabIndex = 189;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtNombre.Location = new System.Drawing.Point(414, 264);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(173, 26);
+            this.txtNombre.TabIndex = 190;
             // 
             // FrmTipo
             // 
@@ -214,9 +191,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(900, 485);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.cajadetexto2);
-            this.Controls.Add(this.cajadetexto1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tsBuscar);
             this.Controls.Add(this.label3);
@@ -225,6 +202,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTipo";
             this.Text = "FrmTipo";
+            this.Load += new System.EventHandler(this.FrmTipo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tsBuscar.ResumeLayout(false);
             this.tsBuscar.PerformLayout();
@@ -236,9 +214,6 @@
         }
 
         #endregion
-
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto2;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip tsBuscar;
         private System.Windows.Forms.ToolStripButton tsGuardar;
@@ -250,5 +225,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnClose;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
