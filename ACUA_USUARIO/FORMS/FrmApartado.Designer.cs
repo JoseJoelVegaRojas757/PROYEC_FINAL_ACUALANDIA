@@ -52,6 +52,8 @@
             this.cbTrabajador = new System.Windows.Forms.ComboBox();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.txtFechaA = new System.Windows.Forms.TextBox();
+            this.btnMAD = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip2.SuspendLayout();
@@ -78,7 +80,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(48, 512);
+            this.toolStrip1.Size = new System.Drawing.Size(36, 557);
             this.toolStrip1.TabIndex = 104;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -88,7 +90,7 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
             this.tsGuardar.Text = "toolStripButton1";
             this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
@@ -98,7 +100,7 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
             this.tsBuscar.Text = "toolStripButton2";
             this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
@@ -108,7 +110,7 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
             this.tsLimpiar.Text = "toolStripButton3";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
@@ -118,7 +120,7 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
             this.tsEliminar.Text = "toolStripButton4";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
@@ -243,10 +245,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(924, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1053, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 512);
+            this.toolStrip2.Size = new System.Drawing.Size(36, 557);
             this.toolStrip2.TabIndex = 118;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -256,7 +258,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 28);
+            this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -286,12 +288,35 @@
             this.txtFechaA.Size = new System.Drawing.Size(217, 26);
             this.txtFechaA.TabIndex = 121;
             // 
+            // btnMAD
+            // 
+            this.btnMAD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMAD.Location = new System.Drawing.Point(456, 460);
+            this.btnMAD.Name = "btnMAD";
+            this.btnMAD.Size = new System.Drawing.Size(164, 36);
+            this.btnMAD.TabIndex = 122;
+            this.btnMAD.Text = "Mascota Apartado";
+            this.btnMAD.UseVisualStyleBackColor = false;
+            this.btnMAD.Click += new System.EventHandler(this.btnMAD_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(671, 460);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 36);
+            this.button2.TabIndex = 123;
+            this.button2.Text = "Producto Apartado";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // FrmApartado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(960, 512);
+            this.ClientSize = new System.Drawing.Size(1089, 557);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnMAD);
             this.Controls.Add(this.txtFechaA);
             this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.cbTrabajador);
@@ -348,5 +373,7 @@
         private System.Windows.Forms.ComboBox cbTrabajador;
         private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.TextBox txtFechaA;
+        private System.Windows.Forms.Button btnMAD;
+        private System.Windows.Forms.Button button2;
     }
 }

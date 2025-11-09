@@ -11,6 +11,8 @@ namespace ACUA_USUARIO.FORMS
         Conexion x = new Conexion();
         SqlConnection con = new SqlConnection();
         SqlCommand comando = new SqlCommand();
+
+
         public FrmApartado()
         {
             InitializeComponent();
@@ -33,12 +35,12 @@ namespace ACUA_USUARIO.FORMS
         void CargarCliente()
         {
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM APARTADO";
+            string consulta = "SELECT * FROM CLIENTE";
             SqlDataAdapter da = new SqlDataAdapter(consulta, con);
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbCliente.DisplayMember = "Nombre";
+            cbCliente.DisplayMember = "cli_Nombre";
             cbCliente.ValueMember = "idCli";
             cbCliente.DataSource = dt;
         }
@@ -140,6 +142,16 @@ namespace ACUA_USUARIO.FORMS
                 txtFaltante.Text = x.dgApartado.SelectedRows[0].Cells["faltante"].Value.ToString();
                 txtTotal.Text = x.dgApartado.SelectedRows[0].Cells["total"].Value.ToString();
             }
+        }
+
+        private void btnMAD_Click(object sender, EventArgs e)
+        {
+            FrmMADetalle x = new FrmMADetalle();
+            x.ShowDialog();
+
+            //FrmGenero x = new FrmGenero();
+            //x.Show();
+
         }
     }
 }

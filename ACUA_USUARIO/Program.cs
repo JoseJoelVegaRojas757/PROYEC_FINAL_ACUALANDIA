@@ -13,7 +13,7 @@ namespace ACUA_USUARIO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FORMS.FrmTipo());
+            Application.Run(new FORMS.FrmMenu());
         }
     }
 }

@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.btnApartado = new System.Windows.Forms.Button();
             this.pMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pBar.SuspendLayout();
@@ -54,7 +55,7 @@
             this.pMain.Controls.Add(this.pictureBox1);
             this.pMain.Location = new System.Drawing.Point(238, 5);
             this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(1198, 785);
+            this.pMain.Size = new System.Drawing.Size(1198, 895);
             this.pMain.TabIndex = 1;
             // 
             // pictureBox1
@@ -70,6 +71,7 @@
             // pBar
             // 
             this.pBar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pBar.Controls.Add(this.btnApartado);
             this.pBar.Controls.Add(this.btnCMascota);
             this.pBar.Controls.Add(this.btnCIn);
             this.pBar.Controls.Add(this.btnTrabajador);
@@ -82,7 +84,7 @@
             this.pBar.Controls.Add(this.btnCategoria);
             this.pBar.Location = new System.Drawing.Point(3, 5);
             this.pBar.Name = "pBar";
-            this.pBar.Size = new System.Drawing.Size(204, 785);
+            this.pBar.Size = new System.Drawing.Size(204, 895);
             this.pBar.TabIndex = 2;
             // 
             // btnCMascota
@@ -90,7 +92,7 @@
             this.btnCMascota.FlatAppearance.BorderSize = 0;
             this.btnCMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCMascota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCMascota.Location = new System.Drawing.Point(4, 640);
+            this.btnCMascota.Location = new System.Drawing.Point(4, 820);
             this.btnCMascota.Name = "btnCMascota";
             this.btnCMascota.Size = new System.Drawing.Size(197, 63);
             this.btnCMascota.TabIndex = 10;
@@ -103,7 +105,7 @@
             this.btnCIn.FlatAppearance.BorderSize = 0;
             this.btnCIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCIn.Location = new System.Drawing.Point(4, 571);
+            this.btnCIn.Location = new System.Drawing.Point(0, 751);
             this.btnCIn.Name = "btnCIn";
             this.btnCIn.Size = new System.Drawing.Size(197, 63);
             this.btnCIn.TabIndex = 9;
@@ -116,7 +118,7 @@
             this.btnTrabajador.FlatAppearance.BorderSize = 0;
             this.btnTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrabajador.Location = new System.Drawing.Point(4, 226);
+            this.btnTrabajador.Location = new System.Drawing.Point(9, 406);
             this.btnTrabajador.Name = "btnTrabajador";
             this.btnTrabajador.Size = new System.Drawing.Size(197, 63);
             this.btnTrabajador.TabIndex = 6;
@@ -129,7 +131,7 @@
             this.btnAbono.FlatAppearance.BorderSize = 0;
             this.btnAbono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbono.Location = new System.Drawing.Point(3, 502);
+            this.btnAbono.Location = new System.Drawing.Point(3, 682);
             this.btnAbono.Name = "btnAbono";
             this.btnAbono.Size = new System.Drawing.Size(197, 63);
             this.btnAbono.TabIndex = 8;
@@ -142,7 +144,7 @@
             this.btnCliente.FlatAppearance.BorderSize = 0;
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(3, 433);
+            this.btnCliente.Location = new System.Drawing.Point(3, 613);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(197, 63);
             this.btnCliente.TabIndex = 7;
@@ -155,7 +157,7 @@
             this.btnDomicilio.FlatAppearance.BorderSize = 0;
             this.btnDomicilio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDomicilio.Location = new System.Drawing.Point(4, 364);
+            this.btnDomicilio.Location = new System.Drawing.Point(8, 544);
             this.btnDomicilio.Name = "btnDomicilio";
             this.btnDomicilio.Size = new System.Drawing.Size(197, 63);
             this.btnDomicilio.TabIndex = 4;
@@ -168,7 +170,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(4, 295);
+            this.button3.Location = new System.Drawing.Point(4, 475);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(197, 63);
             this.button3.TabIndex = 3;
@@ -180,7 +182,7 @@
             this.btnColonia.FlatAppearance.BorderSize = 0;
             this.btnColonia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColonia.Location = new System.Drawing.Point(4, 167);
+            this.btnColonia.Location = new System.Drawing.Point(0, 337);
             this.btnColonia.Name = "btnColonia";
             this.btnColonia.Size = new System.Drawing.Size(197, 63);
             this.btnColonia.TabIndex = 2;
@@ -203,7 +205,7 @@
             this.btnCategoria.FlatAppearance.BorderSize = 0;
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.Location = new System.Drawing.Point(4, 98);
+            this.btnCategoria.Location = new System.Drawing.Point(7, 268);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(197, 63);
             this.btnCategoria.TabIndex = 0;
@@ -215,15 +217,28 @@
             // 
             this.vScrollBar1.Location = new System.Drawing.Point(211, 9);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(12, 778);
+            this.vScrollBar1.Size = new System.Drawing.Size(10, 884);
             this.vScrollBar1.TabIndex = 3;
+            // 
+            // btnApartado
+            // 
+            this.btnApartado.FlatAppearance.BorderSize = 0;
+            this.btnApartado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApartado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApartado.Location = new System.Drawing.Point(4, 199);
+            this.btnApartado.Name = "btnApartado";
+            this.btnApartado.Size = new System.Drawing.Size(197, 63);
+            this.btnApartado.TabIndex = 11;
+            this.btnApartado.Text = "Apartado";
+            this.btnApartado.UseVisualStyleBackColor = true;
+            this.btnApartado.Click += new System.EventHandler(this.btnApartado_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1445, 796);
+            this.ClientSize = new System.Drawing.Size(1451, 900);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.pBar);
             this.Controls.Add(this.pMain);
@@ -254,5 +269,6 @@
         private System.Windows.Forms.Button btnAbono;
         private System.Windows.Forms.Button btnCIn;
         private System.Windows.Forms.Button btnCMascota;
+        private System.Windows.Forms.Button btnApartado;
     }
 }
