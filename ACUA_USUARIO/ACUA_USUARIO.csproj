@@ -504,6 +504,18 @@
     <EmbeddedResource Include="SEARCH\FrmBusquedaMunicipio.resx">
       <DependentUpon>FrmBusquedaMunicipio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaPADetalle.resx">
+      <DependentUpon>FrmBusquedaPADetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaPMascota.resx">
+      <DependentUpon>FrmBusquedaPMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaPProducto.resx">
+      <DependentUpon>FrmBusquedaPProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaProveedor.resx">
+      <DependentUpon>FrmBusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SEARCH\FrmBusquedaRaza.resx">
       <DependentUpon>FrmBusquedaRaza.cs</DependentUpon>
     </EmbeddedResource>

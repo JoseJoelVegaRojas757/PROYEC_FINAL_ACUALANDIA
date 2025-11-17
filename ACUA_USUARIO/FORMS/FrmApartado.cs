@@ -32,16 +32,16 @@ namespace ACUA_USUARIO.FORMS
             cbTrabajador.DataSource = dt;
         }
 
-        void CargarCliente()
+        void CargarCategoria()
         {
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM CLIENTE";
+            string consulta = "SELECT * FROM CATEGORIA";
             SqlDataAdapter da = new SqlDataAdapter(consulta, con);
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbCliente.DisplayMember = "cli_Nombre";
-            cbCliente.ValueMember = "idCli";
+            cbCliente.DisplayMember = "nomCat";
+            cbCliente.ValueMember = "idCat";
             cbCliente.DataSource = dt;
         }
 
@@ -52,7 +52,7 @@ namespace ACUA_USUARIO.FORMS
             txtFaltante.Clear();
             txtTotal.Clear();
             ACUA_CAPA_NEG.CLASES.Herramientas h = new ACUA_CAPA_NEG.CLASES.Herramientas();
-            txtId.Text = h.consecutivo("idApartado", "APARTADO").ToString();
+            txtId.Text = h.consecutivo("idProd", "PRODUCTO").ToString();
             txtAnticipo.Focus();
             txtFaltante.Focus();
             txtTotal.Focus();
@@ -62,7 +62,7 @@ namespace ACUA_USUARIO.FORMS
         {
             bool a = false;
             int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From APARTADO where idApartado = {id}";
+            string cadena = $"Select * From PRODUCTO where idProd = {id}";
             con.Open();
             SqlCommand cmd = new SqlCommand(cadena, con);
             SqlDataReader lector = cmd.ExecuteReader();
@@ -152,6 +152,12 @@ namespace ACUA_USUARIO.FORMS
             //FrmGenero x = new FrmGenero();
             //x.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmPADetalle x = new FrmPADetalle();
+            x.ShowDialog();
         }
     }
 }

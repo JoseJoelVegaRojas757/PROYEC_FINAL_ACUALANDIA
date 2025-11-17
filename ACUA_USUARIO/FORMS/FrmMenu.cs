@@ -72,5 +72,15 @@ namespace ACUA_USUARIO.FORMS
         {
             AbrirFormHijo(new FrmApartado());
         }
+
+        private void btnPMas_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmPMascota());
+        }
+
+        private void pMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

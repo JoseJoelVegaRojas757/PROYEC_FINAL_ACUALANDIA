@@ -98,11 +98,11 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(771, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(775, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(37, 317);
+            this.toolStrip2.Size = new System.Drawing.Size(49, 392);
             this.toolStrip2.TabIndex = 102;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -112,7 +112,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 28);
+            this.btnClose.Size = new System.Drawing.Size(42, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -121,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(808, 317);
+            this.ClientSize = new System.Drawing.Size(824, 392);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.dgMascota);
             this.Controls.Add(this.btnBorrar);

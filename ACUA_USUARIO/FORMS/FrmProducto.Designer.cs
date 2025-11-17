@@ -52,12 +52,12 @@
             this.txtCompra = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtIdCategoria = new System.Windows.Forms.TextBox();
             this.txtEstatus = new System.Windows.Forms.TextBox();
             this.txtProductoOf = new System.Windows.Forms.TextBox();
             this.txtOferta = new System.Windows.Forms.TextBox();
             this.txtVenta = new System.Windows.Forms.TextBox();
             this.txtIva = new System.Windows.Forms.TextBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -156,8 +156,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -165,8 +166,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -174,8 +176,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -183,8 +186,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -223,10 +227,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1151, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(1139, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 611);
+            this.toolStrip2.Size = new System.Drawing.Size(48, 611);
             this.toolStrip2.TabIndex = 185;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -236,8 +240,9 @@
             this.tsClose.Image = ((System.Drawing.Image)(resources.GetObject("tsClose.Image")));
             this.tsClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsClose.Name = "tsClose";
-            this.tsClose.Size = new System.Drawing.Size(31, 28);
+            this.tsClose.Size = new System.Drawing.Size(43, 28);
             this.tsClose.Text = "toolStripButton4";
+            this.tsClose.Click += new System.EventHandler(this.tsClose_Click);
             // 
             // label8
             // 
@@ -291,14 +296,6 @@
             this.txtCodigo.Size = new System.Drawing.Size(202, 26);
             this.txtCodigo.TabIndex = 191;
             // 
-            // txtIdCategoria
-            // 
-            this.txtIdCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtIdCategoria.Location = new System.Drawing.Point(235, 276);
-            this.txtIdCategoria.Name = "txtIdCategoria";
-            this.txtIdCategoria.Size = new System.Drawing.Size(202, 26);
-            this.txtIdCategoria.TabIndex = 192;
-            // 
             // txtEstatus
             // 
             this.txtEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -339,18 +336,27 @@
             this.txtIva.Size = new System.Drawing.Size(189, 26);
             this.txtIva.TabIndex = 197;
             // 
+            // cbCategoria
+            // 
+            this.cbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Location = new System.Drawing.Point(235, 273);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(202, 28);
+            this.cbCategoria.TabIndex = 198;
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1187, 611);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.txtIva);
             this.Controls.Add(this.txtVenta);
             this.Controls.Add(this.txtOferta);
             this.Controls.Add(this.txtProductoOf);
             this.Controls.Add(this.txtEstatus);
-            this.Controls.Add(this.txtIdCategoria);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCompra);
@@ -408,11 +414,11 @@
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtIdCategoria;
         private System.Windows.Forms.TextBox txtEstatus;
         private System.Windows.Forms.TextBox txtProductoOf;
         private System.Windows.Forms.TextBox txtOferta;
         private System.Windows.Forms.TextBox txtVenta;
         private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.ComboBox cbCategoria;
     }
 }

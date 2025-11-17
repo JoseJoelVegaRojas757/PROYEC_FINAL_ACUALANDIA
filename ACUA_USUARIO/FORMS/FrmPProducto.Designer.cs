@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPProducto));
-            this.cajadetexto6 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label7 = new System.Windows.Forms.Label();
-            this.cajadetexto7 = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCantidad = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtProducto = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPedido = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
-            this.txtId = new PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsGuardar = new System.Windows.Forms.ToolStripButton();
@@ -50,32 +44,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtSubT = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.cbPedido = new System.Windows.Forms.ComboBox();
+            this.cbProducto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cajadetexto6
-            // 
-            this.cajadetexto6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto6.BorderRadius = 13;
-            this.cajadetexto6.BorderSize = 2;
-            this.cajadetexto6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto6.Location = new System.Drawing.Point(664, 365);
-            this.cajadetexto6.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto6.Multiline = false;
-            this.cajadetexto6.Name = "cajadetexto6";
-            this.cajadetexto6.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto6.PasswordChar = false;
-            this.cajadetexto6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto6.PlaceholderText = "";
-            this.cajadetexto6.Size = new System.Drawing.Size(275, 41);
-            this.cajadetexto6.TabIndex = 174;
-            this.cajadetexto6.Texts = "";
-            this.cajadetexto6.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -87,28 +65,6 @@
             this.label7.TabIndex = 173;
             this.label7.Text = "SubTotal";
             // 
-            // cajadetexto7
-            // 
-            this.cajadetexto7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cajadetexto7.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cajadetexto7.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.cajadetexto7.BorderRadius = 13;
-            this.cajadetexto7.BorderSize = 2;
-            this.cajadetexto7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajadetexto7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cajadetexto7.Location = new System.Drawing.Point(664, 312);
-            this.cajadetexto7.Margin = new System.Windows.Forms.Padding(6);
-            this.cajadetexto7.Multiline = false;
-            this.cajadetexto7.Name = "cajadetexto7";
-            this.cajadetexto7.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.cajadetexto7.PasswordChar = false;
-            this.cajadetexto7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cajadetexto7.PlaceholderText = "";
-            this.cajadetexto7.Size = new System.Drawing.Size(275, 41);
-            this.cajadetexto7.TabIndex = 172;
-            this.cajadetexto7.Texts = "";
-            this.cajadetexto7.UnderlinedStyle = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -118,50 +74,6 @@
             this.label8.Size = new System.Drawing.Size(94, 35);
             this.label8.TabIndex = 171;
             this.label8.Text = "Precio";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCantidad.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtCantidad.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCantidad.BorderRadius = 13;
-            this.txtCantidad.BorderSize = 2;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCantidad.Location = new System.Drawing.Point(664, 259);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCantidad.Multiline = false;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtCantidad.PasswordChar = false;
-            this.txtCantidad.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCantidad.PlaceholderText = "";
-            this.txtCantidad.Size = new System.Drawing.Size(275, 41);
-            this.txtCantidad.TabIndex = 170;
-            this.txtCantidad.Texts = "";
-            this.txtCantidad.UnderlinedStyle = false;
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtProducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtProducto.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtProducto.BorderRadius = 13;
-            this.txtProducto.BorderSize = 2;
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtProducto.Location = new System.Drawing.Point(247, 371);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(6);
-            this.txtProducto.Multiline = false;
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtProducto.PasswordChar = false;
-            this.txtProducto.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtProducto.PlaceholderText = "";
-            this.txtProducto.Size = new System.Drawing.Size(275, 41);
-            this.txtProducto.TabIndex = 169;
-            this.txtProducto.Texts = "";
-            this.txtProducto.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -182,50 +94,6 @@
             this.label5.Size = new System.Drawing.Size(128, 35);
             this.label5.TabIndex = 167;
             this.label5.Text = "Producto";
-            // 
-            // txtPedido
-            // 
-            this.txtPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtPedido.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtPedido.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPedido.BorderRadius = 13;
-            this.txtPedido.BorderSize = 2;
-            this.txtPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPedido.Location = new System.Drawing.Point(247, 318);
-            this.txtPedido.Margin = new System.Windows.Forms.Padding(6);
-            this.txtPedido.Multiline = false;
-            this.txtPedido.Name = "txtPedido";
-            this.txtPedido.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtPedido.PasswordChar = false;
-            this.txtPedido.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPedido.PlaceholderText = "";
-            this.txtPedido.Size = new System.Drawing.Size(275, 41);
-            this.txtPedido.TabIndex = 166;
-            this.txtPedido.Texts = "";
-            this.txtPedido.UnderlinedStyle = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtId.BorderRadius = 13;
-            this.txtId.BorderSize = 2;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtId.Location = new System.Drawing.Point(247, 266);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtId.PasswordChar = false;
-            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtId.PlaceholderText = "";
-            this.txtId.Size = new System.Drawing.Size(275, 41);
-            this.txtId.TabIndex = 165;
-            this.txtId.Texts = "";
-            this.txtId.UnderlinedStyle = false;
             // 
             // pictureBox1
             // 
@@ -250,7 +118,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 563);
+            this.toolStrip1.Size = new System.Drawing.Size(48, 563);
             this.toolStrip1.TabIndex = 163;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -260,8 +128,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -269,8 +138,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -278,8 +148,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -287,8 +158,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label3
             // 
@@ -343,23 +215,73 @@
             this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.Text = "toolStripButton4";
             // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtId.Location = new System.Drawing.Point(249, 273);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(128, 26);
+            this.txtId.TabIndex = 176;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtCantidad.Location = new System.Drawing.Point(665, 273);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(172, 26);
+            this.txtCantidad.TabIndex = 177;
+            // 
+            // txtSubT
+            // 
+            this.txtSubT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtSubT.Location = new System.Drawing.Point(665, 380);
+            this.txtSubT.Name = "txtSubT";
+            this.txtSubT.Size = new System.Drawing.Size(172, 26);
+            this.txtSubT.TabIndex = 178;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtPrecio.Location = new System.Drawing.Point(665, 328);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(172, 26);
+            this.txtPrecio.TabIndex = 179;
+            // 
+            // cbPedido
+            // 
+            this.cbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbPedido.FormattingEnabled = true;
+            this.cbPedido.Location = new System.Drawing.Point(249, 325);
+            this.cbPedido.Name = "cbPedido";
+            this.cbPedido.Size = new System.Drawing.Size(175, 28);
+            this.cbPedido.TabIndex = 180;
+            // 
+            // cbProducto
+            // 
+            this.cbProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cbProducto.FormattingEnabled = true;
+            this.cbProducto.Location = new System.Drawing.Point(249, 378);
+            this.cbProducto.Name = "cbProducto";
+            this.cbProducto.Size = new System.Drawing.Size(175, 28);
+            this.cbProducto.TabIndex = 181;
+            // 
             // FrmPProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1026, 563);
-            this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.cajadetexto6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cajadetexto7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbProducto);
+            this.Controls.Add(this.cbPedido);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtSubT);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtProducto);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPedido);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label3);
@@ -368,6 +290,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPProducto";
             this.Text = "FrmPProducto";
+            this.Load += new System.EventHandler(this.FrmPProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -379,17 +302,10 @@
         }
 
         #endregion
-
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto6;
         private System.Windows.Forms.Label label7;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO cajadetexto7;
         private System.Windows.Forms.Label label8;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtCantidad;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtProducto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtPedido;
-        private PRUEBAROUNDCORNERS.CONTROLES.CAJADETEXTO txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsGuardar;
@@ -401,5 +317,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnClose;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtSubT;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.ComboBox cbPedido;
+        private System.Windows.Forms.ComboBox cbProducto;
     }
 }
