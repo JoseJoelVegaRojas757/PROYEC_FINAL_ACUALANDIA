@@ -10,9 +10,8 @@ namespace ACUA_CAPA_NEG.CLASES
         SqlCommand comando = new SqlCommand();
 
         public int idProd, idCat;
-        public string codigo, nomProducto;
+        public string codigo, nomProducto, oferta, estatus;
         public decimal pCompra, ivaCompra, pVenta, ivaVenta, pOferta;
-        public bool oferta, estatus;
 
         public Producto()
         {

@@ -99,5 +99,10 @@ namespace ACUA_USUARIO.FORMS
             MessageBox.Show(x.Eliminar());
             Limpiar();
         }
+
+        private void FrmProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
