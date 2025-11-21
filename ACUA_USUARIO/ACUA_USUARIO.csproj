@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.SqlServer.Types.170.700.9-ctp2p0\build\net472\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.170.700.9-ctp2p0\build\net472\Microsoft.SqlServer.Types.props')" />
+  <Import Project="..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -58,7 +58,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Server.1.0.0\lib\net46\Microsoft.SqlServer.Server.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.170.700.9-ctp2p0\lib\net472\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.170.1000.7\lib\net472\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PRUEBAROUNDCORNERS">
       <HintPath>..\..\..\..\..\..\LIBRERIAS\PRUEBAROUNDCORNERS.dll</HintPath>
@@ -76,6 +76,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProducto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -495,6 +500,7 @@
     <EmbeddedResource Include="REPORTS\FrmrProducto.resx">
       <DependentUpon>FrmrProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS\rpProducto.rdlc" />
     <EmbeddedResource Include="SEARCH\FrmBusquedaAbono.resx">
       <DependentUpon>FrmBusquedaAbono.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,6 +564,23 @@
     <EmbeddedResource Include="SEARCH\FrmBusquedaTipo.resx">
       <DependentUpon>FrmBusquedaTipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaTrabajador.resx">
+      <DependentUpon>FrmBusquedaTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaTransportista.resx">
+      <DependentUpon>FrmBusquedaTransportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsProducto.xsc">
+      <DependentUpon>dsProducto.xsd</DependentUpon>
+    </None>
+    <None Include="dsProducto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProducto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsProducto.xss">
+      <DependentUpon>dsProducto.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -583,6 +606,6 @@
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.170.700.9-ctp2p0\build\net472\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.170.700.9-ctp2p0\build\net472\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props'))" />
   </Target>
 </Project>

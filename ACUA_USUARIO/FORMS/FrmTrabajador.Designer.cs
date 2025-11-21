@@ -108,8 +108,9 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
             this.tsGuardar.Text = "toolStripButton1";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
             // tsBuscar
             // 
@@ -117,8 +118,9 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
             this.tsBuscar.Text = "toolStripButton2";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -126,8 +128,9 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
             this.tsLimpiar.Text = "toolStripButton3";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -135,8 +138,9 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
             this.tsEliminar.Text = "toolStripButton4";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label10
             // 
@@ -259,9 +263,9 @@
             // txtRedesS
             // 
             this.txtRedesS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtRedesS.Location = new System.Drawing.Point(881, 424);
+            this.txtRedesS.Location = new System.Drawing.Point(881, 433);
             this.txtRedesS.Name = "txtRedesS";
-            this.txtRedesS.Size = new System.Drawing.Size(100, 26);
+            this.txtRedesS.Size = new System.Drawing.Size(167, 26);
             this.txtRedesS.TabIndex = 145;
             // 
             // txtFechaN
@@ -269,7 +273,7 @@
             this.txtFechaN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtFechaN.Location = new System.Drawing.Point(881, 380);
             this.txtFechaN.Name = "txtFechaN";
-            this.txtFechaN.Size = new System.Drawing.Size(100, 26);
+            this.txtFechaN.Size = new System.Drawing.Size(167, 26);
             this.txtFechaN.TabIndex = 146;
             // 
             // txtTelefono
@@ -277,7 +281,7 @@
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtTelefono.Location = new System.Drawing.Point(881, 268);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(167, 26);
             this.txtTelefono.TabIndex = 147;
             // 
             // txtAMaterno
@@ -285,7 +289,7 @@
             this.txtAMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtAMaterno.Location = new System.Drawing.Point(351, 424);
             this.txtAMaterno.Name = "txtAMaterno";
-            this.txtAMaterno.Size = new System.Drawing.Size(100, 26);
+            this.txtAMaterno.Size = new System.Drawing.Size(165, 26);
             this.txtAMaterno.TabIndex = 148;
             // 
             // txtAPaterno
@@ -293,7 +297,7 @@
             this.txtAPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtAPaterno.Location = new System.Drawing.Point(351, 371);
             this.txtAPaterno.Name = "txtAPaterno";
-            this.txtAPaterno.Size = new System.Drawing.Size(100, 26);
+            this.txtAPaterno.Size = new System.Drawing.Size(165, 26);
             this.txtAPaterno.TabIndex = 149;
             // 
             // txtNombre
@@ -301,7 +305,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtNombre.Location = new System.Drawing.Point(351, 318);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 26);
+            this.txtNombre.Size = new System.Drawing.Size(165, 26);
             this.txtNombre.TabIndex = 150;
             // 
             // cbDomicilio
@@ -310,7 +314,7 @@
             this.cbDomicilio.FormattingEnabled = true;
             this.cbDomicilio.Location = new System.Drawing.Point(348, 483);
             this.cbDomicilio.Name = "cbDomicilio";
-            this.cbDomicilio.Size = new System.Drawing.Size(121, 28);
+            this.cbDomicilio.Size = new System.Drawing.Size(168, 28);
             this.cbDomicilio.TabIndex = 151;
             // 
             // cbPuesto
@@ -319,7 +323,7 @@
             this.cbPuesto.FormattingEnabled = true;
             this.cbPuesto.Location = new System.Drawing.Point(881, 318);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(121, 28);
+            this.cbPuesto.Size = new System.Drawing.Size(167, 28);
             this.cbPuesto.TabIndex = 152;
             // 
             // FrmTrabajador
@@ -353,6 +357,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTrabajador";
             this.Text = "FrmTrabajador";
+            this.Load += new System.EventHandler(this.FrmTrabajador_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

@@ -20,7 +20,21 @@ namespace ACUA_USUARIO.REPORTS
 
         private void FrmrProducto_Load(object sender, EventArgs e)
         {
-            cargarreporte();
+            cargarcb();
+        }
+
+        void cargarcb()
+        {
+            DataTable dt = new DataTable();
+            string consulta = "Select * From INVPRODUCTO";
+            SqlDataAdapter da = new SqlDataAdapter(consulta, con);
+            con.Open();
+            da.Fill(dt);
+            con.Close();
+            cbInvProducto.DisplayMember = "existencia";
+            cbInvProducto.ValueMember = "idInv";
+            cbInvProducto.DataSource = dt;
+
         }
 
         void cargarreporte()
@@ -43,11 +57,16 @@ namespace ACUA_USUARIO.REPORTS
             con.Close();
 
             this.rvMunicipios.LocalReport.DataSources.Clear();
-            this.rvMunicipios.LocalReport.ReportEmbeddedResource = "p_Blockbuster.REPORTES.rMunicipio.rdlc";
-            ReportDataSource r = new ReportDataSource("dsrMunicipios", dt);
+            this.rvMunicipios.LocalReport.ReportEmbeddedResource = "ACUA_USUARIO.REPORTS.rpProducto.rdlc";
+            ReportDataSource r = new ReportDataSource("dsProducto", dt);
             this.rvMunicipios.LocalReport.DataSources.Add(r);
             this.rvMunicipios.RefreshReport();
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            cargarreporte();
         }
     }
 }
