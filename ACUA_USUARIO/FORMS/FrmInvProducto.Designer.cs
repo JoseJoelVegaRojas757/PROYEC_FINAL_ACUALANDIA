@@ -48,6 +48,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtExis = new System.Windows.Forms.TextBox();
             this.txtMinimo = new System.Windows.Forms.TextBox();
+            this.tsImprimir = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -102,7 +103,8 @@
             this.tsGuardar,
             this.tsBuscar,
             this.tsLimpiar,
-            this.tsEliminar});
+            this.tsEliminar,
+            this.tsImprimir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -156,9 +158,9 @@
             this.label3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(348, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 35);
+            this.label3.Size = new System.Drawing.Size(263, 35);
             this.label3.TabIndex = 152;
-            this.label3.Text = "InvProducto";
+            this.label3.Text = "Inventario Producto";
             // 
             // label2
             // 
@@ -245,6 +247,16 @@
             this.txtMinimo.Size = new System.Drawing.Size(146, 26);
             this.txtMinimo.TabIndex = 168;
             // 
+            // tsImprimir
+            // 
+            this.tsImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsImprimir.Image = ((System.Drawing.Image)(resources.GetObject("tsImprimir.Image")));
+            this.tsImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsImprimir.Name = "tsImprimir";
+            this.tsImprimir.Size = new System.Drawing.Size(43, 28);
+            this.tsImprimir.Text = "toolStripButton4";
+            this.tsImprimir.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // FrmInvProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -299,5 +311,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtExis;
         private System.Windows.Forms.TextBox txtMinimo;
+        private System.Windows.Forms.ToolStripButton tsImprimir;
     }
 }

@@ -129,5 +129,11 @@ namespace ACUA_USUARIO.FORMS
             MessageBox.Show(x.Eliminar());
             Limpiar();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            REPORTS.FrmrProducto x = new REPORTS.FrmrProducto();
+            x.ShowDialog();
+        }
     }
 }

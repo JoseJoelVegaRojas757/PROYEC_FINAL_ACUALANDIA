@@ -32,7 +32,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.cbInvProducto = new System.Windows.Forms.ComboBox();
             this.chTodo = new System.Windows.Forms.CheckBox();
-            this.rvMunicipios = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rvInvProducto = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -63,24 +63,24 @@
             this.chTodo.Text = "Todo";
             this.chTodo.UseVisualStyleBackColor = true;
             // 
-            // rvMunicipios
+            // rvInvProducto
             // 
             reportDataSource1.Name = "dsrMunicipios";
             reportDataSource1.Value = null;
-            this.rvMunicipios.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvMunicipios.LocalReport.ReportEmbeddedResource = "p_Blockbuster.REPORTES.rMunicipio.rdlc";
-            this.rvMunicipios.Location = new System.Drawing.Point(5, 209);
-            this.rvMunicipios.Name = "rvMunicipios";
-            this.rvMunicipios.ServerReport.BearerToken = null;
-            this.rvMunicipios.Size = new System.Drawing.Size(1027, 312);
-            this.rvMunicipios.TabIndex = 6;
+            this.rvInvProducto.LocalReport.DataSources.Add(reportDataSource1);
+            this.rvInvProducto.LocalReport.ReportEmbeddedResource = "p_Blockbuster.REPORTES.rMunicipio.rdlc";
+            this.rvInvProducto.Location = new System.Drawing.Point(5, 209);
+            this.rvInvProducto.Name = "rvInvProducto";
+            this.rvInvProducto.ServerReport.BearerToken = null;
+            this.rvInvProducto.Size = new System.Drawing.Size(1027, 312);
+            this.rvInvProducto.TabIndex = 6;
             // 
             // FrmrProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 533);
-            this.Controls.Add(this.rvMunicipios);
+            this.Controls.Add(this.rvInvProducto);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cbInvProducto);
             this.Controls.Add(this.chTodo);
@@ -97,6 +97,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ComboBox cbInvProducto;
         private System.Windows.Forms.CheckBox chTodo;
-        private Microsoft.Reporting.WinForms.ReportViewer rvMunicipios;
+        private Microsoft.Reporting.WinForms.ReportViewer rvInvProducto;
     }
 }

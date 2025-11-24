@@ -47,7 +47,7 @@ namespace ACUA_USUARIO.REPORTS
             }
             else
             {
-                consulta = $"SELECT * FROM VProducto WHERE idInv = {cbInvProducto.SelectedValue.ToString()}";
+                consulta = $"SELECT * FROM VProducto where idInv = {cbInvProducto.SelectedValue.ToString()}";
             }
 
 
@@ -56,11 +56,11 @@ namespace ACUA_USUARIO.REPORTS
             da.Fill(dt);
             con.Close();
 
-            this.rvMunicipios.LocalReport.DataSources.Clear();
-            this.rvMunicipios.LocalReport.ReportEmbeddedResource = "ACUA_USUARIO.REPORTS.rpProducto.rdlc";
+            this.rvInvProducto.LocalReport.DataSources.Clear();
+            this.rvInvProducto.LocalReport.ReportEmbeddedResource = "ACUA_USUARIO.REPORTS.rpProducto.rdlc";
             ReportDataSource r = new ReportDataSource("dsProducto", dt);
-            this.rvMunicipios.LocalReport.DataSources.Add(r);
-            this.rvMunicipios.RefreshReport();
+            this.rvInvProducto.LocalReport.DataSources.Add(r);
+            this.rvInvProducto.RefreshReport();
 
         }
 
