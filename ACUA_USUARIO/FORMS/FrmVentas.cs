@@ -93,6 +93,7 @@ namespace ACUA_USUARIO.FORMS
             {
                 MessageBox.Show(x.Guardar());
             }
+            Limpiar();
         }
 
         private void FrmVentas_Load(object sender, EventArgs e)
