@@ -42,8 +42,8 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -92,7 +92,7 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
             this.tsGuardar.Text = "toolStripButton1";
             this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
@@ -102,7 +102,7 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
             this.tsBuscar.Text = "toolStripButton2";
             this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
@@ -112,7 +112,7 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
             this.tsLimpiar.Text = "toolStripButton3";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
@@ -122,7 +122,7 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
             this.tsEliminar.Text = "toolStripButton4";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
@@ -163,10 +163,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(839, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(851, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(48, 482);
+            this.toolStrip2.Size = new System.Drawing.Size(36, 482);
             this.toolStrip2.TabIndex = 248;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -176,7 +176,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 28);
+            this.btnClose.Size = new System.Drawing.Size(31, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -188,14 +188,6 @@
             this.txtId.Size = new System.Drawing.Size(117, 26);
             this.txtId.TabIndex = 249;
             // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtFecha.Location = new System.Drawing.Point(361, 275);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(233, 26);
-            this.txtFecha.TabIndex = 250;
-            // 
             // txtTipo
             // 
             this.txtTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -204,14 +196,22 @@
             this.txtTipo.Size = new System.Drawing.Size(233, 26);
             this.txtTipo.TabIndex = 251;
             // 
+            // txtFecha
+            // 
+            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtFecha.Location = new System.Drawing.Point(362, 275);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(233, 26);
+            this.txtFecha.TabIndex = 252;
+            // 
             // FrmCInterno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(887, 482);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.label5);
@@ -248,7 +248,7 @@
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton btnClose;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

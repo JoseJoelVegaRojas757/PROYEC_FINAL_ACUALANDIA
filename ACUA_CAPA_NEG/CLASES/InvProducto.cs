@@ -22,7 +22,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = "SP_INVPRODUCTO";
             comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@op", 1);
+            comando.Parameters.AddWithValue("@OP", 1);
             comando.Parameters.AddWithValue("@idInv", idInv);
             comando.Parameters.AddWithValue("@idProd", idProd);
             comando.Parameters.AddWithValue("@existencia", existencia);

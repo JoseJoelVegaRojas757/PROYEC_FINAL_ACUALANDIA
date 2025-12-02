@@ -31,7 +31,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@fApartado", fApartado);
             comando.Parameters.AddWithValue("@anticipo", anticipo);
             comando.Parameters.AddWithValue("@faltante", faltante);
-            comando.Parameters.AddWithValue("@total,", total);
+            comando.Parameters.AddWithValue("@total", total);
             comando.Connection = con;
 
             con.Open();
@@ -54,7 +54,7 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@fApartado", fApartado);
             comando.Parameters.AddWithValue("@anticipo", anticipo);
             comando.Parameters.AddWithValue("@faltante", faltante);
-            comando.Parameters.AddWithValue("@total,", total);
+            comando.Parameters.AddWithValue("@total", total);
             comando.Connection = con;
 
             con.Open();

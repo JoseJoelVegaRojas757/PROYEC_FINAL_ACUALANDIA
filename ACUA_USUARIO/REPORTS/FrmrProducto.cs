@@ -26,13 +26,13 @@ namespace ACUA_USUARIO.REPORTS
         void cargarcb()
         {
             DataTable dt = new DataTable();
-            string consulta = "Select * From INVPRODUCTO";
+            string consulta = "Select * From VProducto";
             SqlDataAdapter da = new SqlDataAdapter(consulta, con);
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbInvProducto.DisplayMember = "existencia";
-            cbInvProducto.ValueMember = "idInv";
+            cbInvProducto.DisplayMember = "nomProducto";
+            cbInvProducto.ValueMember = "existencia";
             cbInvProducto.DataSource = dt;
 
         }
@@ -47,7 +47,7 @@ namespace ACUA_USUARIO.REPORTS
             }
             else
             {
-                consulta = $"SELECT * FROM VProducto where idInv = {cbInvProducto.SelectedValue.ToString()}";
+                consulta = $"SELECT * FROM VProducto where existencia = {cbInvProducto.SelectedValue.ToString()}";
             }
 
 
@@ -58,7 +58,7 @@ namespace ACUA_USUARIO.REPORTS
 
             this.rvInvProducto.LocalReport.DataSources.Clear();
             this.rvInvProducto.LocalReport.ReportEmbeddedResource = "ACUA_USUARIO.REPORTS.rpProducto.rdlc";
-            ReportDataSource r = new ReportDataSource("dsProducto", dt);
+            ReportDataSource r = new ReportDataSource("dsrProducto", dt);
             this.rvInvProducto.LocalReport.DataSources.Add(r);
             this.rvInvProducto.RefreshReport();
 
@@ -67,6 +67,12 @@ namespace ACUA_USUARIO.REPORTS
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             cargarreporte();
+
+        }
+
+        private void cbInvProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

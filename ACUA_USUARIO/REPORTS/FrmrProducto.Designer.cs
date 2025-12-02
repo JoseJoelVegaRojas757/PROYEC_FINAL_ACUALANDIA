@@ -52,6 +52,7 @@
             this.cbInvProducto.Name = "cbInvProducto";
             this.cbInvProducto.Size = new System.Drawing.Size(269, 28);
             this.cbInvProducto.TabIndex = 4;
+            this.cbInvProducto.SelectedIndexChanged += new System.EventHandler(this.cbInvProducto_SelectedIndexChanged);
             // 
             // chTodo
             // 

@@ -44,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.btnPMas = new System.Windows.Forms.Button();
             this.pMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pBar.SuspendLayout();
@@ -53,7 +52,6 @@
             // pMain
             // 
             this.pMain.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pMain.Controls.Add(this.btnPMas);
             this.pMain.Controls.Add(this.pictureBox1);
             this.pMain.Location = new System.Drawing.Point(238, 5);
             this.pMain.Name = "pMain";
@@ -236,19 +234,6 @@
             this.vScrollBar1.Size = new System.Drawing.Size(10, 884);
             this.vScrollBar1.TabIndex = 3;
             // 
-            // btnPMas
-            // 
-            this.btnPMas.FlatAppearance.BorderSize = 0;
-            this.btnPMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPMas.Location = new System.Drawing.Point(3, 29);
-            this.btnPMas.Name = "btnPMas";
-            this.btnPMas.Size = new System.Drawing.Size(197, 63);
-            this.btnPMas.TabIndex = 12;
-            this.btnPMas.Text = "Producto Mascota";
-            this.btnPMas.UseVisualStyleBackColor = true;
-            this.btnPMas.Click += new System.EventHandler(this.btnPMas_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -286,6 +271,5 @@
         private System.Windows.Forms.Button btnCIn;
         private System.Windows.Forms.Button btnCMascota;
         private System.Windows.Forms.Button btnApartado;
-        private System.Windows.Forms.Button btnPMas;
     }
 }

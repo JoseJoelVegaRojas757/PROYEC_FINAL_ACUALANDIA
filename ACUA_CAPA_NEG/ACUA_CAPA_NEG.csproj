@@ -67,6 +67,7 @@
     <Compile Include="CLASES\Municipio.cs" />
     <Compile Include="CLASES\PADetalle.cs" />
     <Compile Include="CLASES\Paqueteria.cs" />
+    <Compile Include="CLASES\Pedido.cs" />
     <Compile Include="CLASES\PMascota.cs" />
     <Compile Include="CLASES\PProducto.cs" />
     <Compile Include="CLASES\Producto.cs" />

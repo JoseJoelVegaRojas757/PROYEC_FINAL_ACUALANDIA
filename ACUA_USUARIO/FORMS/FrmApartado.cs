@@ -84,7 +84,7 @@ namespace ACUA_USUARIO.FORMS
             x.idApartado = int.Parse(txtId.Text);
             x.idTrabajador = Convert.ToInt32(cbTrabajador.SelectedValue);
             x.idCliente = Convert.ToInt32(cbCliente.SelectedValue);
-            x.fApartado = txtFechaA.Text;
+            x.fApartado = dtFechaA.Value.ToString("yyyy/MM/dd");
             x.anticipo = int.Parse(txtAnticipo.Text);
             x.faltante = int.Parse(txtFaltante.Text);
             x.total = int.Parse(txtTotal.Text);
@@ -120,7 +120,7 @@ namespace ACUA_USUARIO.FORMS
             x.idApartado = int.Parse(txtId.Text);
             x.idTrabajador = Convert.ToInt32(cbTrabajador.SelectedValue);
             x.idCliente = Convert.ToInt32(cbCliente.SelectedValue);
-            x.fApartado = txtFechaA.Text;
+            x.fApartado = dtFechaA.Value.ToString("yyyy/MM/dd");
             x.anticipo = int.Parse(txtAnticipo.Text);
             x.faltante = int.Parse(txtFaltante.Text);
             x.total = int.Parse(txtTotal.Text);
@@ -137,7 +137,7 @@ namespace ACUA_USUARIO.FORMS
                 txtId.Text = x.dgApartado.SelectedRows[0].Cells["idApartado"].Value.ToString();
                 cbTrabajador.Text = x.dgApartado.SelectedRows[0].Cells["idTrabajador"].Value.ToString();
                 cbCliente.Text = x.dgApartado.SelectedRows[0].Cells["idCliente"].Value.ToString();
-                txtFechaA.Text = x.dgApartado.SelectedRows[0].Cells["fApartado"].Value.ToString();
+                dtFechaA.Text = x.dgApartado.SelectedRows[0].Cells["fApartado"].Value.ToString();
                 txtAnticipo.Text = x.dgApartado.SelectedRows[0].Cells["anticipo"].Value.ToString();
                 txtFaltante.Text = x.dgApartado.SelectedRows[0].Cells["faltante"].Value.ToString();
                 txtTotal.Text = x.dgApartado.SelectedRows[0].Cells["total"].Value.ToString();

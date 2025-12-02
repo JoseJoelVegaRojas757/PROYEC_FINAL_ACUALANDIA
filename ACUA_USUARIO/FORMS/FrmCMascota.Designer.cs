@@ -44,10 +44,10 @@
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtConsumible = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMascota = new System.Windows.Forms.ComboBox();
             this.cbCliente = new System.Windows.Forms.ComboBox();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -210,14 +210,6 @@
             this.txtConsumible.Size = new System.Drawing.Size(202, 26);
             this.txtConsumible.TabIndex = 194;
             // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtFecha.Location = new System.Drawing.Point(674, 287);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(202, 26);
-            this.txtFecha.TabIndex = 195;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -246,16 +238,23 @@
             this.cbCliente.Size = new System.Drawing.Size(181, 28);
             this.cbCliente.TabIndex = 198;
             // 
+            // dtFecha
+            // 
+            this.dtFecha.Location = new System.Drawing.Point(674, 286);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(202, 26);
+            this.dtFecha.TabIndex = 199;
+            // 
             // FrmCMascota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1019, 537);
+            this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.cbMascota);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtConsumible);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.toolStrip2);
@@ -296,9 +295,9 @@
         private System.Windows.Forms.ToolStripButton btnClose;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtConsumible;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbMascota;
         private System.Windows.Forms.ComboBox cbCliente;
+        private System.Windows.Forms.DateTimePicker dtFecha;
     }
 }

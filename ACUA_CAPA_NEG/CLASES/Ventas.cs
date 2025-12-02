@@ -9,9 +9,8 @@ namespace ACUA_CAPA_NEG.CLASES
         SqlConnection con = new SqlConnection();
         SqlCommand comando = new SqlCommand();
 
-        public int idVenta, idTra, idCliente, idPaq;
-        public string fVenta;
-        public bool tipo, estado;
+        public int idV, idTrabajador, idCliente;
+        public string fVenta, MetodoP, Estado;
         public decimal total;
 
         public Ventas()
@@ -26,14 +25,13 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.CommandText = "SP_VENTA";
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@op", 1);
-            comando.Parameters.AddWithValue("@idVenta", idVenta);
-            comando.Parameters.AddWithValue("@fVenta", fVenta);
-            comando.Parameters.AddWithValue("@idTra", idTra);
+            comando.Parameters.AddWithValue("@idV", idV);
             comando.Parameters.AddWithValue("@idCli", idCliente);
-            comando.Parameters.AddWithValue("@tipo", tipo);
-            comando.Parameters.AddWithValue("@idPaq", idPaq);
-            comando.Parameters.AddWithValue("@estado", estado);
-            comando.Parameters.AddWithValue("@total", total);
+            comando.Parameters.AddWithValue("@idTra", idTrabajador);
+            comando.Parameters.AddWithValue("@Fecha_Venta", fVenta);
+            comando.Parameters.AddWithValue("@Metodo_Pago", MetodoP);
+            comando.Parameters.AddWithValue("@Total", total);
+            comando.Parameters.AddWithValue("@Estado", Estado);
             comando.Connection = con;
 
             con.Open();
@@ -50,14 +48,13 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.CommandText = "SP_VENTA";
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@op", 1);
-            comando.Parameters.AddWithValue("@idVenta", idVenta);
-            comando.Parameters.AddWithValue("@fVenta", fVenta);
-            comando.Parameters.AddWithValue("@idTra", idTra);
+            comando.Parameters.AddWithValue("@idV", idV);
             comando.Parameters.AddWithValue("@idCli", idCliente);
-            comando.Parameters.AddWithValue("@tipo", tipo);
-            comando.Parameters.AddWithValue("@idPaq", idPaq);
-            comando.Parameters.AddWithValue("@estado", estado);
-            comando.Parameters.AddWithValue("@total", total);
+            comando.Parameters.AddWithValue("@idTra", idTrabajador);
+            comando.Parameters.AddWithValue("@Fecha_Venta", fVenta);
+            comando.Parameters.AddWithValue("@Metodo_Pago", MetodoP);
+            comando.Parameters.AddWithValue("@Total", total);
+            comando.Parameters.AddWithValue("@Estado", Estado);
             comando.Connection = con;
             con.Open();
             msj = "La Venta ha actualizado correctamente";
@@ -72,18 +69,17 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.CommandText = "SP_VENTA";
             comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@op", 3);
-            comando.Parameters.AddWithValue("@idVenta", idVenta);
-            comando.Parameters.AddWithValue("@fVenta", fVenta);
-            comando.Parameters.AddWithValue("@idTra", idTra);
+            comando.Parameters.AddWithValue("@idV", idV);
             comando.Parameters.AddWithValue("@idCli", idCliente);
-            comando.Parameters.AddWithValue("@tipo", tipo);
-            comando.Parameters.AddWithValue("@idPaq", idPaq);
-            comando.Parameters.AddWithValue("@estado", estado);
-            comando.Parameters.AddWithValue("@total", total);
+            comando.Parameters.AddWithValue("@idTra", idTrabajador);
+            comando.Parameters.AddWithValue("@Fecha_Venta", fVenta);
+            comando.Parameters.AddWithValue("@Metodo_Pago", MetodoP);
+            comando.Parameters.AddWithValue("@Total", total);
+            comando.Parameters.AddWithValue("@Estado", Estado);
             comando.Connection = con;
             con.Open();
             comando.ExecuteNonQuery();
-            msj = "El tipo se ha Eliminado correctamente";
+            msj = "La Venta se ha Eliminado correctamente";
             con.Close();
             return msj;
         }

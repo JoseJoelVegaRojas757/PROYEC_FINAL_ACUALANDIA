@@ -39,9 +39,9 @@ namespace ACUA_USUARIO.FORMS
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbCliente.DisplayMember = "caracteristicas";
-            cbCliente.ValueMember = "idCmas";
-            cbCliente.DataSource = dt;
+            cbMascota.DisplayMember = "caracteristicas";
+            cbMascota.ValueMember = "idMas";
+            cbMascota.DataSource = dt;
         }
 
         private void btnClose_Click(object sender, System.EventArgs e)
@@ -59,11 +59,9 @@ namespace ACUA_USUARIO.FORMS
         {
             txtId.Clear();
             txtConsumible.Clear();
-            txtFecha.Clear();
             ACUA_CAPA_NEG.CLASES.Herramientas h = new ACUA_CAPA_NEG.CLASES.Herramientas();
             txtId.Text = h.consecutivo("idCmas", "CMASCOTA").ToString();
             txtConsumible.Focus();
-            txtFecha.Focus();
         }
 
         bool encontro()
@@ -93,7 +91,7 @@ namespace ACUA_USUARIO.FORMS
             x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
             x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
             x.consumible = int.Parse(txtConsumible.Text);
-            x.cFecha = txtFecha.Text;
+            x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
             if (encontro() == true)
             {
                 MessageBox.Show(x.Actualizar());
@@ -113,7 +111,7 @@ namespace ACUA_USUARIO.FORMS
                 txtId.Text = x.dgCMascota.SelectedRows[0].Cells["idCmas"].Value.ToString();
                 cbMascota.Text = x.dgCMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
                 cbCliente.Text = x.dgCMascota.SelectedRows[0].Cells["idCli"].Value.ToString();
-                txtFecha.Text = x.dgCMascota.SelectedRows[0].Cells["cFecha"].Value.ToString();
+                dtFecha.Text = x.dgCMascota.SelectedRows[0].Cells["cFecha"].Value.ToString();
                 txtConsumible.Text = x.dgCMascota.SelectedRows[0].Cells["consumible"].Value.ToString();
             }
         }
@@ -130,7 +128,7 @@ namespace ACUA_USUARIO.FORMS
             x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
             x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
             x.consumible = int.Parse(txtConsumible.Text);
-            x.cFecha = txtFecha.Text;
+            x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
             MessageBox.Show(x.Eliminar());
             Limpiar();
         }

@@ -195,6 +195,12 @@
     <Compile Include="FORMS\FrmPaqueteria.Designer.cs">
       <DependentUpon>FrmPaqueteria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmPedido.Designer.cs">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FrmPMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +359,12 @@
     <Compile Include="SEARCH\FrmBusquedaPaqueteria.Designer.cs">
       <DependentUpon>FrmBusquedaPaqueteria.cs</DependentUpon>
     </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEARCH\FrmBusquedaPedido.Designer.cs">
+      <DependentUpon>FrmBusquedaPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="SEARCH\FrmBusquedaPMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,6 +473,9 @@
     <EmbeddedResource Include="FORMS\FrmPaqueteria.resx">
       <DependentUpon>FrmPaqueteria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FrmPedido.resx">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FrmPMascota.resx">
       <DependentUpon>FrmPMascota.cs</DependentUpon>
     </EmbeddedResource>
@@ -546,6 +561,9 @@
     <EmbeddedResource Include="SEARCH\FrmBusquedaPADetalle.resx">
       <DependentUpon>FrmBusquedaPADetalle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaPedido.resx">
+      <DependentUpon>FrmBusquedaPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SEARCH\FrmBusquedaPMascota.resx">
       <DependentUpon>FrmBusquedaPMascota.cs</DependentUpon>
     </EmbeddedResource>
@@ -569,6 +587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SEARCH\FrmBusquedaTransportista.resx">
       <DependentUpon>FrmBusquedaTransportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEARCH\FrmBusquedaVentas.resx">
+      <DependentUpon>FrmBusquedaVentas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dsProducto.xsc">
       <DependentUpon>dsProducto.xsd</DependentUpon>
