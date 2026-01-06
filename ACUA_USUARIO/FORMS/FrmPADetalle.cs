@@ -21,6 +21,22 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarApartado();
             CargarProducto();
+            Limpiar();
+        }
+
+        void subt()
+        {
+            try
+            {
+                decimal p = decimal.Parse(txtPrecio.Text);
+                decimal c = decimal.Parse(txtCantidad.Text);
+                txtSubT.Text = (p * c).ToString();
+            }
+            catch
+            {
+                txtSubT.Text = "0";
+            }
+
         }
 
         void CargarApartado()
@@ -110,8 +126,8 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgPAdetalle.SelectedRows[0].Cells["idAdetalle"].Value.ToString();
-                cbApartado.Text = x.dgPAdetalle.SelectedRows[0].Cells["idApartado"].Value.ToString();
-                cbProducto.Text = x.dgPAdetalle.SelectedRows[0].Cells["idProducto"].Value.ToString();
+                cbApartado.SelectedValue = x.dgPAdetalle.SelectedRows[0].Cells["idApartado"].Value.ToString();
+                cbProducto.SelectedValue = x.dgPAdetalle.SelectedRows[0].Cells["idProducto"].Value.ToString();
                 txtCantidad.Text = x.dgPAdetalle.SelectedRows[0].Cells["cantidad"].Value.ToString();
                 txtPrecio.Text = x.dgPAdetalle.SelectedRows[0].Cells["precio"].Value.ToString();
                 txtAnticipo.Text = x.dgPAdetalle.SelectedRows[0].Cells["anticipo"].Value.ToString();
@@ -138,9 +154,38 @@ namespace ACUA_USUARIO.FORMS
             Limpiar();
         }
 
+        void precioc()
+        {
+            string consulta = "SELECT pVenta FROM PRODUCTO WHERE idProd = " + cbProducto.SelectedValue.ToString();
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            con.Open();
+
+            object precio = cmd.ExecuteScalar();
+            txtPrecio.Text = precio != null ? precio.ToString() : "0";
+            con.Close();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (cbProducto.SelectedValue != null)
+            {
+                precioc();
+            }
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            subt();
         }
     }
 }

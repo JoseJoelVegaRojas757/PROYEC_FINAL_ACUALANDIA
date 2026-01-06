@@ -52,12 +52,15 @@
             this.txtCompra = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtEstatus = new System.Windows.Forms.TextBox();
-            this.txtProductoOf = new System.Windows.Forms.TextBox();
-            this.txtOferta = new System.Windows.Forms.TextBox();
+            this.txtIvaVenta = new System.Windows.Forms.TextBox();
             this.txtVenta = new System.Windows.Forms.TextBox();
-            this.txtIva = new System.Windows.Forms.TextBox();
+            this.txtIvaCompra = new System.Windows.Forms.TextBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.chkOferta = new System.Windows.Forms.CheckBox();
+            this.chkEstatus = new System.Windows.Forms.CheckBox();
+            this.txtPrecioOferta = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -67,9 +70,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(659, 266);
+            this.label10.Location = new System.Drawing.Point(439, 173);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 35);
+            this.label10.Size = new System.Drawing.Size(60, 23);
             this.label10.TabIndex = 184;
             this.label10.Text = "Venta";
             // 
@@ -77,9 +81,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(659, 319);
+            this.label9.Location = new System.Drawing.Point(429, 248);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 35);
+            this.label9.Size = new System.Drawing.Size(65, 23);
             this.label9.TabIndex = 183;
             this.label9.Text = "Oferta";
             // 
@@ -87,9 +92,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(691, 213);
+            this.label7.Location = new System.Drawing.Point(461, 138);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 35);
+            this.label7.Size = new System.Drawing.Size(36, 23);
             this.label7.TabIndex = 182;
             this.label7.Text = "IVA";
             // 
@@ -97,9 +103,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(78, 266);
+            this.label6.Location = new System.Drawing.Point(52, 173);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 35);
+            this.label6.Size = new System.Drawing.Size(98, 23);
             this.label6.TabIndex = 181;
             this.label6.Text = "Categoria";
             // 
@@ -107,9 +114,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(100, 425);
+            this.label5.Location = new System.Drawing.Point(67, 276);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 35);
+            this.label5.Size = new System.Drawing.Size(79, 23);
             this.label5.TabIndex = 180;
             this.label5.Text = "Compra";
             // 
@@ -117,18 +125,20 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 372);
+            this.label4.Location = new System.Drawing.Point(69, 242);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 35);
+            this.label4.Size = new System.Drawing.Size(78, 23);
             this.label4.TabIndex = 179;
             this.label4.Text = "Nombre";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(84, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 167);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 170;
             this.pictureBox1.TabStop = false;
@@ -146,7 +156,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 611);
+            this.toolStrip1.Size = new System.Drawing.Size(29, 397);
             this.toolStrip1.TabIndex = 169;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -156,7 +166,7 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(43, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(26, 28);
             this.tsGuardar.Text = "toolStripButton1";
             this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
@@ -166,7 +176,7 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(43, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(26, 28);
             this.tsBuscar.Text = "toolStripButton2";
             this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
@@ -176,7 +186,7 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(43, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(26, 28);
             this.tsLimpiar.Text = "toolStripButton3";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
@@ -186,7 +196,7 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(43, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(26, 28);
             this.tsEliminar.Text = "toolStripButton4";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
@@ -194,9 +204,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(327, 58);
+            this.label3.Location = new System.Drawing.Point(218, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 35);
+            this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 168;
             this.label3.Text = "Producto";
             // 
@@ -204,9 +215,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 319);
+            this.label2.Location = new System.Drawing.Point(73, 207);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 35);
+            this.label2.Size = new System.Drawing.Size(72, 23);
             this.label2.TabIndex = 167;
             this.label2.Text = "Codigo";
             // 
@@ -214,9 +226,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 213);
+            this.label1.Location = new System.Drawing.Point(115, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 35);
+            this.label1.Size = new System.Drawing.Size(28, 23);
             this.label1.TabIndex = 166;
             this.label1.Text = "ID";
             // 
@@ -227,10 +240,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1139, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(762, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(48, 611);
+            this.toolStrip2.Size = new System.Drawing.Size(29, 397);
             this.toolStrip2.TabIndex = 185;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -240,7 +253,7 @@
             this.tsClose.Image = ((System.Drawing.Image)(resources.GetObject("tsClose.Image")));
             this.tsClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsClose.Name = "tsClose";
-            this.tsClose.Size = new System.Drawing.Size(43, 28);
+            this.tsClose.Size = new System.Drawing.Size(26, 28);
             this.tsClose.Text = "toolStripButton4";
             this.tsClose.Click += new System.EventHandler(this.tsClose_Click);
             // 
@@ -248,115 +261,174 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(540, 372);
+            this.label8.Location = new System.Drawing.Point(414, 207);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(211, 35);
+            this.label8.Size = new System.Drawing.Size(90, 23);
             this.label8.TabIndex = 186;
-            this.label8.Text = "Producto Oferta";
+            this.label8.Text = "IVA Venta";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(638, 419);
+            this.label11.Location = new System.Drawing.Point(429, 320);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 35);
+            this.label11.Size = new System.Drawing.Size(75, 23);
             this.label11.TabIndex = 187;
             this.label11.Text = "Estatus";
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.Location = new System.Drawing.Point(235, 221);
+            this.txtId.Location = new System.Drawing.Point(157, 144);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(148, 26);
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 188;
+            this.txtId.TabStop = false;
             // 
             // txtCompra
             // 
             this.txtCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCompra.Location = new System.Drawing.Point(235, 434);
+            this.txtCompra.Location = new System.Drawing.Point(157, 282);
+            this.txtCompra.Margin = new System.Windows.Forms.Padding(2);
             this.txtCompra.Name = "txtCompra";
-            this.txtCompra.Size = new System.Drawing.Size(202, 26);
+            this.txtCompra.Size = new System.Drawing.Size(136, 20);
             this.txtCompra.TabIndex = 189;
+            this.txtCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompra_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNombre.Location = new System.Drawing.Point(235, 381);
+            this.txtNombre.Location = new System.Drawing.Point(157, 248);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(202, 26);
+            this.txtNombre.Size = new System.Drawing.Size(136, 20);
             this.txtNombre.TabIndex = 190;
             // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtCodigo.Location = new System.Drawing.Point(235, 329);
+            this.txtCodigo.Location = new System.Drawing.Point(157, 214);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(202, 26);
+            this.txtCodigo.Size = new System.Drawing.Size(136, 20);
             this.txtCodigo.TabIndex = 191;
             // 
-            // txtEstatus
+            // txtIvaVenta
             // 
-            this.txtEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtEstatus.Location = new System.Drawing.Point(751, 429);
-            this.txtEstatus.Name = "txtEstatus";
-            this.txtEstatus.Size = new System.Drawing.Size(189, 26);
-            this.txtEstatus.TabIndex = 193;
-            // 
-            // txtProductoOf
-            // 
-            this.txtProductoOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtProductoOf.Location = new System.Drawing.Point(751, 381);
-            this.txtProductoOf.Name = "txtProductoOf";
-            this.txtProductoOf.Size = new System.Drawing.Size(189, 26);
-            this.txtProductoOf.TabIndex = 194;
-            // 
-            // txtOferta
-            // 
-            this.txtOferta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtOferta.Location = new System.Drawing.Point(751, 324);
-            this.txtOferta.Name = "txtOferta";
-            this.txtOferta.Size = new System.Drawing.Size(189, 26);
-            this.txtOferta.TabIndex = 195;
+            this.txtIvaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtIvaVenta.Location = new System.Drawing.Point(501, 212);
+            this.txtIvaVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIvaVenta.Name = "txtIvaVenta";
+            this.txtIvaVenta.Size = new System.Drawing.Size(127, 20);
+            this.txtIvaVenta.TabIndex = 194;
+            this.txtIvaVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompra_KeyPress);
             // 
             // txtVenta
             // 
             this.txtVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtVenta.Location = new System.Drawing.Point(751, 276);
+            this.txtVenta.Location = new System.Drawing.Point(501, 179);
+            this.txtVenta.Margin = new System.Windows.Forms.Padding(2);
             this.txtVenta.Name = "txtVenta";
-            this.txtVenta.Size = new System.Drawing.Size(189, 26);
+            this.txtVenta.Size = new System.Drawing.Size(127, 20);
             this.txtVenta.TabIndex = 196;
+            this.txtVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompra_KeyPress);
             // 
-            // txtIva
+            // txtIvaCompra
             // 
-            this.txtIva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtIva.Location = new System.Drawing.Point(751, 221);
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(189, 26);
-            this.txtIva.TabIndex = 197;
+            this.txtIvaCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtIvaCompra.Location = new System.Drawing.Point(501, 144);
+            this.txtIvaCompra.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIvaCompra.Name = "txtIvaCompra";
+            this.txtIvaCompra.Size = new System.Drawing.Size(127, 20);
+            this.txtIvaCompra.TabIndex = 197;
+            this.txtIvaCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompra_KeyPress);
             // 
             // cbCategoria
             // 
             this.cbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(235, 273);
+            this.cbCategoria.Location = new System.Drawing.Point(157, 177);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(202, 28);
+            this.cbCategoria.Size = new System.Drawing.Size(136, 21);
             this.cbCategoria.TabIndex = 198;
+            // 
+            // chkOferta
+            // 
+            this.chkOferta.AutoSize = true;
+            this.chkOferta.Location = new System.Drawing.Point(501, 254);
+            this.chkOferta.Name = "chkOferta";
+            this.chkOferta.Size = new System.Drawing.Size(71, 17);
+            this.chkOferta.TabIndex = 199;
+            this.chkOferta.Text = "En Oferta";
+            this.chkOferta.UseVisualStyleBackColor = true;
+            this.chkOferta.CheckedChanged += new System.EventHandler(this.chkOferta_CheckedChanged);
+            // 
+            // chkEstatus
+            // 
+            this.chkEstatus.AutoSize = true;
+            this.chkEstatus.BackColor = System.Drawing.Color.Azure;
+            this.chkEstatus.Checked = true;
+            this.chkEstatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEstatus.Location = new System.Drawing.Point(509, 320);
+            this.chkEstatus.Name = "chkEstatus";
+            this.chkEstatus.Size = new System.Drawing.Size(56, 17);
+            this.chkEstatus.TabIndex = 200;
+            this.chkEstatus.Text = "Activo";
+            this.chkEstatus.UseVisualStyleBackColor = false;
+            // 
+            // txtPrecioOferta
+            // 
+            this.txtPrecioOferta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtPrecioOferta.Location = new System.Drawing.Point(517, 284);
+            this.txtPrecioOferta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioOferta.Name = "txtPrecioOferta";
+            this.txtPrecioOferta.Size = new System.Drawing.Size(127, 20);
+            this.txtPrecioOferta.TabIndex = 202;
+            this.txtPrecioOferta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompra_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(361, 284);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(152, 23);
+            this.label12.TabIndex = 201;
+            this.label12.Text = "Precio de Oferta";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(571, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.TabIndex = 203;
+            this.button1.Text = "Inventario Productos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1187, 611);
+            this.ClientSize = new System.Drawing.Size(791, 397);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPrecioOferta);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.chkEstatus);
+            this.Controls.Add(this.chkOferta);
             this.Controls.Add(this.cbCategoria);
-            this.Controls.Add(this.txtIva);
+            this.Controls.Add(this.txtIvaCompra);
             this.Controls.Add(this.txtVenta);
-            this.Controls.Add(this.txtOferta);
-            this.Controls.Add(this.txtProductoOf);
-            this.Controls.Add(this.txtEstatus);
+            this.Controls.Add(this.txtIvaVenta);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCompra);
@@ -376,6 +448,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmProducto";
             this.Text = "FrmProducto";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
@@ -414,11 +487,14 @@
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtEstatus;
-        private System.Windows.Forms.TextBox txtProductoOf;
-        private System.Windows.Forms.TextBox txtOferta;
+        private System.Windows.Forms.TextBox txtIvaVenta;
         private System.Windows.Forms.TextBox txtVenta;
-        private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.TextBox txtIvaCompra;
         private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.CheckBox chkOferta;
+        private System.Windows.Forms.CheckBox chkEstatus;
+        private System.Windows.Forms.TextBox txtPrecioOferta;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
     }
 }

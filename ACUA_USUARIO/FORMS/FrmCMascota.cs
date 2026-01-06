@@ -53,6 +53,7 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarCliente();
             CargarMascota();
+            Limpiar();
         }
 
         void Limpiar()
@@ -67,38 +68,93 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From CMASCOTA where idCmas = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From CMASCOTA where idCmas = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void tsGuardar_Click(object sender, System.EventArgs e)
         {
-            CMascota x = new CMascota();
-            x.idCmas = int.Parse(txtId.Text);
-            x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
-            x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
-            x.consumible = int.Parse(txtConsumible.Text);
-            x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
-            if (encontro() == true)
+            if (cbCliente.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione un cliente");
+                cbCliente.Focus();
+                return;
             }
-            else
+
+            if (cbMascota.SelectedValue == null)
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Seleccione una mascota");
+                cbMascota.Focus();
+                return;
+            }
+
+            if (txtConsumible.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese la cantidad consumible");
+                txtConsumible.Focus();
+                return;
+            }
+
+            int consumible;
+            if (!int.TryParse(txtConsumible.Text, out consumible))
+            {
+                MessageBox.Show("Consumible debe ser un número válido");
+                txtConsumible.Focus();
+                return;
+            }
+
+            if (consumible <= 0)
+            {
+                MessageBox.Show("El consumible debe ser mayor que cero");
+                txtConsumible.Focus();
+                return;
+            }
+
+            try
+            {
+                CMascota x = new CMascota();
+                x.idCmas = int.Parse(txtId.Text);
+                x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
+                x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
+                x.consumible = int.Parse(txtConsumible.Text);
+                x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -109,8 +165,8 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgCMascota.SelectedRows[0].Cells["idCmas"].Value.ToString();
-                cbMascota.Text = x.dgCMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
-                cbCliente.Text = x.dgCMascota.SelectedRows[0].Cells["idCli"].Value.ToString();
+                cbMascota.SelectedValue = x.dgCMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
+                cbCliente.SelectedValue = x.dgCMascota.SelectedRows[0].Cells["idCli"].Value.ToString();
                 dtFecha.Text = x.dgCMascota.SelectedRows[0].Cells["cFecha"].Value.ToString();
                 txtConsumible.Text = x.dgCMascota.SelectedRows[0].Cells["consumible"].Value.ToString();
             }
@@ -123,14 +179,32 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.CMascota x = new ACUA_CAPA_NEG.CLASES.CMascota();
-            x.idCmas = int.Parse(txtId.Text);
-            x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
-            x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
-            x.consumible = int.Parse(txtConsumible.Text);
-            x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un registro para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ACUA_CAPA_NEG.CLASES.CMascota x = new ACUA_CAPA_NEG.CLASES.CMascota();
+                    x.idCmas = int.Parse(txtId.Text);
+                    x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
+                    x.idCli = Convert.ToInt32(cbCliente.SelectedValue);
+                    x.consumible = int.Parse(txtConsumible.Text);
+                    x.cFecha = dtFecha.Value.ToString("yyyy/MM/dd");
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
     }
 }

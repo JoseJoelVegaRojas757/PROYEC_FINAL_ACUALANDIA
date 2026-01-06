@@ -2,6 +2,6 @@
 {
     public class Conexion
     {
-        public string ConexionSql = @"Data Source = JOEL\UADEO; Initial Catalog = BSAcualandia; user id = sa; password = Jose2Joel";
+        public string ConexionSql = @"Data Source = LOCALHOST\UADEO; Initial Catalog = BSAcualandia; user id = SA; password = soto 1811";
     }
 }

@@ -51,18 +51,65 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            Proveedor x = new Proveedor();
-            x.idProv = int.Parse(txtId.Text);
-            x.nomProveedor = txtNombre.Text;
-            x.telOficina = txtTelefono.Text;
-            x.correo = txtCorreo.Text;
-            if (encontro() == true)
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Ingrese el nombre del proveedor");
+                txtNombre.Focus();
+                return;
             }
-            else
+
+            if (string.IsNullOrWhiteSpace(txtTelefono.Text))
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese el teléfono");
+                txtTelefono.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                MessageBox.Show("Ingrese el correo electrónico");
+                txtCorreo.Focus();
+                return;
+            }
+
+            if (!txtCorreo.Text.Contains("@") || !txtCorreo.Text.Contains("."))
+            {
+                MessageBox.Show("Ingrese un correo electrónico válido");
+                txtCorreo.Focus();
+                return;
+            }
+
+            string accion = encontro() ? "actualizar" : "guardar";
+            if (MessageBox.Show($"¿Está seguro de {accion} este proveedor?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                Proveedor x = new Proveedor();
+                x.idProv = int.Parse(txtId.Text);
+                x.nomProveedor = txtNombre.Text.Trim();
+                x.telOficina = txtTelefono.Text.Trim();
+                x.correo = txtCorreo.Text.Trim();
+
+                string resultado;
+                if (encontro())
+                {
+                    resultado = x.Actualizar();
+                }
+                else
+                {
+                    resultado = x.Guardar();
+                }
+
+                MessageBox.Show(resultado);
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -91,18 +138,59 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            Proveedor x = new Proveedor();
-            x.idProv = int.Parse(txtId.Text);
-            x.nomProveedor = txtNombre.Text;
-            x.telOficina = txtTelefono.Text;
-            x.correo = txtCorreo.Text;
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (string.IsNullOrWhiteSpace(txtId.Text) || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un proveedor para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este proveedor?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                Proveedor x = new Proveedor();
+                x.idProv = int.Parse(txtId.Text);
+                x.nomProveedor = txtNombre.Text.Trim();
+                x.telOficina = txtTelefono.Text.Trim();
+                x.correo = txtCorreo.Text.Trim();
+
+                MessageBox.Show(x.Eliminar());
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
 
         private void FrmProveedor_Load(object sender, EventArgs e)
         {
+            Limpiar();
+        }
 
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '+' && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                if (!txtCorreo.Text.Contains("@") || !txtCorreo.Text.Contains("."))
+                {
+                    MessageBox.Show("Ingrese un correo electrónico válido");
+                    txtCorreo.Focus();
+                    e.Cancel = true; // Esto evita que salga del TextBox hasta que sea válido
+                }
+            }
         }
     }
 }

@@ -48,7 +48,7 @@ namespace ACUA_USUARIO.FORMS
             txtNombre.Clear();
             txtAPaterno.Clear();
             txtAMaterno.Clear();
-            txtFechaN.Clear();
+            //dtFechaN.Clear();
             txtTelefono.Clear();
             txtRedesS.Clear();
             ACUA_CAPA_NEG.CLASES.Herramientas h = new ACUA_CAPA_NEG.CLASES.Herramientas();
@@ -56,7 +56,7 @@ namespace ACUA_USUARIO.FORMS
             txtNombre.Focus();
             txtAPaterno.Focus();
             txtAMaterno.Focus();
-            txtFechaN.Focus();
+            dtFechaN.Focus();
             txtTelefono.Focus();
             txtRedesS.Focus();
         }
@@ -64,20 +64,24 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
+
+            if (txtId.Text == "" || txtId.Text == "0")
+                return false;
+
             int id = int.Parse(txtId.Text);
-            string cadena = $"SELECT * FROM TRABJADOR WHERE idTra = {id}";
+            string cadena = $"SELECT * FROM TRABAJADOR WHERE idTra = {id}"; 
             con.Open();
             SqlCommand cmd = new SqlCommand(cadena, con);
             SqlDataReader lector = cmd.ExecuteReader();
+
             if (lector.Read())
             {
                 a = true;
             }
-            else
-            {
-                a = false;
-            }
+
+            lector.Close(); 
             con.Close();
+
             return a;
         }
 
@@ -88,16 +92,38 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
+           
+            if (txtNombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Falta el nombre");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (txtAPaterno.Text.Trim() == "")
+            {
+                MessageBox.Show("Falta el apellido paterno");
+                txtAPaterno.Focus();
+                return;
+            }
+
+            if (dtFechaN.Text.Trim() == "")
+            {
+                MessageBox.Show("Falta la fecha de nacimiento");
+                dtFechaN.Focus();
+                return;
+            }
+
             Trabajador x = new Trabajador();
             x.idTra = int.Parse(txtId.Text);
             x.traNombre = txtNombre.Text;
-            x.traNombre = txtAPaterno.Text;
+
             x.traPaterno = txtAPaterno.Text;
             x.traMaterno = txtAMaterno.Text;
             x.traDom = int.Parse(cbDomicilio.SelectedValue.ToString());
             x.traTel = txtTelefono.Text;
             x.idPuesto = int.Parse(cbPuesto.SelectedValue.ToString());
-            x.traNacimiento = txtFechaN.Text;
+            x.traNacimiento = dtFechaN.Value;
             x.traSociales = txtRedesS.Text;
             if (encontro() == true)
             {
@@ -117,12 +143,12 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgTrabajador.SelectedRows[0].Cells["idTra"].Value.ToString();
-                cbPuesto.Text = x.dgTrabajador.SelectedRows[0].Cells["idPuesto"].Value.ToString();
-                cbDomicilio.Text = x.dgTrabajador.SelectedRows[0].Cells["traDom"].Value.ToString();
+                cbPuesto.SelectedValue = x.dgTrabajador.SelectedRows[0].Cells["idPuesto"].Value.ToString();
+                cbDomicilio.SelectedValue = x.dgTrabajador.SelectedRows[0].Cells["traDom"].Value.ToString();
                 txtNombre.Text = x.dgTrabajador.SelectedRows[0].Cells["traNombre"].Value.ToString();
                 txtAPaterno.Text = x.dgTrabajador.SelectedRows[0].Cells["traPaterno"].Value.ToString();
                 txtAMaterno.Text = x.dgTrabajador.SelectedRows[0].Cells["traMaterno"].Value.ToString();
-                txtFechaN.Text = x.dgTrabajador.SelectedRows[0].Cells["traNacimiento"].Value.ToString();
+                dtFechaN.Text = x.dgTrabajador.SelectedRows[0].Cells["traNacimiento"].Value.ToString();
                 txtTelefono.Text = x.dgTrabajador.SelectedRows[0].Cells["traTel"].Value.ToString();
                 txtRedesS.Text = x.dgTrabajador.SelectedRows[0].Cells["traSociales"].Value.ToString();
             }
@@ -135,6 +161,13 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
+            if (txtId.Text == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un trabajador primero");
+                return;
+            }
+
+
             Trabajador x = new Trabajador();
             x.idTra = int.Parse(txtId.Text);
             x.traNombre = txtNombre.Text;
@@ -144,7 +177,7 @@ namespace ACUA_USUARIO.FORMS
             x.traDom = int.Parse(cbDomicilio.SelectedValue.ToString());
             x.traTel = txtTelefono.Text;
             x.idPuesto = int.Parse(cbPuesto.SelectedValue.ToString());
-            x.traNacimiento = txtFechaN.Text;
+            x.traNacimiento = dtFechaN.Value;
             x.traSociales = txtRedesS.Text;
             MessageBox.Show(x.Eliminar());
             Limpiar();
@@ -154,6 +187,16 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarDomicilio();
             CargarPuesto();
+            Limpiar();
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '-' && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

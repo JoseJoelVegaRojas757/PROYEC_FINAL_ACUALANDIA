@@ -25,6 +25,7 @@ namespace ACUA_USUARIO.FORMS
         private void FrmDomicilio_Load(object sender, EventArgs e)
         {
             CargarColonia();
+            Limpiar();
         }
 
         void CargarColonia()
@@ -62,43 +63,100 @@ namespace ACUA_USUARIO.FORMS
 
         bool encontro()
         {
+
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From DOMICILIO where idDom = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From DOMICILIO where idDom = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            Domicilio x = new Domicilio();
-            x.idDom = int.Parse(txtId.Text);
-            x.idCol = Convert.ToInt32(cbColonia.SelectedValue);
-            x.calle = txtCalle.Text;
-            x.calle1 = txtCalle1.Text;
-            x.calle2 = txtCalle2.Text;
-            x.numEx = int.Parse(txtNumE.Text);
-            x.numInt = int.Parse(txtNumIn.Text);
-            x.referencias = txtReferencia.Text;
-
-            if (encontro() == true)
+            if (cbColonia.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione una colonia");
+                cbColonia.Focus();
+                return;
             }
-            else
+
+            if (txtCalle.Text.Trim() == "")
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese la calle principal");
+                txtCalle.Focus();
+                return;
+            }
+
+            if (txtNumE.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el número exterior");
+                txtNumE.Focus();
+                return;
+            }
+
+            int numExterior;
+            if (!int.TryParse(txtNumE.Text, out numExterior))
+            {
+                MessageBox.Show("Número exterior debe ser un número");
+                txtNumE.Focus();
+                return;
+            }
+
+            if (numExterior <= 0)
+            {
+                MessageBox.Show("Número exterior debe ser mayor que cero");
+                txtNumE.Focus();
+                return;
+            }
+
+            try
+            {
+                Domicilio x = new Domicilio();
+                x.idDom = int.Parse(txtId.Text);
+                x.idCol = Convert.ToInt32(cbColonia.SelectedValue);
+                x.calle = txtCalle.Text;
+                x.calle1 = txtCalle1.Text;
+                x.calle2 = txtCalle2.Text;
+                x.numEx = int.Parse(txtNumE.Text);
+
+                if (!string.IsNullOrWhiteSpace(txtNumIn.Text))
+                    x.numInt = int.Parse(txtNumIn.Text);
+
+                x.referencias = txtReferencia.Text;
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -109,7 +167,7 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgDomicilio.SelectedRows[0].Cells["idDom"].Value.ToString();
-                cbColonia.Text = x.dgDomicilio.SelectedRows[0].Cells["idCol"].Value.ToString();
+                cbColonia.SelectedValue = x.dgDomicilio.SelectedRows[0].Cells["idCol"].Value.ToString();
                 txtCalle.Text = x.dgDomicilio.SelectedRows[0].Cells["calle"].Value.ToString();
                 txtCalle1.Text = x.dgDomicilio.SelectedRows[0].Cells["calle1"].Value.ToString();
                 txtCalle2.Text = x.dgDomicilio.SelectedRows[0].Cells["calle2"].Value.ToString();
@@ -126,17 +184,38 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.Domicilio x = new ACUA_CAPA_NEG.CLASES.Domicilio();
-            x.idDom = int.Parse(txtId.Text);
-            x.idCol = Convert.ToInt32(cbColonia.SelectedValue);
-            x.calle = txtCalle.Text;
-            x.calle1 = txtCalle1.Text;
-            x.calle2 = txtCalle2.Text;
-            x.numEx = int.Parse(txtNumE.Text);
-            x.numInt = int.Parse(txtNumIn.Text);
-            x.referencias = txtReferencia.Text;
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un domicilio para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este domicilio?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ACUA_CAPA_NEG.CLASES.Domicilio x = new ACUA_CAPA_NEG.CLASES.Domicilio();
+                    x.idDom = int.Parse(txtId.Text);
+                    x.idCol = Convert.ToInt32(cbColonia.SelectedValue);
+                    x.calle = txtCalle.Text;
+                    x.calle1 = txtCalle1.Text;
+                    x.calle2 = txtCalle2.Text;
+                    x.numEx = int.Parse(txtNumE.Text);
+
+                    if (!string.IsNullOrWhiteSpace(txtNumIn.Text))
+                        x.numInt = int.Parse(txtNumIn.Text);
+
+                    x.referencias = txtReferencia.Text;
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
     }
 }

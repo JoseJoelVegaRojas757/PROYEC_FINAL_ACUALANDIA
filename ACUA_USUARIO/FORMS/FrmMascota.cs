@@ -63,17 +63,57 @@ namespace ACUA_USUARIO.FORMS
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Mascota x = new Mascota();
-            x.idMas = int.Parse(txtId.Text);
-            x.caracteristicas = txtCaracteristicas.Text;
-            x.idRaza = Convert.ToInt32(cbRaza.SelectedValue);
-            if (encontro() == true)
+            if (cbRaza.SelectedIndex == -1)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione una raza");
+                cbRaza.Focus();
+                return;
             }
-            else
+
+            if (string.IsNullOrWhiteSpace(txtCaracteristicas.Text))
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese las características");
+                txtCaracteristicas.Focus();
+                return;
+            }
+
+            if (txtCaracteristicas.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("Las características deben tener al menos 3 caracteres");
+                txtCaracteristicas.Focus();
+                return;
+            }
+
+            string accion = encontro() ? "actualizar" : "guardar";
+            if (MessageBox.Show($"¿Está seguro de {accion} esta mascota?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                Mascota x = new Mascota();
+                x.idMas = int.Parse(txtId.Text);
+                x.caracteristicas = txtCaracteristicas.Text.Trim();
+                x.idRaza = Convert.ToInt32(cbRaza.SelectedValue);
+
+                string resultado;
+                if (encontro())
+                {
+                    resultado = x.Actualizar();
+                }
+                else
+                {
+                    resultado = x.Guardar();
+                }
+
+                MessageBox.Show(resultado);
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
 
         }
@@ -88,16 +128,38 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarRaza();
             Limpiar();
+            Limpiar();
         }
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.Mascota x = new ACUA_CAPA_NEG.CLASES.Mascota();
-            x.idMas = int.Parse(txtId.Text);
-            x.caracteristicas = txtCaracteristicas.Text;
-            x.idRaza = Convert.ToInt32(cbRaza.SelectedValue);
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            
+            if (string.IsNullOrWhiteSpace(txtId.Text) || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione una mascota para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar esta mascota?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                ACUA_CAPA_NEG.CLASES.Mascota x = new ACUA_CAPA_NEG.CLASES.Mascota();
+                x.idMas = int.Parse(txtId.Text);
+                x.caracteristicas = txtCaracteristicas.Text.Trim();
+                x.idRaza = Convert.ToInt32(cbRaza.SelectedValue);
+
+                MessageBox.Show(x.Eliminar());
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
 
         private void tsBuscar_Click(object sender, EventArgs e)
@@ -108,13 +170,19 @@ namespace ACUA_USUARIO.FORMS
             {
                 txtId.Text = x.dgMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
                 txtCaracteristicas.Text = x.dgMascota.SelectedRows[0].Cells["Caracteristicas"].Value.ToString();
-                cbRaza.Text = x.dgMascota.SelectedRows[0].Cells["idRaza"].Value.ToString();
+                cbRaza.SelectedValue = x.dgMascota.SelectedRows[0].Cells["idRaza"].Value.ToString();
             }
         }
 
         private void tsLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void btnRaza_Click(object sender, EventArgs e)
+        {
+            FORMS.FrmRaza w = new FORMS.FrmRaza();
+            w.ShowDialog();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarMascota();
             CargarPedido();
+            Limpiar();
         }
 
         void CargarMascota()
@@ -108,8 +109,8 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgPMascota.SelectedRows[0].Cells["idPmas"].Value.ToString();
-                cbMascota.Text = x.dgPMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
-                cbPedido.Text = x.dgPMascota.SelectedRows[0].Cells["idPed"].Value.ToString();
+                cbMascota.SelectedValue = x.dgPMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
+                cbPedido.SelectedValue = x.dgPMascota.SelectedRows[0].Cells["idPed"].Value.ToString();
                 txtCantidad.Text = x.dgPMascota.SelectedRows[0].Cells["cantidad"].Value.ToString();
                 txtPrecio.Text = x.dgPMascota.SelectedRows[0].Cells["precio"].Value.ToString();
                 txtSubT.Text = x.dgPMascota.SelectedRows[0].Cells["subtotal"].Value.ToString();
@@ -138,5 +139,7 @@ namespace ACUA_USUARIO.FORMS
         {
             this.Close();
         }
+
+
     }
 }

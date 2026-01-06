@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ACUA_USUARIO.FORMS
 {
@@ -107,8 +108,8 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgPProducto.SelectedRows[0].Cells["idPprod"].Value.ToString();
-                cbPedido.Text = x.dgPProducto.SelectedRows[0].Cells["idPed"].Value.ToString();
-                cbProducto.Text = x.dgPProducto.SelectedRows[0].Cells["idProd"].Value.ToString();
+                cbPedido.SelectedValue = x.dgPProducto.SelectedRows[0].Cells["idPed"].Value.ToString();
+                cbProducto.SelectedValue = x.dgPProducto.SelectedRows[0].Cells["idProd"].Value.ToString();
                 txtCantidad.Text = x.dgPProducto.SelectedRows[0].Cells["cantidad"].Value.ToString();
                 txtPrecio.Text = x.dgPProducto.SelectedRows[0].Cells["precio"].Value.ToString();
                 txtSubT.Text = x.dgPProducto.SelectedRows[0].Cells["subtotal"].Value.ToString();
@@ -131,6 +132,35 @@ namespace ACUA_USUARIO.FORMS
             x.subtotal = int.Parse(txtSubT.Text);
             MessageBox.Show(x.Eliminar());
             Limpiar();
+        }
+
+        void precioc()
+        {
+            string consulta = "SELECT pVenta FROM PRODUCTO WHERE idProd = " + cbProducto.SelectedValue.ToString();
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            con.Open();
+
+            object precio = cmd.ExecuteScalar();
+            txtPrecio.Text = precio != null ? precio.ToString() : "0";
+            con.Close();
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (cbProducto.SelectedValue != null)
+            {
+                precioc();
+            }
         }
     }
 }

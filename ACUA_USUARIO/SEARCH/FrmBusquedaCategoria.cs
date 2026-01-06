@@ -60,5 +60,10 @@ namespace ACUA_USUARIO.SEARCH
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void dgCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

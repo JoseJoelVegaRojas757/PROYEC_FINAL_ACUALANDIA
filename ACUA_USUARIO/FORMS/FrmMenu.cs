@@ -12,7 +12,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmCategoria());
+            AbrirFormHijo(new FrmProducto());
         }
 
         private void AbrirFormHijo(object frmHijo)
@@ -35,7 +35,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void btnColonia_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmColonia());
+            AbrirFormHijo(new FrmInvMascota());
         }
 
         private void btnTrabajador_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmCliente());
+            AbrirFormHijo(new FrmProveedor());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void btnCIn_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmCInterno());
+            AbrirFormHijo(new FrmMascota());
         }
 
         private void btnCMascota_Click(object sender, EventArgs e)
@@ -81,6 +81,21 @@ namespace ACUA_USUARIO.FORMS
         private void pMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmVentas());
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmPedido());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new FrmPaqueteria());
         }
     }
 }

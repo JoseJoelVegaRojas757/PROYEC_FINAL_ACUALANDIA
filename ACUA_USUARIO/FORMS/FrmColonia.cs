@@ -25,6 +25,7 @@ namespace ACUA_USUARIO.FORMS
         private void FrmColonia_Load(object sender, EventArgs e)
         {
             CargarMunicipio();
+            Limpiar();
         }
 
         void CargarMunicipio()
@@ -53,37 +54,92 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From COLONIA where idCol = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From COLONIA where idCol = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            Colonia x = new Colonia();
-            x.idCol = int.Parse(txtId.Text);
-            x.idMun = Convert.ToInt32(cbMunicipio.SelectedValue);
-            x.nombre = txtNombre.Text;
-            x.cPostal = int.Parse(txtCodigoP.Text);
-            if (encontro() == true)
+            if (cbMunicipio.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione un municipio");
+                cbMunicipio.Focus();
+                return;
             }
-            else
+
+            if (txtNombre.Text.Trim() == "")
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese el nombre de la colonia");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (txtCodigoP.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el código postal");
+                txtCodigoP.Focus();
+                return;
+            }
+
+            int codigoPostal;
+            if (!int.TryParse(txtCodigoP.Text, out codigoPostal))
+            {
+                MessageBox.Show("Código postal debe ser un número");
+                txtCodigoP.Focus();
+                return;
+            }
+
+            if (codigoPostal.ToString().Length != 5)
+            {
+                MessageBox.Show("Código postal debe tener 5 dígitos");
+                txtCodigoP.Focus();
+                return;
+            }
+
+            try
+            {
+                Colonia x = new Colonia();
+                x.idCol = int.Parse(txtId.Text);
+                x.idMun = Convert.ToInt32(cbMunicipio.SelectedValue);
+                x.nombre = txtNombre.Text;
+                x.cPostal = int.Parse(txtCodigoP.Text);
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -94,7 +150,7 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgColonia.SelectedRows[0].Cells["idCol"].Value.ToString();
-                cbMunicipio.Text = x.dgColonia.SelectedRows[0].Cells["idMun"].Value.ToString();
+                cbMunicipio.SelectedValue = x.dgColonia.SelectedRows[0].Cells["idMun"].Value.ToString();
                 txtNombre.Text = x.dgColonia.SelectedRows[0].Cells["nombre"].Value.ToString();
                 txtCodigoP.Text = x.dgColonia.SelectedRows[0].Cells["cPostal"].Value.ToString();
             }
@@ -107,13 +163,31 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            Colonia x = new Colonia();
-            x.idCol = int.Parse(txtId.Text);
-            x.idMun = Convert.ToInt32(cbMunicipio.SelectedValue);
-            x.nombre = txtNombre.Text;
-            x.cPostal = int.Parse(txtCodigoP.Text);
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione una colonia para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar esta colonia?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    Colonia x = new Colonia();
+                    x.idCol = int.Parse(txtId.Text);
+                    x.idMun = Convert.ToInt32(cbMunicipio.SelectedValue);
+                    x.nombre = txtNombre.Text;
+                    x.cPostal = int.Parse(txtCodigoP.Text);
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
     }
 }

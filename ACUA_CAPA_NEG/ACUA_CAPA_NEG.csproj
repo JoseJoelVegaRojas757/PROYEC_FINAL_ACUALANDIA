@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -65,6 +65,7 @@
     <Compile Include="CLASES\MADetalle.cs" />
     <Compile Include="CLASES\Mascota.cs" />
     <Compile Include="CLASES\Municipio.cs" />
+    <Compile Include="CLASES\MVenta.cs" />
     <Compile Include="CLASES\PADetalle.cs" />
     <Compile Include="CLASES\Paqueteria.cs" />
     <Compile Include="CLASES\Pedido.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="CLASES\Tipo.cs" />
     <Compile Include="CLASES\Trabajador.cs" />
     <Compile Include="CLASES\Transportista.cs" />
-    <Compile Include="CLASES\Ventas.cs" />
+    <Compile Include="CLASES\VentaD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

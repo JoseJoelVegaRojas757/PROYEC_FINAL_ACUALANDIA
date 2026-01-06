@@ -63,20 +63,66 @@ namespace ACUA_USUARIO.FORMS
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Transportista x = new Transportista();
-            x.idTrans = int.Parse(txtId.Text);
-            x.idPaq = Convert.ToInt32(cbPaqueteria.Text);
-            x.nombre = txtNombre.Text;
-            x.telefono = txtTelefono.Text;
-            if (encontro() == true)
+            if (cbPaqueteria.SelectedIndex == -1)
             {
-                MessageBox.Show(x.Actualizar());
-            }
-            else
-            {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Seleccione una paquetería");
+                cbPaqueteria.Focus();
+                return;
             }
 
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("Ingrese el nombre del transportista");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTelefono.Text))
+            {
+                MessageBox.Show("Ingrese el teléfono");
+                txtTelefono.Focus();
+                return;
+            }
+
+            if (txtTelefono.Text.Length < 8)
+            {
+                MessageBox.Show("El teléfono debe tener al menos 8 dígitos");
+                txtTelefono.Focus();
+                return;
+            }
+
+            string accion = encontro() ? "actualizar" : "guardar";
+            if (MessageBox.Show($"¿Está seguro de {accion} este transportista?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                Transportista x = new Transportista();
+                x.idTrans = int.Parse(txtId.Text);
+                x.idPaq = Convert.ToInt32(cbPaqueteria.SelectedValue);
+                x.nombre = txtNombre.Text.Trim();
+                x.telefono = txtTelefono.Text.Trim();
+
+                string resultado;
+                if (encontro())
+                {
+                    resultado = x.Actualizar();
+                }
+                else
+                {
+                    resultado = x.Guardar();
+                }
+
+                MessageBox.Show(resultado);
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void tsBuscar_Click(object sender, EventArgs e)
@@ -86,7 +132,7 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgTransportista.SelectedRows[0].Cells["idTrans"].Value.ToString();
-                cbPaqueteria.Text = x.dgTransportista.SelectedRows[0].Cells["idPaq"].Value.ToString();
+                cbPaqueteria.SelectedValue = x.dgTransportista.SelectedRows[0].Cells["idPaq"].Value.ToString();
                 txtNombre.Text = x.dgTransportista.SelectedRows[0].Cells["nombre"].Value.ToString();
                 txtTelefono.Text = x.dgTransportista.SelectedRows[0].Cells["telefono"].Value.ToString();
             }
@@ -99,13 +145,33 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            Transportista x = new Transportista();
-            x.idTrans = int.Parse(txtId.Text);
-            x.idPaq = Convert.ToInt32(cbPaqueteria.Text);
-            x.nombre = txtNombre.Text;
-            x.telefono = txtTelefono.Text;
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (string.IsNullOrWhiteSpace(txtId.Text) || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un transportista para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este transportista?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                Transportista x = new Transportista();
+                x.idTrans = int.Parse(txtId.Text);
+                x.idPaq = Convert.ToInt32(cbPaqueteria.SelectedValue);
+                x.nombre = txtNombre.Text.Trim();
+                x.telefono = txtTelefono.Text.Trim();
+
+                MessageBox.Show(x.Eliminar());
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -116,6 +182,28 @@ namespace ACUA_USUARIO.FORMS
         private void FrmTransportista_Load(object sender, EventArgs e)
         {
             CargarPaqueteria();
+            Limpiar();
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '+')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombre_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtNombre.Text.Length >= 100 && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

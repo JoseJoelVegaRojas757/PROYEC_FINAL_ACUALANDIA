@@ -1,4 +1,6 @@
 ﻿using ACUA_CAPA_NEG.CLASES;
+using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -21,7 +23,7 @@ namespace ACUA_USUARIO.FORMS
             txtMonto.Clear();
             ACUA_CAPA_NEG.CLASES.Herramientas h = new ACUA_CAPA_NEG.CLASES.Herramientas();
             txtId.Text = h.consecutivo("id", "GASTO").ToString();
-            txtId.Clear();
+            
             txtDesG.Clear();
             txtMonto.Clear();
         }
@@ -29,21 +31,30 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From GASTO where id = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From GASTO where id = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
 
@@ -78,12 +89,30 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, System.EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.Gasto x = new ACUA_CAPA_NEG.CLASES.Gasto();
-            x.id = int.Parse(txtId.Text);
-            x.descripcion = txtDesG.Text;
-            x.monto = int.Parse(txtMonto.Text);
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un gasto para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este gasto?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ACUA_CAPA_NEG.CLASES.Gasto x = new ACUA_CAPA_NEG.CLASES.Gasto();
+                    x.id = int.Parse(txtId.Text);
+                    x.descripcion = txtDesG.Text;
+                    x.monto = int.Parse(txtMonto.Text);
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
 
         private void tsLimpiar_Click(object sender, System.EventArgs e)
@@ -94,6 +123,11 @@ namespace ACUA_USUARIO.FORMS
         private void btnClose_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmGasto_Load(object sender, System.EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

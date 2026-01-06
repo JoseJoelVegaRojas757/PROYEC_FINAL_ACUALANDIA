@@ -55,18 +55,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(279, 380);
+            this.label5.Location = new System.Drawing.Point(186, 247);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(214, 35);
+            this.label5.Size = new System.Drawing.Size(153, 23);
             this.label5.TabIndex = 133;
             this.label5.Text = "Telefono Oficina";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(142, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 181);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 130;
             this.pictureBox1.TabStop = false;
@@ -84,7 +86,7 @@
             this.tsGuardar.Location = new System.Drawing.Point(0, 0);
             this.tsGuardar.Name = "tsGuardar";
             this.tsGuardar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tsGuardar.Size = new System.Drawing.Size(36, 558);
+            this.tsGuardar.Size = new System.Drawing.Size(29, 363);
             this.tsGuardar.TabIndex = 129;
             this.tsGuardar.Text = "toolStrip1";
             // 
@@ -94,7 +96,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(31, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(26, 28);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -104,7 +106,7 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(26, 28);
             this.tsBuscar.Text = "toolStripButton2";
             this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
@@ -114,7 +116,7 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(26, 28);
             this.tsLimpiar.Text = "toolStripButton3";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
@@ -124,7 +126,7 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(26, 28);
             this.tsEliminar.Text = "toolStripButton4";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
@@ -132,9 +134,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(412, 92);
+            this.label3.Location = new System.Drawing.Point(275, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 35);
+            this.label3.Size = new System.Drawing.Size(131, 23);
             this.label3.TabIndex = 128;
             this.label3.Text = "Transportista";
             // 
@@ -142,9 +145,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(382, 283);
+            this.label2.Location = new System.Drawing.Point(255, 184);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 35);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 127;
             this.label2.Text = "Nombre";
             // 
@@ -152,9 +156,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(453, 225);
+            this.label1.Location = new System.Drawing.Point(302, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 35);
+            this.label1.Size = new System.Drawing.Size(27, 23);
             this.label1.TabIndex = 126;
             this.label1.Text = "Id";
             // 
@@ -165,10 +170,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(1028, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(680, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 558);
+            this.toolStrip2.Size = new System.Drawing.Size(29, 363);
             this.toolStrip2.TabIndex = 137;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -178,41 +183,51 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 28);
+            this.btnClose.Size = new System.Drawing.Size(26, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.Location = new System.Drawing.Point(499, 234);
+            this.txtId.Location = new System.Drawing.Point(333, 152);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(68, 20);
             this.txtId.TabIndex = 138;
+            this.txtId.TabStop = false;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtNombre.Location = new System.Drawing.Point(497, 292);
+            this.txtNombre.Location = new System.Drawing.Point(331, 190);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(147, 26);
+            this.txtNombre.Size = new System.Drawing.Size(99, 20);
             this.txtNombre.TabIndex = 139;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyUp);
             // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtTelefono.Location = new System.Drawing.Point(499, 389);
+            this.txtTelefono.Location = new System.Drawing.Point(333, 253);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(145, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(98, 20);
             this.txtTelefono.TabIndex = 140;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(342, 335);
+            this.label4.Location = new System.Drawing.Point(228, 218);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 35);
+            this.label4.Size = new System.Drawing.Size(108, 23);
             this.label4.TabIndex = 141;
             this.label4.Text = "Paqueteria";
             // 
@@ -220,17 +235,18 @@
             // 
             this.cbPaqueteria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cbPaqueteria.FormattingEnabled = true;
-            this.cbPaqueteria.Location = new System.Drawing.Point(499, 341);
+            this.cbPaqueteria.Location = new System.Drawing.Point(333, 222);
+            this.cbPaqueteria.Margin = new System.Windows.Forms.Padding(2);
             this.cbPaqueteria.Name = "cbPaqueteria";
-            this.cbPaqueteria.Size = new System.Drawing.Size(145, 28);
+            this.cbPaqueteria.Size = new System.Drawing.Size(98, 21);
             this.cbPaqueteria.TabIndex = 142;
             // 
             // FrmTransportista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1064, 558);
+            this.ClientSize = new System.Drawing.Size(709, 363);
             this.Controls.Add(this.cbPaqueteria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTelefono);
@@ -244,6 +260,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTransportista";
             this.Text = "FrmTransportista";
             this.Load += new System.EventHandler(this.FrmTransportista_Load);

@@ -95,7 +95,7 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgRaza.SelectedRows[0].Cells["idRaza"].Value.ToString();
-                cbTipo.Text = x.dgRaza.SelectedRows[0].Cells["idTipo"].Value.ToString();
+                cbTipo.SelectedValue = x.dgRaza.SelectedRows[0].Cells["idTipo"].Value.ToString();
                 txtNombre.Text = x.dgRaza.SelectedRows[0].Cells["nomRaza"].Value.ToString();
             }
         }

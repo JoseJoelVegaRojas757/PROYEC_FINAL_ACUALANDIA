@@ -21,6 +21,7 @@ namespace ACUA_USUARIO.FORMS
         {
             CargarMascota();
             CargarProveedor();
+            Limpiar();
         }
 
         void CargarMascota()
@@ -64,39 +65,114 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From INVMASCOTA where idInv = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From INVMASCOTA where idInv = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            InvMascota x = new InvMascota();
-            x.idInv = int.Parse(txtId.Text);
-            x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
-            x.idProv = Convert.ToInt32(cbProveedor.SelectedValue);
-            x.minimo = int.Parse(txtMin.Text);
-            x.existencia = int.Parse(txtExistencia.Text);
-
-            if (encontro() == true)
+            if (cbMascota.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione una mascota");
+                cbMascota.Focus();
+                return;
             }
-            else
+
+            if (cbProveedor.SelectedValue == null)
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Seleccione un proveedor");
+                cbProveedor.Focus();
+                return;
+            }
+
+            if (txtMin.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el mínimo de inventario");
+                txtMin.Focus();
+                return;
+            }
+
+            if (txtExistencia.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese la existencia actual");
+                txtExistencia.Focus();
+                return;
+            }
+
+            int minimo, existencia;
+            if (!int.TryParse(txtMin.Text, out minimo))
+            {
+                MessageBox.Show("Mínimo debe ser un número válido");
+                txtMin.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtExistencia.Text, out existencia))
+            {
+                MessageBox.Show("Existencia debe ser un número válido");
+                txtExistencia.Focus();
+                return;
+            }
+
+            if (minimo < 0)
+            {
+                MessageBox.Show("El mínimo no puede ser negativo");
+                txtMin.Focus();
+                return;
+            }
+
+            if (existencia < 0)
+            {
+                MessageBox.Show("La existencia no puede ser negativa");
+                txtExistencia.Focus();
+                return;
+            }
+
+            try
+            {
+                InvMascota x = new InvMascota();
+                x.idInv = int.Parse(txtId.Text);
+                x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
+                x.idProv = Convert.ToInt32(cbProveedor.SelectedValue);
+                x.minimo = int.Parse(txtMin.Text);
+                x.existencia = int.Parse(txtExistencia.Text);
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -107,8 +183,8 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgInvMascota.SelectedRows[0].Cells["idInv"].Value.ToString();
-                cbMascota.Text = x.dgInvMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
-                cbProveedor.Text = x.dgInvMascota.SelectedRows[0].Cells["idProv"].Value.ToString();
+                cbMascota.SelectedValue = x.dgInvMascota.SelectedRows[0].Cells["idMas"].Value.ToString();
+                cbProveedor.SelectedValue = x.dgInvMascota.SelectedRows[0].Cells["idProv"].Value.ToString();
                 txtMin.Text = x.dgInvMascota.SelectedRows[0].Cells["minimo"].Value.ToString();
                 txtExistencia.Text = x.dgInvMascota.SelectedRows[0].Cells["existencia"].Value.ToString();
             }
@@ -121,14 +197,43 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.InvMascota x = new ACUA_CAPA_NEG.CLASES.InvMascota();
-            x.idInv = int.Parse(txtId.Text);
-            x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
-            x.idProv = Convert.ToInt32(cbProveedor.SelectedValue);
-            x.minimo = int.Parse(txtMin.Text);
-            x.existencia = int.Parse(txtExistencia.Text);
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un inventario para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este inventario?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ACUA_CAPA_NEG.CLASES.InvMascota x = new ACUA_CAPA_NEG.CLASES.InvMascota();
+                    x.idInv = int.Parse(txtId.Text);
+                    x.idMas = Convert.ToInt32(cbMascota.SelectedValue);
+                    x.idProv = Convert.ToInt32(cbProveedor.SelectedValue);
+                    x.minimo = int.Parse(txtMin.Text);
+                    x.existencia = int.Parse(txtExistencia.Text);
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tsImprimir_Click(object sender, EventArgs e)
+        {
+            REPORTS.FrmrMascota x = new REPORTS.FrmrMascota();
+            x.ShowDialog();
         }
     }
 }

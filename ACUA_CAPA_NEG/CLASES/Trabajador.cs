@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace ACUA_CAPA_NEG.CLASES
@@ -10,7 +11,8 @@ namespace ACUA_CAPA_NEG.CLASES
         SqlCommand comando = new SqlCommand();
 
         public int idTra, traDom, idPuesto;
-        public string traNombre, traPaterno, traMaterno, traTel, traNacimiento, traSociales;
+        public string traNombre, traPaterno, traMaterno, traTel,  traSociales;
+        public DateTime traNacimiento;
         public Trabajador()
         {
             con.ConnectionString = x.ConexionSql;

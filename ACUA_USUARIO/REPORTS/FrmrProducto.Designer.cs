@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cbInvProducto);
             this.Controls.Add(this.chTodo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmrProducto";
             this.Text = "FrmrProducto";
             this.Load += new System.EventHandler(this.FrmrProducto_Load);

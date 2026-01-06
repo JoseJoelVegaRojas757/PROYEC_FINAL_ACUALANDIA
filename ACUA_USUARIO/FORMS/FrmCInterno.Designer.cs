@@ -53,18 +53,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(287, 319);
+            this.label5.Location = new System.Drawing.Point(191, 207);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 35);
+            this.label5.Size = new System.Drawing.Size(48, 23);
             this.label5.TabIndex = 246;
             this.label5.Text = "Tipo";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 167);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 243;
             this.pictureBox1.TabStop = false;
@@ -82,7 +84,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(36, 482);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 313);
             this.toolStrip1.TabIndex = 242;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -92,7 +94,7 @@
             this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
             this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(31, 28);
+            this.tsGuardar.Size = new System.Drawing.Size(29, 28);
             this.tsGuardar.Text = "toolStripButton1";
             this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
             // 
@@ -102,7 +104,7 @@
             this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
             this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(31, 28);
+            this.tsBuscar.Size = new System.Drawing.Size(29, 28);
             this.tsBuscar.Text = "toolStripButton2";
             this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
@@ -112,7 +114,7 @@
             this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
             this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(31, 28);
+            this.tsLimpiar.Size = new System.Drawing.Size(29, 28);
             this.tsLimpiar.Text = "toolStripButton3";
             this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
@@ -122,7 +124,7 @@
             this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
             this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(31, 28);
+            this.tsEliminar.Size = new System.Drawing.Size(29, 28);
             this.tsEliminar.Text = "toolStripButton4";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
@@ -130,9 +132,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(315, 62);
+            this.label3.Location = new System.Drawing.Point(210, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 35);
+            this.label3.Size = new System.Drawing.Size(161, 23);
             this.label3.TabIndex = 241;
             this.label3.Text = "Consumo Interno";
             // 
@@ -140,9 +143,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(267, 266);
+            this.label2.Location = new System.Drawing.Point(178, 173);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 35);
+            this.label2.Size = new System.Drawing.Size(62, 23);
             this.label2.TabIndex = 240;
             this.label2.Text = "Fecha";
             // 
@@ -150,9 +154,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(315, 213);
+            this.label1.Location = new System.Drawing.Point(210, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 35);
+            this.label1.Size = new System.Drawing.Size(27, 23);
             this.label1.TabIndex = 239;
             this.label1.Text = "Id";
             // 
@@ -163,10 +168,10 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(851, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(562, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(36, 482);
+            this.toolStrip2.Size = new System.Drawing.Size(29, 313);
             this.toolStrip2.TabIndex = 248;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -176,40 +181,45 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 28);
+            this.btnClose.Size = new System.Drawing.Size(26, 28);
             this.btnClose.Text = "toolStripButton4";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtId.Location = new System.Drawing.Point(362, 221);
+            this.txtId.Location = new System.Drawing.Point(241, 144);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(117, 26);
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(79, 20);
             this.txtId.TabIndex = 249;
+            this.txtId.TabStop = false;
             // 
             // txtTipo
             // 
             this.txtTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtTipo.Location = new System.Drawing.Point(361, 328);
+            this.txtTipo.Location = new System.Drawing.Point(241, 213);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(233, 26);
+            this.txtTipo.Size = new System.Drawing.Size(157, 20);
             this.txtTipo.TabIndex = 251;
             // 
             // txtFecha
             // 
             this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtFecha.Location = new System.Drawing.Point(362, 275);
+            this.txtFecha.Location = new System.Drawing.Point(241, 179);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(233, 26);
+            this.txtFecha.Size = new System.Drawing.Size(157, 20);
             this.txtFecha.TabIndex = 252;
             // 
             // FrmCInterno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(887, 482);
+            this.ClientSize = new System.Drawing.Size(591, 313);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtId);
@@ -221,6 +231,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCInterno";
             this.Text = "FrmCInterno";
             this.Load += new System.EventHandler(this.FrmCInterno_Load);

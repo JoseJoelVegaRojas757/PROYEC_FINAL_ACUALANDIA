@@ -65,5 +65,10 @@ namespace ACUA_USUARIO.SEARCH
             dgProducto.DataSource = dt;
             con.Close();
         }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

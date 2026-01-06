@@ -9,8 +9,8 @@ namespace ACUA_CAPA_NEG.CLASES
         SqlConnection con = new SqlConnection();
         SqlCommand comando = new SqlCommand();
 
-        public int idPaq, idDom, telefono;
-        public string nombre;
+        public int idPaq, idDom;
+        public string nombre, telefono;
 
 
         public Paqueteria()

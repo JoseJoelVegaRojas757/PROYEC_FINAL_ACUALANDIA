@@ -10,8 +10,10 @@ namespace ACUA_CAPA_NEG.CLASES
         SqlCommand comando = new SqlCommand();
 
         public int idProd, idCat;
-        public string codigo, nomProducto, oferta, estatus;
+        public string codigo, nomProducto;
         public decimal pCompra, ivaCompra, pVenta, ivaVenta, pOferta;
+        public bool oferta, estatus; 
+
 
         public Producto()
         {
@@ -21,9 +23,9 @@ namespace ACUA_CAPA_NEG.CLASES
         public string Guardar()
         {
             string msj = "";
+            SqlCommand comando = new SqlCommand("SP_PRODUCTO", con);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "SP_PRODUCTO";
-            comando.Parameters.Clear();
+
             comando.Parameters.AddWithValue("@op", 1);
             comando.Parameters.AddWithValue("@idProd", idProd);
             comando.Parameters.AddWithValue("@idCat", idCat);
@@ -33,25 +35,25 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@ivaCompra", ivaCompra);
             comando.Parameters.AddWithValue("@pVenta", pVenta);
             comando.Parameters.AddWithValue("@ivaVenta", ivaVenta);
-            comando.Parameters.AddWithValue("@oferta", oferta);
+            comando.Parameters.AddWithValue("@oferta", oferta ? 1 : 0);
             comando.Parameters.AddWithValue("@pOferta", pOferta);
-            comando.Parameters.AddWithValue("@estatus", estatus);
-            comando.Connection = con;
+            comando.Parameters.AddWithValue("@estatus", estatus ? 1 : 0); 
 
             con.Open();
             comando.ExecuteNonQuery();
             con.Close();
-            msj = "El Producto se ha guardado correctamente";
+
+            msj = "Producto guardado";
             return msj;
         }
 
         public string Actualizar()
         {
             string msj = "";
+            SqlCommand comando = new SqlCommand("SP_PRODUCTO", con);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "SP_PRODUCTO";
-            comando.Parameters.Clear();
-            comando.Parameters.AddWithValue("@op", 1);
+
+            comando.Parameters.AddWithValue("@op", 1); 
             comando.Parameters.AddWithValue("@idProd", idProd);
             comando.Parameters.AddWithValue("@idCat", idCat);
             comando.Parameters.AddWithValue("@codigo", codigo);
@@ -60,23 +62,25 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@ivaCompra", ivaCompra);
             comando.Parameters.AddWithValue("@pVenta", pVenta);
             comando.Parameters.AddWithValue("@ivaVenta", ivaVenta);
-            comando.Parameters.AddWithValue("@oferta", oferta);
+            comando.Parameters.AddWithValue("@oferta", oferta ? 1 : 0);
             comando.Parameters.AddWithValue("@pOferta", pOferta);
-            comando.Parameters.AddWithValue("@estatus", estatus);
-            comando.Connection = con;
+            comando.Parameters.AddWithValue("@estatus", estatus ? 1 : 0);
 
             con.Open();
-            msj = "El Producto se ha actualizado correctamente";
+            comando.ExecuteNonQuery();
             con.Close();
+
+            msj = "Producto actualizado";
             return msj;
         }
 
         public string Eliminar()
         {
             string msj = "";
+            SqlCommand comando = new SqlCommand("SP_PRODUCTO", con);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "SP_PRODUCTO";
-            comando.Parameters.Clear();
+
+
             comando.Parameters.AddWithValue("@op", 3);
             comando.Parameters.AddWithValue("@idProd", idProd);
             comando.Parameters.AddWithValue("@idCat", idCat);
@@ -86,9 +90,10 @@ namespace ACUA_CAPA_NEG.CLASES
             comando.Parameters.AddWithValue("@ivaCompra", ivaCompra);
             comando.Parameters.AddWithValue("@pVenta", pVenta);
             comando.Parameters.AddWithValue("@ivaVenta", ivaVenta);
-            comando.Parameters.AddWithValue("@oferta", oferta);
+            comando.Parameters.AddWithValue("@oferta", oferta ? 1 : 0);
             comando.Parameters.AddWithValue("@pOferta", pOferta);
-            comando.Parameters.AddWithValue("@estatus", estatus);
+            comando.Parameters.AddWithValue("@estatus", estatus ? 1 : 0);
+
             comando.Connection = con;
 
             con.Open();

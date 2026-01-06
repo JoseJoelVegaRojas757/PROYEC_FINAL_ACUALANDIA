@@ -1,5 +1,6 @@
 ﻿using ACUA_CAPA_NEG.CLASES;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void FrmCInterno_Load(object sender, EventArgs e)
         {
-
+            Limpiar();
         }
 
         void Limpiar()
@@ -35,36 +36,69 @@ namespace ACUA_USUARIO.FORMS
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From CINTERNO where idInterno = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From CINTERNO where idInterno = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            CInterno x = new CInterno();
-            x.idInterno = int.Parse(txtId.Text);
-            x.fecha = txtFecha.Text;
-            x.tipo = txtTipo.Text;
-            if (encontro() == true)
+            if (txtFecha.Text.Trim() == "")
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Ingrese la fecha");
+                txtFecha.Focus();
+                return;
             }
-            else
+
+            if (txtTipo.Text.Trim() == "")
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese el tipo");
+                txtTipo.Focus();
+                return;
+            }
+
+            try
+            {
+                CInterno x = new CInterno();
+                x.idInterno = int.Parse(txtId.Text);
+                x.fecha = txtFecha.Text;
+                x.tipo = txtTipo.Text;
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -87,12 +121,30 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            CInterno x = new CInterno();
-            x.idInterno = int.Parse(txtId.Text);
-            x.fecha = txtFecha.Text;
-            x.tipo = txtTipo.Text;
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un registro para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    CInterno x = new CInterno();
+                    x.idInterno = int.Parse(txtId.Text);
+                    x.fecha = txtFecha.Text;
+                    x.tipo = txtTipo.Text;
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -20,6 +20,7 @@ namespace ACUA_USUARIO.FORMS
         private void FrmPaqueteria_Load(object sender, EventArgs e)
         {
             CargarDomicilio();
+            Limpiar();
         }
 
         void CargarDomicilio()
@@ -72,7 +73,7 @@ namespace ACUA_USUARIO.FORMS
             x.idPaq = int.Parse(txtId.Text);
             x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
             x.nombre = txtNombre.Text;
-            x.telefono = int.Parse(txtTelefono.Text);
+            x.telefono = txtTelefono.Text;
             if (encontro() == true)
             {
                 MessageBox.Show(x.Actualizar());
@@ -85,7 +86,15 @@ namespace ACUA_USUARIO.FORMS
 
         private void tsBuscar_Click(object sender, EventArgs e)
         {
-
+            SEARCH.FrmBusquedaPaqueteria x = new SEARCH.FrmBusquedaPaqueteria();
+            x.ShowDialog();
+            if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                txtId.Text = x.dgPaqueteria.SelectedRows[0].Cells["idPaq"].Value.ToString();
+                txtNombre.Text = x.dgPaqueteria.SelectedRows[0].Cells["nombre"].Value.ToString();
+                txtTelefono.Text = x.dgPaqueteria.SelectedRows[0].Cells["telefono"].Value.ToString();
+                cbDomicilio.SelectedValue =  x.dgPaqueteria.SelectedRows[0].Cells["idDom"].Value.ToString();
+            }
         }
 
         private void tsLimpiar_Click(object sender, EventArgs e)
@@ -99,9 +108,14 @@ namespace ACUA_USUARIO.FORMS
             x.idPaq = int.Parse(txtId.Text);
             x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
             x.nombre = txtNombre.Text;
-            x.telefono = int.Parse(txtTelefono.Text);
+            x.telefono = txtTelefono.Text;
             MessageBox.Show(x.Eliminar());
             Limpiar();
+        }
+
+        private void tsClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

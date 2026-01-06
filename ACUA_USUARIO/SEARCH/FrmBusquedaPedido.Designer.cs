@@ -47,11 +47,11 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnClose});
-            this.toolStrip2.Location = new System.Drawing.Point(881, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(579, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(37, 441);
+            this.toolStrip2.Size = new System.Drawing.Size(33, 287);
             this.toolStrip2.TabIndex = 112;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -61,62 +61,73 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 28);
+            this.btnClose.Size = new System.Drawing.Size(28, 28);
             this.btnClose.Text = "toolStripButton4";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgPedido
             // 
             this.dgPedido.AllowUserToAddRows = false;
             this.dgPedido.AllowUserToDeleteRows = false;
             this.dgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPedido.Location = new System.Drawing.Point(55, 103);
+            this.dgPedido.Location = new System.Drawing.Point(37, 67);
+            this.dgPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgPedido.Name = "dgPedido";
             this.dgPedido.ReadOnly = true;
             this.dgPedido.RowHeadersWidth = 62;
             this.dgPedido.RowTemplate.Height = 28;
-            this.dgPedido.Size = new System.Drawing.Size(744, 163);
+            this.dgPedido.Size = new System.Drawing.Size(496, 106);
             this.dgPedido.TabIndex = 111;
+            this.dgPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPedido_CellClick);
+            this.dgPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPedido_CellContentClick);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(717, 272);
+            this.btnBorrar.Location = new System.Drawing.Point(478, 177);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(84, 36);
+            this.btnBorrar.Size = new System.Drawing.Size(56, 23);
             this.btnBorrar.TabIndex = 110;
             this.btnBorrar.Text = "Cancelar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(636, 272);
+            this.btnAceptar.Location = new System.Drawing.Point(424, 177);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 36);
+            this.btnAceptar.Size = new System.Drawing.Size(50, 23);
             this.btnAceptar.TabIndex = 109;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(717, 55);
+            this.btnBuscar.Location = new System.Drawing.Point(478, 36);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(82, 37);
+            this.btnBuscar.Size = new System.Drawing.Size(55, 24);
             this.btnBuscar.TabIndex = 108;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(55, 60);
+            this.txtFiltro.Location = new System.Drawing.Point(37, 39);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(644, 26);
+            this.txtFiltro.Size = new System.Drawing.Size(431, 20);
             this.txtFiltro.TabIndex = 107;
             // 
             // FrmBusquedaPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(918, 441);
+            this.ClientSize = new System.Drawing.Size(612, 287);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.dgPedido);
             this.Controls.Add(this.btnBorrar);
@@ -124,8 +135,10 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmBusquedaPedido";
             this.Text = "FrmBusquedaPedido";
+            this.Load += new System.EventHandler(this.FrmBusquedaPedido_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPedido)).EndInit();

@@ -23,7 +23,7 @@ namespace ACUA_USUARIO.FORMS
 
         private void FrmCategoria_Load(object sender, System.EventArgs e)
         {
-
+            Limpiar();
         }
 
         void Limpiar()

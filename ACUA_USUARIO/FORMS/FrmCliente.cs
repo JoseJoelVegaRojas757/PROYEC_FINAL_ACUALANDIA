@@ -42,7 +42,7 @@ namespace ACUA_USUARIO.FORMS
             txtNombre.Clear();
             txtA_Paterno.Clear();
             txtA_Materno.Clear();
-            txtFechaNa.Clear();
+            //dtFechaN.Clear();
             txtTel.Clear();
             txtSociales.Clear();
             ACUA_CAPA_NEG.CLASES.Herramientas h = new ACUA_CAPA_NEG.CLASES.Herramientas();
@@ -51,53 +51,94 @@ namespace ACUA_USUARIO.FORMS
             txtA_Paterno.Focus();
             txtA_Materno.Focus();
             txtTel.Focus();
-            txtFechaNa.Focus();
+            dtFechaN.Focus();
             txtSociales.Focus();
         }
 
         bool encontro()
         {
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From CLIENTE where idCli = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From CLIENTE where idCli = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
         private void FrmCliente_Load(object sender, System.EventArgs e)
         {
             CargarDomiclio();
+            Limpiar();
         }
 
         private void tsGuardar_Click(object sender, System.EventArgs e)
         {
-            Cliente x = new Cliente();
-            x.idCli = int.Parse(txtId.Text);
-            x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
-            x.Nombre = txtNombre.Text;
-            x.Paterno = txtA_Paterno.Text;
-            x.Materno = txtA_Materno.Text;
-            x.Nacimiento = txtFechaNa.Text;
-            x.Telefono = txtTel.Text;
-            x.RSociales = txtSociales.Text;
-            if (encontro() == true)
+            if (cbDomicilio.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione un domicilio");
+                cbDomicilio.Focus();
+                return;
             }
-            else
+
+            if (txtNombre.Text.Trim() == "")
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Ingrese el nombre");
+                txtNombre.Focus();
+                return;
+            }
+
+            if (txtA_Paterno.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el apellido paterno");
+                txtA_Paterno.Focus();
+                return;
+            }
+
+            try
+            {
+                Cliente x = new Cliente();
+                x.idCli = int.Parse(txtId.Text);
+                x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
+                x.Nombre = txtNombre.Text;
+                x.Paterno = txtA_Paterno.Text;
+                x.Materno = txtA_Materno.Text;
+                x.Nacimiento = dtFechaN.Value.ToString("yyyy/MM/dd");
+                x.Telefono = txtTel.Text;
+                x.RSociales = txtSociales.Text;
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -113,29 +154,47 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgCliente.SelectedRows[0].Cells["idCli"].Value.ToString();
-                cbDomicilio.Text = x.dgCliente.SelectedRows[0].Cells["idDom"].Value.ToString();
+                cbDomicilio.SelectedValue = x.dgCliente.SelectedRows[0].Cells["idDom"].Value.ToString();
                 txtNombre.Text = x.dgCliente.SelectedRows[0].Cells["cli_Nombre"].Value.ToString();
                 txtA_Paterno.Text = x.dgCliente.SelectedRows[0].Cells["cli_Paterno"].Value.ToString();
                 txtA_Materno.Text = x.dgCliente.SelectedRows[0].Cells["cli_Materno"].Value.ToString();
                 txtTel.Text = x.dgCliente.SelectedRows[0].Cells["cli_Tel"].Value.ToString();
                 txtSociales.Text = x.dgCliente.SelectedRows[0].Cells["cli_Sociales"].Value.ToString();
-                txtFechaNa.Text = x.dgCliente.SelectedRows[0].Cells["cli_Nacimiento"].Value.ToString();
+                dtFechaN.Text = x.dgCliente.SelectedRows[0].Cells["cli_Nacimiento"].Value.ToString();
             }
         }
 
         private void tsEliminar_Click(object sender, EventArgs e)
         {
-            ACUA_CAPA_NEG.CLASES.Cliente x = new ACUA_CAPA_NEG.CLASES.Cliente();
-            x.idCli = int.Parse(txtId.Text);
-            x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
-            x.Nombre = txtNombre.Text;
-            x.Paterno = txtA_Paterno.Text;
-            x.Materno = txtA_Materno.Text;
-            x.Nacimiento = txtFechaNa.Text;
-            x.Telefono = txtTel.Text;
-            x.RSociales = txtSociales.Text;
-            MessageBox.Show(x.Eliminar());
-            Limpiar();
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+            {
+                MessageBox.Show("Seleccione un cliente para eliminar");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro de eliminar este cliente?", "Confirmar",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ACUA_CAPA_NEG.CLASES.Cliente x = new ACUA_CAPA_NEG.CLASES.Cliente();
+                    x.idCli = int.Parse(txtId.Text);
+                    x.idDom = Convert.ToInt32(cbDomicilio.SelectedValue);
+                    x.Nombre = txtNombre.Text;
+                    x.Paterno = txtA_Paterno.Text;
+                    x.Materno = txtA_Materno.Text;
+                    x.Nacimiento = dtFechaN.Value.ToString("yyyy/MM/dd");
+                    x.Telefono = txtTel.Text;
+                    x.RSociales = txtSociales.Text;
+
+                    MessageBox.Show(x.Eliminar());
+                    Limpiar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
+                }
+            }
         }
     }
 }

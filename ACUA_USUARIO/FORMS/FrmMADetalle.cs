@@ -60,43 +60,155 @@ namespace ACUA_USUARIO.FORMS
 
         bool encontro()
         {
+
             bool a = false;
-            int id = int.Parse(txtId.Text);
-            string cadena = $"Select * From MADETALLE where idAdetalle = {id}";
-            con.Open();
-            SqlCommand cmd = new SqlCommand(cadena, con);
-            SqlDataReader lector = cmd.ExecuteReader();
-            if (lector.Read())
+
+            if (txtId.Text.Trim() == "" || txtId.Text == "0")
+                return false;
+
+            try
             {
-                a = true;
+                int id = int.Parse(txtId.Text);
+                string cadena = $"Select * From MADETALLE where idAdetalle = {id}";
+                con.Open();
+                SqlCommand cmd = new SqlCommand(cadena, con);
+                SqlDataReader lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    a = true;
+                }
+                con.Close();
+                return a;
             }
-            else
+            catch
             {
-                a = false;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return false;
             }
-            con.Close();
-            return a;
         }
 
 
 
         private void tsGuardar_Click(object sender, EventArgs e)
         {
-            MADetalle x = new MADetalle();
-            x.idAdetalle = int.Parse(txtId.Text);
-            x.idApartado = Convert.ToInt32(cbApartado.SelectedValue);
-            x.idMascota = Convert.ToInt32(cbMascota.SelectedValue);
-            x.cantidad = int.Parse(txtCantidad.Text);
-            x.precio = int.Parse(txtPrecio.Text);
-            x.anticipo = int.Parse(txtAnticipo.Text);
-            x.subtotal = int.Parse(txtSubTotal.Text);
-            if (encontro() == true)
+            if (cbApartado.SelectedValue == null)
             {
-                MessageBox.Show(x.Actualizar());
+                MessageBox.Show("Seleccione un apartado");
+                cbApartado.Focus();
+                return;
             }
-            else
+
+            if (cbMascota.SelectedValue == null)
             {
-                MessageBox.Show(x.Guardar());
+                MessageBox.Show("Seleccione una mascota");
+                cbMascota.Focus();
+                return;
+            }
+
+            if (txtCantidad.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese la cantidad");
+                txtCantidad.Focus();
+                return;
+            }
+
+            if (txtPrecio.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el precio");
+                txtPrecio.Focus();
+                return;
+            }
+
+            if (txtAnticipo.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el anticipo");
+                txtAnticipo.Focus();
+                return;
+            }
+
+            int cantidad, precio, anticipo, subtotal;
+            if (!int.TryParse(txtCantidad.Text, out cantidad))
+            {
+                MessageBox.Show("Cantidad debe ser un número");
+                txtCantidad.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtPrecio.Text, out precio))
+            {
+                MessageBox.Show("Precio debe ser un número");
+                txtPrecio.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtAnticipo.Text, out anticipo))
+            {
+                MessageBox.Show("Anticipo debe ser un número");
+                txtAnticipo.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtSubTotal.Text, out subtotal))
+            {
+                MessageBox.Show("Subtotal debe ser un número");
+                txtSubTotal.Focus();
+                return;
+            }
+
+            if (cantidad <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser mayor que cero");
+                txtCantidad.Focus();
+                return;
+            }
+
+            if (precio <= 0)
+            {
+                MessageBox.Show("El precio debe ser mayor que cero");
+                txtPrecio.Focus();
+                return;
+            }
+
+            if (anticipo <= 0)
+            {
+                MessageBox.Show("El anticipo debe ser mayor que cero");
+                txtAnticipo.Focus();
+                return;
+            }
+
+            if (anticipo > subtotal)
+            {
+                MessageBox.Show("El anticipo no puede ser mayor que el subtotal");
+                txtAnticipo.Focus();
+                return;
+            }
+
+            try
+            {
+                MADetalle x = new MADetalle();
+                x.idAdetalle = int.Parse(txtId.Text);
+                x.idApartado = Convert.ToInt32(cbApartado.SelectedValue);
+                x.idMascota = Convert.ToInt32(cbMascota.SelectedValue);
+                x.cantidad = int.Parse(txtCantidad.Text);
+                x.precio = int.Parse(txtPrecio.Text);
+                x.anticipo = int.Parse(txtAnticipo.Text);
+                x.subtotal = int.Parse(txtSubTotal.Text);
+
+                if (encontro())
+                {
+                    MessageBox.Show(x.Actualizar());
+                }
+                else
+                {
+                    MessageBox.Show(x.Guardar());
+                }
+
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
 
         }
@@ -139,13 +251,57 @@ namespace ACUA_USUARIO.FORMS
             if (x.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 txtId.Text = x.dgMadetalle.SelectedRows[0].Cells["idAdetalle"].Value.ToString();
-                cbApartado.Text = x.dgMadetalle.SelectedRows[0].Cells["idApartado"].Value.ToString();
-                cbMascota.Text = x.dgMadetalle.SelectedRows[0].Cells["idMascota"].Value.ToString();
+                cbApartado.SelectedValue = x.dgMadetalle.SelectedRows[0].Cells["idApartado"].Value.ToString();
+                cbMascota.SelectedValue = x.dgMadetalle.SelectedRows[0].Cells["idMascota"].Value.ToString();
                 txtCantidad.Text = x.dgMadetalle.SelectedRows[0].Cells["cantidad"].Value.ToString();
                 txtPrecio.Text = x.dgMadetalle.SelectedRows[0].Cells["precio"].Value.ToString();
                 txtAnticipo.Text = x.dgMadetalle.SelectedRows[0].Cells["anticipo"].Value.ToString();
                 txtSubTotal.Text = x.dgMadetalle.SelectedRows[0].Cells["subtotal"].Value.ToString();
             }
+        }
+
+        void precioPM()
+        {
+            string consulta = "SELECT pVenta FROM MVENTA WHERE idMas = " + cbMascota.SelectedValue.ToString();
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            con.Open();
+
+            object precio = cmd.ExecuteScalar();
+            txtPrecio.Text = precio != null ? precio.ToString() : "No esta en Venta";
+            con.Close();
+        }
+
+        private void cbMascota_TextChanged(object sender, EventArgs e)
+        {
+            if (cbMascota.SelectedValue != null)
+            {
+                precioPM();
+            }
+        }
+
+        void subt()
+        {
+            try
+            {
+                decimal p = decimal.Parse(txtPrecio.Text);
+                decimal c = decimal.Parse(txtCantidad.Text);
+                txtSubTotal.Text = (p * c).ToString();
+            }
+            catch
+            {
+                txtSubTotal.Text = "0";
+            }
+
+        }
+
+        private void cbMascota_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            subt();
         }
     }
 }

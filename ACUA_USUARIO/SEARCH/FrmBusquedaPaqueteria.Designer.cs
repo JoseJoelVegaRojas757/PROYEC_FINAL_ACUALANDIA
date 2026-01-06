@@ -28,12 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBusquedaPaqueteria));
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.dgPaqueteria = new System.Windows.Forms.DataGridView();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPaqueteria)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.BackColor = System.Drawing.Color.LightCyan;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnClose});
+            this.toolStrip2.Location = new System.Drawing.Point(711, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip2.Size = new System.Drawing.Size(30, 299);
+            this.toolStrip2.TabIndex = 112;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // btnClose
+            // 
+            this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 28);
+            this.btnClose.Text = "toolStripButton4";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // dgPaqueteria
+            // 
+            this.dgPaqueteria.AllowUserToAddRows = false;
+            this.dgPaqueteria.AllowUserToDeleteRows = false;
+            this.dgPaqueteria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPaqueteria.Location = new System.Drawing.Point(79, 79);
+            this.dgPaqueteria.Margin = new System.Windows.Forms.Padding(2);
+            this.dgPaqueteria.Name = "dgPaqueteria";
+            this.dgPaqueteria.ReadOnly = true;
+            this.dgPaqueteria.RowHeadersWidth = 62;
+            this.dgPaqueteria.RowTemplate.Height = 28;
+            this.dgPaqueteria.Size = new System.Drawing.Size(496, 106);
+            this.dgPaqueteria.TabIndex = 111;
+            this.dgPaqueteria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPaqueteria_CellClick);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(521, 188);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(56, 23);
+            this.btnBorrar.TabIndex = 110;
+            this.btnBorrar.Text = "Cancelar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(467, 188);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(50, 23);
+            this.btnAceptar.TabIndex = 109;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(521, 47);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(55, 24);
+            this.btnBuscar.TabIndex = 108;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(79, 51);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(431, 20);
+            this.txtFiltro.TabIndex = 107;
+            // 
+            // FrmBusquedaPaqueteria
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(741, 299);
+            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.dgPaqueteria);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtFiltro);
+            this.Name = "FrmBusquedaPaqueteria";
             this.Text = "FrmBusquedaPaqueteria";
+            this.Load += new System.EventHandler(this.FrmBusquedaPaqueteria_Load);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPaqueteria)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnClose;
+        public System.Windows.Forms.DataGridView dgPaqueteria;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtFiltro;
     }
 }
